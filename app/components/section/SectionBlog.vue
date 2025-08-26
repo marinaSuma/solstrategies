@@ -1,40 +1,43 @@
 <template>
-  <div class="blog-section">
-    <div class="blog-container">
-      <div class="w-l center text-center" id="hero">
-        <h1 class="fadeinUp mb-5">Our Blog</h1>
-        <div class="w-s center text fadeinUp">
-          <p>
-            Stay in the loop with the latest in crypto, plus exclusive updates
-            <br />on what we’re building.
-          </p>
-        </div>
-      </div>
 
-      <section class="blog">
-        <div class="row">
-          <div
-            v-for="(post, index) in posts"
-            :key="index"
-            class="col-sm-4 fadeinUp"
-          >
-            <div class="grid-box">
-              <div class="img">
-                <img :src="post.img" :alt="post.title" />
-              </div>
-              <div class="content">
-                <div class="meta">{{ post.date }}</div>
-                <h6>{{ post.title }}</h6>
-                <div class="border-gradient">
-                  <a :href="post.url" class="btn">View Article</a>
+
+    <div id="hero">
+        <div class="container">
+            <div class="w-l center text-center">
+                <h1 class="fadeinUp mb-5">Our Blog</h1>
+                <div class="w-s center text fadeinUp">
+                    <p>Stay in the loop with the latest in crypto, plus exclusive updates <br> on what we’re building.</p>
                 </div>
-              </div>
             </div>
-          </div>
+        </div>
+    </div>     
+      <section class="blog">
+        <div class="container">
+            <div class="w-l center">
+                <div class="row">
+                  <div
+                    v-for="(post, index) in posts"
+                    :key="index"
+                    class="col-sm-4 fadeinUp"
+                  >
+                    <div class="grid-box">
+                      <div class="img">
+                        <img :src="post.img" :alt="post.title" />
+                      </div>
+                      <div class="content">
+                        <div class="meta">{{ post.date }}</div>
+                        <h6>{{ post.title }}</h6>
+                        <div class="border-gradient">
+                          <a :href="post.url" class="btn">View Article</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
         </div>
       </section>
-    </div>
-  </div>
+
 </template>
 
 <script setup>
@@ -49,12 +52,6 @@ const posts = [
 </script>
 
 <style scoped>
-/* Wrapper del blog para aislar Bootstrap */
-.blog-section .blog-container {
-  max-width: 1140px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 /* Hero */
 .blog-section #hero {
@@ -94,7 +91,7 @@ a, a.btn, input[type='submit'] {
   row-gap: 50px;
 }
 
-.blog-section .grid-box .img {
+.grid-box .img {
   background-color: #efefef;
   width: 100%;
   aspect-ratio: 5 / 4;
@@ -102,19 +99,19 @@ a, a.btn, input[type='submit'] {
   margin-bottom: 20px;
 }
 
-.blog-section .grid-box .img img {
+.grid-box .img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-.blog-section .grid-box .img img[src=''] {
+.grid-box .img img[src=''] {
   display: none;
 }
 
 /* Botones con borde degradado */
-.blog-section .border-gradient {
+.border-gradient {
   margin-top: 30px;
   border-radius: 20px;
   display: inline-block;
@@ -122,7 +119,7 @@ a, a.btn, input[type='submit'] {
   padding: 1px;
 }
 
-.blog-section .border-gradient a {
+.border-gradient a {
   background-color: #fff;
   display: inline-block;
   font-size: 15px;
@@ -134,12 +131,12 @@ a, a.btn, input[type='submit'] {
   transition: 0.2s;
 }
 
-.blog-section .border-gradient a:hover {
+.border-gradient a:hover {
   background: linear-gradient(to right, #bf35a8, #fa974c) border-box;
   color: #fff;
 }
 
-.blog-section .meta {
+.meta {
   font-size: 14px;
   margin-bottom: 15px;
 }
