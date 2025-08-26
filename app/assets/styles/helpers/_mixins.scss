@@ -1,0 +1,111 @@
+@use 'variables' as var;
+@use 'functions' as fn;
+
+// Responsive
+@mixin mobile() {
+  @media (max-width: #{var.$base-query + 0.98}px) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media (min-width: #{var.$base-query + 0.99}px) {
+    @content;
+  }
+}
+
+// Etc
+@mixin text-underline($color: currentColor) {
+  cursor: pointer;
+
+  position: relative;
+
+  width: fit-content;
+
+  color: $color;
+  text-decoration: none;
+
+  &:not(.btn, button) {
+    &::before {
+      pointer-events: none;
+      content: '';
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scale3d(0, 1, 1);
+
+      width: 100%;
+      height: 1px;
+
+      background: $color;
+
+      transition: transform var.$transition-default;
+    }
+
+    &:hover::before {
+      transform-origin: left;
+      transform: scale3d(1, 1, 1);
+    }
+
+    &.active {
+      &::before {
+        transform-origin: 0% 50%;
+        transform: scale3d(1, 1, 1);
+      }
+
+      &:hover {
+        &::before {
+          transform-origin: 100% 100%;
+          transform: scale3d(0, 1, 1);
+        }
+      }
+    }
+  }
+}
+
+@mixin text-underline-nohover($color: currentColor) {
+  cursor: pointer;
+
+  position: relative;
+
+  width: fit-content;
+
+  color: $color;
+  text-decoration: none;
+
+  &:not(.btn, button) {
+    &::before {
+      pointer-events: none;
+      content: '';
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scale3d(0, 1, 1);
+
+      width: 100%;
+      height: 1px;
+
+      background: $color;
+
+      transition: transform var.$transition-default;
+    }
+
+    &.active {
+      &::before {
+        transform-origin: 0% 50%;
+        transform: scale3d(1, 1, 1);
+      }
+
+      &:hover {
+        &::before {
+          transform-origin: 100% 100%;
+          transform: scale3d(0, 1, 1);
+        }
+      }
+    }
+  }
+}

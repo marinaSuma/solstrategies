@@ -1,0 +1,20 @@
+{
+  "title": "SOL STRATEGIES",
+  "shortdesc": "Solana meets Wall Street",
+  "description": "A publicly traded company providing infrastructure for the Solana blockchain ecosystem, the fastest growing project in crypto.",
+  "site": "https://solstrategies.com",
+  "thumbnail": "/thumbnail.jpg",
+  "lang": "en",
+  "credit": [
+    {
+      "title": "Design by",
+      "name": "Suma",
+      "site": "https://bysuma.com"
+    },
+    {
+      "title": "Development by",
+      "name": "Reksa Andhika",
+      "site": "https://reksaandhika.com"
+    }
+  ]
+}

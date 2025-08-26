@@ -1,0 +1,147 @@
+@use './helpers/typography' as mxt;
+
+/*! purgecss start ignore */
+
+.article {
+  --space-general: 2em;
+  --space-heading: 1em;
+
+  h1,
+  h2 {
+    @include mxt.font-heading1medium70;
+  }
+
+  h3 {
+    @include mxt.font-heading1medium60;
+  }
+
+  h4,
+  h5,
+  h6 {
+    @include mxt.font-heading2;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: var(--space-heading);
+    text-transform: none;
+  }
+
+  p {
+    text-wrap: pretty;
+
+    &:not(:last-child) {
+      margin-bottom: var(--space-general);
+    }
+  }
+
+  ul,
+  ol {
+    margin-bottom: var(--space-general);
+    margin-left: var(--space-heading);
+  }
+
+  li {
+    &:not(:last-child) {
+      margin-bottom: calc(var(--space-general) / 2);
+    }
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  b,
+  strong {
+    font-weight: bold;
+  }
+
+  i,
+  em {
+    font-style: italic;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: var(--space-heading);
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: var(--space-heading);
+
+    th,
+    td {
+      padding: calc(var(--space-heading) / 2);
+      border: 1px solid #ccc;
+    }
+
+    th {
+      font-weight: bold;
+      background-color: #f0f0f0;
+    }
+  }
+
+  hr {
+    margin: var(--space-heading) 0;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+
+  sub,
+  sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+  }
+
+  sup {
+    top: calc(var(--space-heading) / 2 * -1);
+  }
+
+  sub {
+    bottom: calc(var(--space-heading) / 4 * -1);
+  }
+
+  blockquote {
+    margin: var(--space-heading) 0;
+    padding-left: var(--space-heading);
+    border-left: 4px solid #ccc;
+    font-style: italic;
+  }
+
+  code {
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: monospace;
+    background-color: #f0f0f0;
+  }
+
+  pre {
+    overflow-x: auto;
+    margin-bottom: var(--space-heading);
+    padding: var(--space-heading);
+    background-color: #f0f0f0;
+  }
+}
+
+/*! purgecss end ignore */

@@ -1,0 +1,77 @@
+/*! purgecss start ignore */
+
+@use './helpers/typography' as mxt;
+
+.font-heading1 {
+  @include mxt.font-heading1;
+}
+
+.font-heading1medium120 {
+  @include mxt.font-heading1medium120;
+}
+
+.font-heading1medium70 {
+  @include mxt.font-heading1medium70;
+}
+
+.font-heading1medium60 {
+  @include mxt.font-heading1medium60;
+}
+
+.font-heading1light120 {
+  @include mxt.font-heading1light120;
+}
+
+.font-heading2 {
+  @include mxt.font-heading2;
+}
+
+.font-heading2light70 {
+  @include mxt.font-heading2light70;
+}
+
+.font-body1 {
+  @include mxt.font-body1;
+}
+
+.font-body35 {
+  @include mxt.font-body35;
+}
+
+.font-body28 {
+  @include mxt.font-body28;
+}
+
+.font-body26 {
+  @include mxt.font-body26;
+}
+
+.font-body22 {
+  @include mxt.font-body22;
+}
+
+.font-body18 {
+  @include mxt.font-body18;
+}
+
+.font-body16 {
+  @include mxt.font-body16;
+}
+
+.font-body14 {
+  @include mxt.font-body14;
+}
+
+.font-body13 {
+  @include mxt.font-body13;
+}
+
+.font-body12 {
+  @include mxt.font-body12;
+}
+
+.font-uc {
+  @include mxt.font-uc;
+}
+
+/*! purgecss end ignore */

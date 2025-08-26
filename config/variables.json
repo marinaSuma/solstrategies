@@ -1,0 +1,268 @@
+{
+  "system": {
+    "cms": "null"
+  },
+  "base": {
+    "vw": 1920,
+    "vwm": 402,
+    "svh": 812,
+    "query": 767,
+    "multiplier": "100vw"
+  },
+  "component": {
+    "preloader": true,
+    "preloaderfont": true,
+    "smoothscroll": true,
+    "cookies": true
+  },
+  "color": {
+    "primary": "#000000",
+    "secondary": "#ffffff",
+    "background": "#ffffff",
+    "text": "#000000",
+    "black": "#000000",
+    "white": "#ffffff",
+    "gray": "#686868",
+    "gray20": "#d0d0d0",
+    "gray30": "#686868",
+    "lightgray": "#dfdfdf",
+    "neutral": "#f8f8f8",
+    "neutral02": "#efefef",
+    "red": "#fa604c",
+    "orange": "#fa974c",
+    "yellow": "#fffc75",
+    "purple": "#5e3ea1",
+    "purple2": "#8a1c77",
+    "green": "#5c8875"
+  },
+  "transition": {
+    "name": "customdefault",
+    "unit": "s",
+    "duration": 0.8,
+    "durations": "#{$transition-duration}#{$transition-unit}",
+    "ease": "cubic-bezier(0.17, 0.84, 0.44, 1)",
+    "default": "#{$transition-duration}#{$transition-unit} $transition-ease",
+    "delay": 0.15,
+    "scrolloffset": 15,
+    "easegsap": {
+      "power1": {
+        "out": "cubic-bezier(0.25, 1, 0.5, 1)",
+        "in": "cubic-bezier(0.5, 0, 0.75, 0)",
+        "inout": "cubic-bezier(0.42, 0, 0.58, 1)"
+      },
+      "power2": {
+        "out": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+        "in": "cubic-bezier(0.55, 0.085, 0.68, 0.53)",
+        "inout": "cubic-bezier(0.455, 0.03, 0.515, 0.955)"
+      },
+      "power3": {
+        "out": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "in": "cubic-bezier(0.645, 0.045, 0.355, 1)",
+        "inout": "cubic-bezier(0.645, 0.045, 0.355, 1)"
+      },
+      "power4": {
+        "out": "cubic-bezier(0.165, 0.84, 0.44, 1)",
+        "in": "cubic-bezier(0.895, 0.03, 0.685, 0.22)",
+        "inout": "cubic-bezier(0.77, 0, 0.175, 1)"
+      },
+      "expo": {
+        "out": "cubic-bezier(0.19, 1, 0.22, 1)",
+        "in": "cubic-bezier(0.95, 0.05, 0.795, 0.035)",
+        "inout": "cubic-bezier(1, 0, 0, 1)"
+      },
+      "sine": {
+        "out": "cubic-bezier(0.39, 0.575, 0.565, 1)",
+        "in": "cubic-bezier(0.47, 0, 0.745, 0.715)",
+        "inout": "cubic-bezier(0.445, 0.05, 0.55, 0.95)"
+      },
+      "back": {
+        "out": "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+        "in": "cubic-bezier(0.6, -0.28, 0.735, 0.045)",
+        "inout": "cubic-bezier(0.68, -0.55, 0.265, 1.55)"
+      },
+      "circ": {
+        "out": "cubic-bezier(0.075, 0.82, 0.165, 1)",
+        "in": "cubic-bezier(0.6, 0.04, 0.98, 0.335)",
+        "inout": "cubic-bezier(0.785, 0.135, 0.15, 0.86)"
+      }
+    }
+  },
+  "layout": {
+    "grid": {
+      "columns": 12,
+      "gutter": 10
+    },
+    "container": {
+      "desktop": 152,
+      "mobile": 15
+    }
+  },
+  "font": {
+    "family": {
+      "main": "'Sequel Sans', sans-serif",
+      "title": "'Sequel Sans', sans, serif"
+    },
+    "heading1": {
+      "family": "$font-family-title",
+      "size": 60,
+      "sizem": 32,
+      "weight": 400,
+      "line": "normal",
+      "letter": "null",
+      "transform": "null"
+    },
+    "heading1medium120": {
+      "family": "$font-family-title",
+      "size": 120,
+      "sizem": 60,
+      "weight": 500,
+      "line": 120,
+      "letter": "null",
+      "transform": "null"
+    },
+    "heading1medium70": {
+      "family": "$font-family-title",
+      "size": 70,
+      "sizem": 44,
+      "weight": 500,
+      "line": "normal",
+      "letter": "null",
+      "transform": "null"
+    },
+    "heading1medium60": {
+      "family": "$font-family-title",
+      "size": 60,
+      "sizem": 44,
+      "weight": 500,
+      "line": 59.4,
+      "letter": "null",
+      "transform": "null"
+    },
+    "heading1light120": {
+      "family": "$font-family-title",
+      "size": 120,
+      "sizem": 60,
+      "weight": 300,
+      "line": 120,
+      "letter": "null",
+      "transform": "null"
+    },
+    "heading2": {
+      "family": "$font-family-title",
+      "size": 35,
+      "sizem": 22,
+      "weight": 400,
+      "line": "normal",
+      "letter": "null",
+      "transform": "null"
+    },
+    "heading2light70": {
+      "family": "$font-family-title",
+      "size": 70,
+      "sizem": 44,
+      "weight": 300,
+      "line": 69.3,
+      "letter": "null",
+      "transform": "null"
+    },
+    "body1": {
+      "family": "$font-family-main",
+      "size": 18,
+      "sizem": "null",
+      "weight": 400,
+      "line": "normal",
+      "letter": 0.36,
+      "transform": "null"
+    },
+    "body35": {
+      "family": "$font-family-main",
+      "size": 35,
+      "sizem": 22,
+      "weight": 400,
+      "line": "normal",
+      "letter": "null",
+      "transform": "null"
+    },
+    "body28": {
+      "family": "$font-family-main",
+      "size": 28,
+      "sizem": 22,
+      "weight": 300,
+      "line": "normal",
+      "letter": "null",
+      "transform": "null"
+    },
+    "body26": {
+      "family": "$font-family-main",
+      "size": 26,
+      "sizem": 14,
+      "weight": 700,
+      "line": "normal",
+      "letter": "null",
+      "transform": "null"
+    },
+    "body22": {
+      "family": "$font-family-main",
+      "size": 22,
+      "sizem": 18,
+      "weight": 400,
+      "line": "normal",
+      "letter": 0.44,
+      "transform": "null"
+    },
+    "body18": {
+      "family": "$font-family-main",
+      "size": 18,
+      "sizem": 12,
+      "weight": 400,
+      "line": "normal",
+      "letter": 0.36,
+      "transform": "null"
+    },
+    "body16": {
+      "family": "$font-family-main",
+      "size": 16,
+      "sizem": 14,
+      "weight": 400,
+      "line": 20.8,
+      "letter": "null",
+      "transform": "null"
+    },
+    "body14": {
+      "family": "$font-family-main",
+      "size": 14,
+      "sizem": "null",
+      "weight": 300,
+      "line": "normal",
+      "letter": "null",
+      "transform": "null"
+    },
+    "body13": {
+      "family": "$font-family-main",
+      "size": 13,
+      "sizem": 12,
+      "weight": 300,
+      "line": 16.25,
+      "letter": "null",
+      "transform": "null"
+    },
+    "body12": {
+      "family": "$font-family-main",
+      "size": 12,
+      "sizem": "null",
+      "weight": 400,
+      "line": "normal",
+      "letter": "null",
+      "transform": "null"
+    },
+    "uc": {
+      "family": "$font-family-main",
+      "size": 40,
+      "sizem": 28,
+      "weight": 500,
+      "line": "normal",
+      "letter": "null",
+      "transform": "null"
+    }
+  }
+}

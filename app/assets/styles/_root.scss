@@ -1,0 +1,18 @@
+@use './helpers/variables' as var;
+@use './helpers/mixins' as mx;
+
+// @use 'sass:meta';
+
+:root {
+  --base-vw: #{var.$base-vw};
+  --base-svh: #{var.$base-svh};
+  --base-multiplier: #{var.$base-multiplier};
+
+  @include mx.mobile {
+    --base-vw: #{var.$base-vwm};
+  }
+
+  // @each $name, $value in meta.module-variables('var') {
+  //   --#{$name}: #{$value};
+  // }
+}

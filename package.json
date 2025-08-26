@@ -1,0 +1,92 @@
+{
+  "name": "starter-nuxt4",
+  "version": "1.0",
+  "author": "reksaandhika",
+  "private": true,
+  "type": "module",
+  "license": "See License in LICENSE file",
+  "engines": {
+    "node": ">=20",
+    "npm": ">=10"
+  },
+  "scripts": {
+    "dev": "nuxt dev --host",
+    "start": "node .output/server/index.mjs",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "preview:generate": "npm run serve",
+    "serve": "npx serve dist/",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "oxlint": "oxlint --fix .",
+    "lint-style": "stylelint **/*.{scss,vue} --fix",
+    "prettier": "prettier --write .",
+    "format": "npm run lint-fix & npm run prettier & npm run lint-style",
+    "postinstall": "nuxt prepare",
+    "prepare": "husky",
+    "nuxt:prepare": "nuxt prepare",
+    "clean": "nuxt cleanup",
+    "analyze": "nuxt analyze",
+    "upgrade": "nuxt upgrade --force",
+    "typecheck": "nuxt typecheck",
+    "generate-pwa-assets": "pwa-assets-generator --preset minimal-2023 public/logo.png & node generate-manifest.js",
+    "tunnel": "node tunnel.js"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@nuxt/devtools": "^2.6.2",
+    "@nuxt/eslint": "^1.7.1",
+    "@nuxt/image": "^1.11.0",
+    "@nuxt/scripts": "^0.11.10",
+    "@nuxtjs/critters": "^0.9.0",
+    "@nuxtjs/device": "^3.2.4",
+    "@nuxtjs/seo": "^3.1.0",
+    "@nuxtjs/stylelint-module": "^5.2.1",
+    "@prettier/plugin-oxc": "^0.0.4",
+    "@unhead/vue": "^2.0.14",
+    "@vite-pwa/assets-generator": "^1.0.0",
+    "@vueuse/core": "^13.5.0",
+    "@vueuse/nuxt": "^13.5.0",
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.1.0",
+    "eslint": "^9.32.0",
+    "husky": "^9.1.7",
+    "jsdom": "^26.1.0",
+    "lint-staged": "^16.1.2",
+    "nuxt": "^4.0.3",
+    "nuxt-gtag": "^3.0.3",
+    "nuxt-mcp": "^0.2.3",
+    "nuxt-purgecss": "^2.0.0",
+    "nuxt-svgo": "^4.2.4",
+    "oxlint": "^1.9.0",
+    "postcss-calc": "^10.1.1",
+    "postcss-preset-env": "^10.2.4",
+    "prettier": "^3.6.2",
+    "sass": "^1.89.2",
+    "stylelint": "^16.23.0",
+    "stylelint-config-clean-order": "^7.0.0",
+    "stylelint-config-recommended-vue": "^1.6.1",
+    "stylelint-config-standard-scss": "^15.0.1",
+    "stylelint-scss": "^6.12.1",
+    "typescript": "^5.8.3",
+    "vue-tsc": "^2.2.12"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0",
+    "lenis": "^1.3.6",
+    "nuxt-tradingview": "^1.3.3"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "eslint --fix"
+    ],
+    "*.{js,vue,css,scss,html,json,md}": [
+      "prettier --write"
+    ],
+    "*.{vue,scss}": [
+      "stylelint --fix"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+/*! purgecss start ignore */
+.line-mask,
+.masking-text {
+  overflow: hidden;
+  display: block;
+  margin-top: -0.1em;
+  padding-bottom: 0.1em;
+
+  &:first-child {
+    padding-top: 0.1em;
+  }
+
+  .line {
+    will-change: transform;
+    position: relative;
+  }
+
+  .word {
+    will-change: transform;
+  }
+}
+
+.extra-lineheight {
+  .line-mask,
+  .masking-text {
+    margin-top: -0.1em;
+    padding-bottom: 0.1em;
+
+    &:first-child {
+      padding-top: 0.1em;
+    }
+  }
+}
+
+/*! purgecss end ignore */

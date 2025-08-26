@@ -1,0 +1,173 @@
+@use './helpers/variables' as var;
+@use './helpers/functions' as fn;
+@use './helpers/mixins' as mx;
+
+.desktop {
+  display: block;
+
+  @include mx.mobile {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+
+  @include mx.mobile {
+    display: block;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var.$layout-grid-columns, 1fr);
+  gap: fn.toVw(var.$layout-grid-gutter);
+  width: 100%;
+
+  @include mx.mobile {
+    display: flex;
+  }
+}
+
+.link {
+  @include mx.text-underline;
+}
+
+.link-nohover {
+  @include mx.text-underline-nohover;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.absolute-topleft {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.absolute-topright {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.absolute-bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.absolute-bottomright {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.z--1 {
+  z-index: -1;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.z-2 {
+  z-index: 2;
+}
+
+.z-3 {
+  z-index: 3;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  overflow: hidden;
+
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0 0 99.9% 99.9%);
+}
+
+.border {
+  width: 100%;
+  height: 1px;
+  background-color: currentcolor;
+}
+
+.overlay-black {
+  pointer-events: none;
+
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.3;
+  background: #000;
+}
+
+.overlay-gradient {
+  pointer-events: none;
+
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.4;
+  background: linear-gradient(180deg, #000 0%, rgb(0 0 0 / 0%) 100%);
+}
+
+.is--loading {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.is--noevent {
+  pointer-events: none;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s var.$transition-ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}

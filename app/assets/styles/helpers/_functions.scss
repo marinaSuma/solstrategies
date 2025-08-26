@@ -1,0 +1,14 @@
+@use 'sass:math';
+
+// Convert px
+@function toVw($px) {
+  @return calc(#{$px} / var(--base-vw) * var(--base-multiplier));
+}
+
+@function toSvh($px) {
+  @return calc(100svh * #{$px} / var(--base-svh));
+}
+
+@function toEm($px, $base-font-size) {
+  @return #{math.div($px, $base-font-size)}em;
+}

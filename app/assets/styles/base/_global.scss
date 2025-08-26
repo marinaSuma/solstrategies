@@ -1,0 +1,122 @@
+@use '~/assets/styles/helpers/variables' as var;
+@use '~/assets/styles/helpers/functions' as fn;
+@use '~/assets/styles/helpers/mixins' as mx;
+@use '~/assets/styles/helpers/typography' as mxt;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: initial;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+  text-rendering: optimizelegibility;
+}
+
+body {
+  color: var.$color-text;
+  background-color: var.$color-background;
+
+  @include mxt.font-body1;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+/*! purgecss start ignore */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+// .lenis.lenis-stopped {
+//   overflow: hidden;
+// }
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/*! purgecss end ignore */
+
+::selection {
+  color: var.$color-primary;
+  background: var.$color-secondary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var.$font-family-title;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+u {
+  text-decoration: underline;
+}
+
+img,
+video {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+svg {
+  height: auto;
+}
+
+canvas {
+  pointer-events: none;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+#main {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-color: var.$color-background;
+}
+
+.container {
+  display: block;
+  width: 100%;
+  padding: 0 fn.toVw(var.$layout-container-desktop);
+
+  @include mx.mobile {
+    padding: 0 fn.toVw(var.$layout-container-mobile);
+  }
+}

@@ -1,0 +1,417 @@
+@use 'variables' as var;
+@use 'functions' as fn;
+@use 'mixins' as mx;
+
+@mixin font-heading1(
+  $family: var.$font-heading1-family,
+  $size: var.$font-heading1-size,
+  $sizem: var.$font-heading1-sizem,
+  $weight: var.$font-heading1-weight,
+  $line: var.$font-heading1-line,
+  $letter: var.$font-heading1-letter,
+  $transform: var.$font-heading1-transform
+) {
+  font-family: $family;
+  font-size: fn.toVw($size);
+  font-weight: $weight;
+  line-height: if($line == normal, normal, calc(#{$line} / #{$size}));
+  text-transform: $transform;
+  letter-spacing: if($letter != null, fn.toEm($letter, $size), null);
+
+  @if $sizem {
+    @include mx.mobile {
+      font-size: fn.toVw($sizem);
+    }
+  }
+}
+
+@mixin font-heading1medium120(
+  $family: var.$font-heading1medium120-family,
+  $size: var.$font-heading1medium120-size,
+  $sizem: var.$font-heading1medium120-sizem,
+  $weight: var.$font-heading1medium120-weight,
+  $line: var.$font-heading1medium120-line,
+  $letter: var.$font-heading1medium120-letter,
+  $transform: var.$font-heading1medium120-transform
+) {
+  font-family: $family;
+  font-size: fn.toVw($size);
+  font-weight: $weight;
+  line-height: if($line == normal, normal, calc(#{$line} / #{$size}));
+  text-transform: $transform;
+  letter-spacing: if($letter != null, fn.toEm($letter, $size), null);
+
+  @if $sizem {
+    @include mx.mobile {
+      font-size: fn.toVw($sizem);
+    }
+  }
+}
+
+@mixin font-heading1medium70(
+  $family: var.$font-heading1medium70-family,
+  $size: var.$font-heading1medium70-size,
+  $sizem: var.$font-heading1medium70-sizem,
+  $weight: var.$font-heading1medium70-weight,
+  $line: var.$font-heading1medium70-line,
+  $letter: var.$font-heading1medium70-letter,
+  $transform: var.$font-heading1medium70-transform
+) {
+  font-family: $family;
+  font-size: fn.toVw($size);
+  font-weight: $weight;
+  line-height: if($line == normal, normal, calc(#{$line} / #{$size}));
+  text-transform: $transform;
+  letter-spacing: if($letter != null, fn.toEm($letter, $size), null);
+
+  @if $sizem {
+    @include mx.mobile {
+      font-size: fn.toVw($sizem);
+    }
+  }
+}
+
+@mixin font-heading1medium60(
+  $family: var.$font-heading1medium60-family,
+  $size: var.$font-heading1medium60-size,
+  $sizem: var.$font-heading1medium60-sizem,
+  $weight: var.$font-heading1medium60-weight,
+  $line: var.$font-heading1medium60-line,
+  $letter: var.$font-heading1medium60-letter,
+  $transform: var.$font-heading1medium60-transform
+) {
+  font-family: $family;
+  font-size: fn.toVw($size);
+  font-weight: $weight;
+  line-height: if($line == normal, normal, calc(#{$line} / #{$size}));
+  text-transform: $transform;
+  letter-spacing: if($letter != null, fn.toEm($letter, $size), null);
+
+  @if $sizem {
+    @include mx.mobile {
+      font-size: fn.toVw($sizem);
+    }
+  }
+}
+
+@mixin font-heading1light120(
+  $family: var.$font-heading1light120-family,
+  $size: var.$font-heading1light120-size,
+  $sizem: var.$font-heading1light120-sizem,
+  $weight: var.$font-heading1light120-weight,
+  $line: var.$font-heading1light120-line,
+  $letter: var.$font-heading1light120-letter,
+  $transform: var.$font-heading1light120-transform
+) {
+  font-family: $family;
+  font-size: fn.toVw($size);
+  font-weight: $weight;
+  line-height: if($line == normal, normal, calc(#{$line} / #{$size}));
+  text-transform: $transform;
+  letter-spacing: if($letter != null, fn.toEm($letter, $size), null);
+
+  @if $sizem {
+    @include mx.mobile {
+      font-size: fn.toVw($sizem);
+    }
+  }
+}
+
+@mixin font-heading2(
+  $family: var.$font-heading2-family,
+  $size: var.$font-heading2-size,
+  $sizem: var.$font-heading2-sizem,
+  $weight: var.$font-heading2-weight,
+  $line: var.$font-heading2-line,
+  $letter: var.$font-heading2-letter,
+  $transform: var.$font-heading2-transform
+) {
+  font-family: $family;
+  font-size: fn.toVw($size);
+  font-weight: $weight;
+  line-height: if($line == normal, normal, calc(#{$line} / #{$size}));
+  text-transform: $transform;
+  letter-spacing: if($letter != null, fn.toEm($letter, $size), null);
+
+  @if $sizem {
+    @include mx.mobile {
+      font-size: fn.toVw($sizem);
+    }
+  }
+}
+
+@mixin font-heading2light70(
+  $family: var.$font-heading2light70-family,
+  $size: var.$font-heading2light70-size,
+  $sizem: var.$font-heading2light70-sizem,
+  $weight: var.$font-heading2light70-weight,
+  $line: var.$font-heading2light70-line,
+  $letter: var.$font-heading2light70-letter,
+  $transform: var.$font-heading2light70-transform
+) {
+  font-family: $family;
+  font-size: fn.toVw($size);
+  font-weight: $weight;
+  line-height: if($line == normal, normal, calc(#{$line} / #{$size}));
+  text-transform: $transform;
+  letter-spacing: if($letter != null, fn.toEm($letter, $size), null);
+
+  @if $sizem {
+    @include mx.mobile {
+      font-size: fn.toVw($sizem);
+    }
+  }
+}
+
+@mixin font-body1(
+  $family: var.$font-body1-family,
+  $size: var.$font-body1-size,
+  $sizem: var.$font-body1-sizem,
+  $weight: var.$font-body1-weight,
+  $line: var.$font-body1-line,
+  $letter: var.$font-body1-letter,
+  $transform: var.$font-body1-transform
+) {
+  font-family: $family;
+  font-size: fn.toVw($size);
+  font-weight: $weight;
+  line-height: if($line == normal, normal, calc(#{$line} / #{$size}));
+  text-transform: $transform;
+  letter-spacing: if($letter != null, fn.toEm($letter, $size), null);
+
+  @if $sizem {
+    @include mx.mobile {
+      font-size: fn.toVw($sizem);
+    }
+  }
+}
+
+@mixin font-body35(
+  $family: var.$font-body35-family,
+  $size: var.$font-body35-size,
+  $sizem: var.$font-body35-sizem,
+  $weight: var.$font-body35-weight,
+  $line: var.$font-body35-line,
+  $letter: var.$font-body35-letter,
+  $transform: var.$font-body35-transform
+) {
+  font-family: $family;
+  font-size: fn.toVw($size);
+  font-weight: $weight;
+  line-height: if($line == normal, normal, calc(#{$line} / #{$size}));
+  text-transform: $transform;
+  letter-spacing: if($letter != null, fn.toEm($letter, $size), null);
+
+  @if $sizem {
+    @include mx.mobile {
+      font-size: fn.toVw($sizem);
+    }
+  }
+}
+
+@mixin font-body28(
+  $family: var.$font-body28-family,
+  $size: var.$font-body28-size,
+  $sizem: var.$font-body28-sizem,
+  $weight: var.$font-body28-weight,
+  $line: var.$font-body28-line,
+  $letter: var.$font-body28-letter,
+  $transform: var.$font-body28-transform
+) {
+  font-family: $family;
+  font-size: fn.toVw($size);
+  font-weight: $weight;
+  line-height: if($line == normal, normal, calc(#{$line} / #{$size}));
+  text-transform: $transform;
+  letter-spacing: if($letter != null, fn.toEm($letter, $size), null);
+
+  @if $sizem {
+    @include mx.mobile {
+      font-size: fn.toVw($sizem);
+    }
+  }
+}
+
+@mixin font-body26(
+  $family: var.$font-body26-family,
+  $size: var.$font-body26-size,
+  $sizem: var.$font-body26-sizem,
+  $weight: var.$font-body26-weight,
+  $line: var.$font-body26-line,
+  $letter: var.$font-body26-letter,
+  $transform: var.$font-body26-transform
+) {
+  font-family: $family;
+  font-size: fn.toVw($size);
+  font-weight: $weight;
+  line-height: if($line == normal, normal, calc(#{$line} / #{$size}));
+  text-transform: $transform;
+  letter-spacing: if($letter != null, fn.toEm($letter, $size), null);
+
+  @if $sizem {
+    @include mx.mobile {
+      font-size: fn.toVw($sizem);
+    }
+  }
+}
+
+@mixin font-body22(
+  $family: var.$font-body22-family,
+  $size: var.$font-body22-size,
+  $sizem: var.$font-body22-sizem,
+  $weight: var.$font-body22-weight,
+  $line: var.$font-body22-line,
+  $letter: var.$font-body22-letter,
+  $transform: var.$font-body22-transform
+) {
+  font-family: $family;
+  font-size: fn.toVw($size);
+  font-weight: $weight;
+  line-height: if($line == normal, normal, calc(#{$line} / #{$size}));
+  text-transform: $transform;
+  letter-spacing: if($letter != null, fn.toEm($letter, $size), null);
+
+  @if $sizem {
+    @include mx.mobile {
+      font-size: fn.toVw($sizem);
+    }
+  }
+}
+
+@mixin font-body18(
+  $family: var.$font-body18-family,
+  $size: var.$font-body18-size,
+  $sizem: var.$font-body18-sizem,
+  $weight: var.$font-body18-weight,
+  $line: var.$font-body18-line,
+  $letter: var.$font-body18-letter,
+  $transform: var.$font-body18-transform
+) {
+  font-family: $family;
+  font-size: fn.toVw($size);
+  font-weight: $weight;
+  line-height: if($line == normal, normal, calc(#{$line} / #{$size}));
+  text-transform: $transform;
+  letter-spacing: if($letter != null, fn.toEm($letter, $size), null);
+
+  @if $sizem {
+    @include mx.mobile {
+      font-size: fn.toVw($sizem);
+    }
+  }
+}
+
+@mixin font-body16(
+  $family: var.$font-body16-family,
+  $size: var.$font-body16-size,
+  $sizem: var.$font-body16-sizem,
+  $weight: var.$font-body16-weight,
+  $line: var.$font-body16-line,
+  $letter: var.$font-body16-letter,
+  $transform: var.$font-body16-transform
+) {
+  font-family: $family;
+  font-size: fn.toVw($size);
+  font-weight: $weight;
+  line-height: if($line == normal, normal, calc(#{$line} / #{$size}));
+  text-transform: $transform;
+  letter-spacing: if($letter != null, fn.toEm($letter, $size), null);
+
+  @if $sizem {
+    @include mx.mobile {
+      font-size: fn.toVw($sizem);
+    }
+  }
+}
+
+@mixin font-body14(
+  $family: var.$font-body14-family,
+  $size: var.$font-body14-size,
+  $sizem: var.$font-body14-sizem,
+  $weight: var.$font-body14-weight,
+  $line: var.$font-body14-line,
+  $letter: var.$font-body14-letter,
+  $transform: var.$font-body14-transform
+) {
+  font-family: $family;
+  font-size: fn.toVw($size);
+  font-weight: $weight;
+  line-height: if($line == normal, normal, calc(#{$line} / #{$size}));
+  text-transform: $transform;
+  letter-spacing: if($letter != null, fn.toEm($letter, $size), null);
+
+  @if $sizem {
+    @include mx.mobile {
+      font-size: fn.toVw($sizem);
+    }
+  }
+}
+
+@mixin font-body13(
+  $family: var.$font-body13-family,
+  $size: var.$font-body13-size,
+  $sizem: var.$font-body13-sizem,
+  $weight: var.$font-body13-weight,
+  $line: var.$font-body13-line,
+  $letter: var.$font-body13-letter,
+  $transform: var.$font-body13-transform
+) {
+  font-family: $family;
+  font-size: fn.toVw($size);
+  font-weight: $weight;
+  line-height: if($line == normal, normal, calc(#{$line} / #{$size}));
+  text-transform: $transform;
+  letter-spacing: if($letter != null, fn.toEm($letter, $size), null);
+
+  @if $sizem {
+    @include mx.mobile {
+      font-size: fn.toVw($sizem);
+    }
+  }
+}
+
+@mixin font-body12(
+  $family: var.$font-body12-family,
+  $size: var.$font-body12-size,
+  $sizem: var.$font-body12-sizem,
+  $weight: var.$font-body12-weight,
+  $line: var.$font-body12-line,
+  $letter: var.$font-body12-letter,
+  $transform: var.$font-body12-transform
+) {
+  font-family: $family;
+  font-size: fn.toVw($size);
+  font-weight: $weight;
+  line-height: if($line == normal, normal, calc(#{$line} / #{$size}));
+  text-transform: $transform;
+  letter-spacing: if($letter != null, fn.toEm($letter, $size), null);
+
+  @if $sizem {
+    @include mx.mobile {
+      font-size: fn.toVw($sizem);
+    }
+  }
+}
+
+@mixin font-uc(
+  $family: var.$font-uc-family,
+  $size: var.$font-uc-size,
+  $sizem: var.$font-uc-sizem,
+  $weight: var.$font-uc-weight,
+  $line: var.$font-uc-line,
+  $letter: var.$font-uc-letter,
+  $transform: var.$font-uc-transform
+) {
+  font-family: $family;
+  font-size: fn.toVw($size);
+  font-weight: $weight;
+  line-height: if($line == normal, normal, calc(#{$line} / #{$size}));
+  text-transform: $transform;
+  letter-spacing: if($letter != null, fn.toEm($letter, $size), null);
+
+  @if $sizem {
+    @include mx.mobile {
+      font-size: fn.toVw($sizem);
+    }
+  }
+}
