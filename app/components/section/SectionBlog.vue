@@ -1,19 +1,19 @@
 <template>
-    <div id="hero">
-      <div class="container">
-        <div class="w-l center text-center">
-          <h1 class="fadeinUp mb-5">Our Blog</h1>
-          <div class="w-s center text fadeinUp">
-            <p>
-              Stay in the loop with the latest in crypto, plus exclusive updates
-              <br />on what we’re building.
-            </p>
-          </div>
+  <div id="hero" class="text-center">
+    <div class="container">
+      <div class="w-l center">
+        <h1 class="fadeinUp mb-5">Our Blog</h1>
+        <div class="w-s center fadeinUp">
+          <p>
+            Stay in the loop with the latest in crypto, plus exclusive updates
+            <br />on what we’re building.
+          </p>
         </div>
       </div>
     </div>
-    <section class="blog grid page-blog">
+  </div>
 
+  <section class="blog grid">
     <div class="container">
       <div class="w-l center">
         <div class="row">
@@ -38,7 +38,7 @@
         </div>
       </div>
     </div>
-    </section>
+  </section>
 </template>
 
 <script setup>
@@ -83,73 +83,42 @@ const posts = [
 </script>
 
 <style scoped>
-.page-blog #hero {
+/* Hero */
+#hero {
   height: 540px;
   display: flex;
   align-items: center;
   padding-top: 80px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
 }
+
 .center {
   margin-left: auto;
   margin-right: auto;
 }
 
-.w-xs {
-  max-width: 360px;
-}
-.w-s {
-  max-width: 560px;
-}
-.w-m {
-  max-width: 900px;
-}
-.w-l {
-  max-width: 1140px;
-}
+.w-xs { max-width: 360px; }
+.w-s { max-width: 560px; }
+.w-m { max-width: 900px; }
+.w-l { max-width: 1140px; }
 
-h1 {
-  font-size: 70px;
-  line-height: 106%;
-}
-h2 {
-  font-size: 60px;
-  line-height: 100%;
-}
-h3 {
-  font-size: 52px;
-  line-height: 100%;
-}
-h4 {
-  font-size: 48px;
-  line-height: 122%;
-}
-h5 {
-  font-size: 35px;
-  line-height: 122%;
-}
-h6 {
-  font-size: 28px;
-  line-height: 122%;
-}
+h1 { font-size: 70px; line-height: 106%; }
+h2 { font-size: 60px; line-height: 100%; }
+h3 { font-size: 52px; line-height: 100%; }
+h4 { font-size: 48px; line-height: 122%; }
+h5 { font-size: 35px; line-height: 122%; }
+h6 { font-size: 28px; line-height: 122%; }
 
-p,
-div,
-li,
-a {
+p, div, li, a {
   font-size: 17px;
   font-weight: 400;
   line-height: 164%;
 }
 
+/* Blog grid */
 section.blog.grid {
   margin-bottom: 130px;
 }

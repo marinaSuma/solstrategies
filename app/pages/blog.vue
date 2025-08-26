@@ -1,37 +1,42 @@
 <template>
   <div :class="$route.name">
-    <SectionHeroBlog />
-    <SectionBlog />
+    <!-- Wrapper donde se aplica Bootstrap -->
+    <div class="blog-bootstrap-wrapper">
+      <SectionHeroBlog />
+      <SectionBlog />
+    </div>
+
+    <!-- Sección CTA fuera del wrapper de Bootstrap -->
     <SectionCta />
   </div>
 </template>
 
 <script setup>
-import seo from '~~/config/seo.json';
-import { useHead } from '#imports'
+import SectionHeroBlog from '~/components/section/SectionHeroBlog.vue';
+import SectionBlog from '~/components/section/SectionBlog.vue';
+import SectionCta from '~/components/section/SectionCta.vue';
 
-// Configuración de SEO
-useHead({
-  titleTemplate: null,
-  // Agregamos Bootstrap CSS y JS solo para esta página
-  link: [
-    {
-      rel: 'stylesheet',
-      href: 'https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css'
-    }
-  ],
-  script: [
-    {
-      src: 'https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js',
-      defer: true
-    }
-  ]
-})
+import seo from '~~/config/seo.json';
+import { useHead } from '#imports';
+
+// Solo la grilla de Bootstrap, sin afectar header/footer
+import 'bootstrap/dist/css/bootstrap-grid.min.css';
 
 const title = seo.title;
+
+useHead({
+  titleTemplate: null,
+});
 
 useSeoMeta({
   title: title,
   ogTitle: title,
 });
 </script>
+
+<style scoped>
+/* Aquí solo puedes poner ajustes globales dentro del wrapper si es necesario */
+.blog-bootstrap-wrapper {
+  /* ejemplo: padding extra para la sección */
+}
+</style>
