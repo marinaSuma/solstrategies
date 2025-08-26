@@ -1,4 +1,14 @@
 <template>
+<div id="hero">
+    <div class="container">
+        <div class="w-l center text-center">
+            <h1 class="fadeinUp mb-5">Our Blog</h1>
+            <div class="w-s center text fadeinUp">
+                <p>Stay in the loop with the latest in crypto, plus exclusive updates <br> on what we’re building.</p>
+            </div>
+        </div>
+    </div>
+</div>
   <section class="blog grid">
     <div class="container">
       <div class="w-l center">
