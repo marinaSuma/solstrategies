@@ -54,7 +54,7 @@ const posts = [
 <style scoped>
 
 /* Hero */
-.blog-section #hero {
+.page-blog #hero {
   height: 540px;
   display: flex;
   align-items: center;
@@ -87,7 +87,7 @@ a, a.btn, input[type='submit'] {
 }
 
 /* Grid */
-.blog-section .row {
+.page-blog .blog .row {
   row-gap: 50px;
 }
 

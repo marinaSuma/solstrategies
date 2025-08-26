@@ -1,6 +1,6 @@
 <template>
   <div :class="$route.name">
-    <div class="blog-bootstrap-wrapper">
+    <div class="blog-bootstrap-wrapper page-blog">
       <SectionBlog />
     </div>
     <SectionCta />
