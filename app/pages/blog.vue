@@ -1,6 +1,6 @@
 <template>
   <div :class="$route.name">
-    <BlogSectionHero />
+    <SectionHeroBlog />
     <SectionCta />
   </div>
 </template>
