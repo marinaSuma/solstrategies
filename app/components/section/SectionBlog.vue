@@ -11,7 +11,7 @@
         </div>
       </div>
 
-      <section class="blog grid">
+      <section class="blog">
         <div class="row">
           <div
             v-for="(post, index) in posts"
@@ -79,6 +79,14 @@ p, div, li, a {
   font-size: 17px;
   font-weight: 400;
   line-height: 164%;
+}
+
+a, a.btn, input[type='submit'] {
+    text-decoration: none;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
 }
 
 /* Grid */
