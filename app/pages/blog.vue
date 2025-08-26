@@ -1,6 +1,7 @@
 <template>
   <div :class="$route.name">
     <SectionHeroBlog />
+    <SectionBlog />
     <SectionCta />
   </div>
 </template>
@@ -19,3 +20,4 @@ useSeoMeta({
   ogTitle: title,
 });
 </script>
+
