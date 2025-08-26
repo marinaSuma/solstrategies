@@ -1,9 +1,9 @@
 <template>
-  <div id="hero" class="text-center">
+  <div id="hero">
     <div class="container">
-      <div class="w-l center">
+      <div class="w-l center text-center">
         <h1 class="fadeinUp mb-5">Our Blog</h1>
-        <div class="w-s center fadeinUp">
+        <div class="w-s center text fadeinUp">
           <p>
             Stay in the loop with the latest in crypto, plus exclusive updates
             <br />on what we’re building.
@@ -13,7 +13,7 @@
     </div>
   </div>
 
-  <section class="blog grid">
+  <section class="blog grid page-blog">
     <div class="container">
       <div class="w-l center">
         <div class="row">
@@ -23,7 +23,7 @@
             class="col-sm-4 fadeinUp"
           >
             <div class="grid-box">
-              <div class="img">
+              <div class="img" v-if="post.img">
                 <img :src="post.img" :alt="post.title" />
               </div>
               <div class="content">
@@ -43,137 +43,85 @@
 
 <script setup>
 const posts = [
-  {
-    date: 'May 20th 2025',
-    title: 'How Crypto is Transforming Traditional Finance',
-    img: '', // agregar imagen si hay
-    url: '#'
-  },
-  {
-    date: 'May 20th 2025',
-    title: 'How Crypto is Transforming Traditional Finance',
-    img: '',
-    url: '#'
-  },
-  {
-    date: 'May 20th 2025',
-    title: 'How Crypto is Transforming Traditional Finance',
-    img: '',
-    url: '#'
-  },
-  {
-    date: 'May 20th 2025',
-    title: 'How Crypto is Transforming Traditional Finance',
-    img: '',
-    url: '#'
-  },
-  {
-    date: 'May 20th 2025',
-    title: 'How Crypto is Transforming Traditional Finance',
-    img: '',
-    url: '#'
-  },
-  {
-    date: 'May 20th 2025',
-    title: 'How Crypto is Transforming Traditional Finance',
-    img: '',
-    url: '#'
-  }
+  { date: 'May 20th 2025', title: 'How Crypto is Transforming Traditional Finance', img: '', url: '#' },
+  { date: 'May 20th 2025', title: 'How Crypto is Transforming Traditional Finance', img: '', url: '#' },
+  { date: 'May 20th 2025', title: 'How Crypto is Transforming Traditional Finance', img: '', url: '#' },
+  { date: 'May 20th 2025', title: 'How Crypto is Transforming Traditional Finance', img: '', url: '#' },
+  { date: 'May 20th 2025', title: 'How Crypto is Transforming Traditional Finance', img: '', url: '#' },
+  { date: 'May 20th 2025', title: 'How Crypto is Transforming Traditional Finance', img: '', url: '#' }
 ];
 </script>
 
 <style scoped>
 /* Hero */
-#hero {
+.page-blog #hero {
   height: 540px;
   display: flex;
   align-items: center;
   padding-top: 80px;
 }
 
+/* Tipografía */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
 }
-
-.center {
-  margin-left: auto;
-  margin-right: auto;
-}
+.center { margin-left:auto; margin-right:auto; }
 
 .w-xs { max-width: 360px; }
 .w-s { max-width: 560px; }
 .w-m { max-width: 900px; }
 .w-l { max-width: 1140px; }
 
-h1 { font-size: 70px; line-height: 106%; }
-h2 { font-size: 60px; line-height: 100%; }
-h3 { font-size: 52px; line-height: 100%; }
-h4 { font-size: 48px; line-height: 122%; }
-h5 { font-size: 35px; line-height: 122%; }
-h6 { font-size: 28px; line-height: 122%; }
+h1 { font-size:70px; line-height:106%; }
+h2 { font-size:60px; line-height:100%; }
+h3 { font-size:52px; line-height:100%; }
+h4 { font-size:48px; line-height:122%; }
+h5 { font-size:35px; line-height:122%; }
+h6 { font-size:28px; line-height:122%; }
 
-p, div, li, a {
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 164%;
-}
+p, div, li, a { font-size:17px; font-weight:400; line-height:164%; }
 
-/* Blog grid */
-section.blog.grid {
-  margin-bottom: 130px;
-}
-
-.blog.grid .row {
-  row-gap: 50px;
-}
+/* Sección Blog */
+section.blog.grid { margin-bottom: 130px; }
+.blog.grid .row { row-gap:50px; }
 
 .grid-box .img {
-  background-color: #efefef;
-  width: 100%;
-  aspect-ratio: 5 / 4;
-  border-radius: 9px;
-  margin-bottom: 20px;
+  background-color:#efefef;
+  width:100%;
+  aspect-ratio:5/4;
+  border-radius:9px;
+  margin-bottom:20px;
 }
-
 .grid-box .img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.grid-box .img img[src=''] {
-  display: none;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
 }
 
 .border-gradient {
-  margin-top: 30px;
-  border-radius: 20px;
-  box-sizing: border-box;
-  display: inline-block;
+  margin-top:30px;
+  border-radius:20px;
+  box-sizing:border-box;
+  display:inline-block;
   background: linear-gradient(to right, #bf35a8, #fa974c) border-box;
-  padding: 1px;
+  padding:1px;
 }
-
 .border-gradient a {
-  background-color: #fff;
-  display: inline-block;
-  font-size: 15px;
-  color: #212529;
-  text-align: center;
-  padding: 4px 20px;
-  line-height: 164%;
-  border-radius: 20px;
-  transition: 0.2s;
+  background-color:#fff;
+  display:inline-block;
+  font-size:15px;
+  color:#212529;
+  text-align:center;
+  padding:4px 20px;
+  line-height:164%;
+  border-radius:20px;
+  transition:0.2s;
 }
-
 .border-gradient a:hover {
   background: linear-gradient(to right, #bf35a8, #fa974c) border-box;
-  color: #fff;
+  color:#fff;
 }
 
-.meta {
-  font-size: 14px;
-  margin-bottom: 15px;
-}
+.meta { font-size:14px; margin-bottom:15px; }
 </style>

@@ -59,7 +59,10 @@ export default defineNuxtConfig({
   },
 
   // css
-  css: ['~/assets/styles/app.scss'],
+  css: [
+  'bootstrap/dist/css/bootstrap-grid.min.css', // solo la grid
+  '~/assets/styles/app.scss',                  // tus estilos principales
+  ],
 
   // modules
   modules: [

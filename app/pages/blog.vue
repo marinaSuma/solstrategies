@@ -1,12 +1,11 @@
 <template>
   <div :class="$route.name">
-    <!-- Wrapper donde se aplica Bootstrap -->
+    <!-- Solo se aplica Bootstrap dentro de este wrapper -->
     <div class="blog-bootstrap-wrapper">
       <SectionHeroBlog />
       <SectionBlog />
     </div>
 
-    <!-- Sección CTA fuera del wrapper de Bootstrap -->
     <SectionCta />
   </div>
 </template>
@@ -15,12 +14,7 @@
 import SectionHeroBlog from '~/components/section/SectionHeroBlog.vue';
 import SectionBlog from '~/components/section/SectionBlog.vue';
 import SectionCta from '~/components/section/SectionCta.vue';
-
 import seo from '~~/config/seo.json';
-import { useHead } from '#imports';
-
-// Solo la grilla de Bootstrap, sin afectar header/footer
-import 'bootstrap/dist/css/bootstrap-grid.min.css';
 
 const title = seo.title;
 
@@ -35,8 +29,8 @@ useSeoMeta({
 </script>
 
 <style scoped>
-/* Aquí solo puedes poner ajustes globales dentro del wrapper si es necesario */
+/* Opcional: estilos globales solo para el wrapper de blog */
 .blog-bootstrap-wrapper {
-  /* ejemplo: padding extra para la sección */
+  /* si quieres padding extra o fondo */
 }
 </style>
