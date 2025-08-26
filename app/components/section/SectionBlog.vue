@@ -1,24 +1,28 @@
 <template>
-<div id="hero">
-    <div class="container">
+  <section class="blog grid page-blog">
+    <div id="hero">
+      <div class="container">
         <div class="w-l center text-center">
-            <h1 class="fadeinUp mb-5">Our Blog</h1>
-            <div class="w-s center text fadeinUp">
-                <p>Stay in the loop with the latest in crypto, plus exclusive updates <br> on what we’re building.</p>
-            </div>
+          <h1 class="fadeinUp mb-5">Our Blog</h1>
+          <div class="w-s center text fadeinUp">
+            <p>
+              Stay in the loop with the latest in crypto, plus exclusive updates
+              <br />on what we’re building.
+            </p>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-  <section class="blog grid">
+
     <div class="container">
       <div class="w-l center">
         <div class="row">
-          <div 
-            class="col-sm-4" 
-            v-for="(post, index) in posts" 
+          <div
+            v-for="(post, index) in posts"
             :key="index"
+            class="col-sm-4 fadeinUp"
           >
-            <div class="grid-box fadeinUp">
+            <div class="grid-box">
               <div class="img">
                 <img :src="post.img" :alt="post.title" />
               </div>
@@ -26,7 +30,7 @@
                 <div class="meta">{{ post.date }}</div>
                 <h6>{{ post.title }}</h6>
                 <div class="border-gradient">
-                  <a :href="post.link" class="btn">View Article</a>
+                  <a :href="post.url" class="btn">View Article</a>
                 </div>
               </div>
             </div>
@@ -40,58 +44,122 @@
 <script setup>
 const posts = [
   {
-    img: '', // si no hay imagen, el CSS la oculta
     date: 'May 20th 2025',
     title: 'How Crypto is Transforming Traditional Finance',
-    link: '/blog/single',
+    img: '', // agregar imagen si hay
+    url: '#'
   },
   {
-    img: '',
     date: 'May 20th 2025',
     title: 'How Crypto is Transforming Traditional Finance',
-    link: '/blog/single',
+    img: '',
+    url: '#'
   },
   {
-    img: '',
     date: 'May 20th 2025',
     title: 'How Crypto is Transforming Traditional Finance',
-    link: '/blog/single',
+    img: '',
+    url: '#'
   },
   {
-    img: '',
     date: 'May 20th 2025',
     title: 'How Crypto is Transforming Traditional Finance',
-    link: '/blog/single',
+    img: '',
+    url: '#'
   },
   {
-    img: '',
     date: 'May 20th 2025',
     title: 'How Crypto is Transforming Traditional Finance',
-    link: '/blog/single',
+    img: '',
+    url: '#'
   },
   {
-    img: '',
     date: 'May 20th 2025',
     title: 'How Crypto is Transforming Traditional Finance',
-    link: '/blog/single',
-  },
+    img: '',
+    url: '#'
+  }
 ];
 </script>
 
-<style scoped lang="scss">
+<style scoped>
+.page-blog #hero {
+  height: 540px;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.w-xs {
+  max-width: 360px;
+}
+.w-s {
+  max-width: 560px;
+}
+.w-m {
+  max-width: 900px;
+}
+.w-l {
+  max-width: 1140px;
+}
+
+h1 {
+  font-size: 70px;
+  line-height: 106%;
+}
+h2 {
+  font-size: 60px;
+  line-height: 100%;
+}
+h3 {
+  font-size: 52px;
+  line-height: 100%;
+}
+h4 {
+  font-size: 48px;
+  line-height: 122%;
+}
+h5 {
+  font-size: 35px;
+  line-height: 122%;
+}
+h6 {
+  font-size: 28px;
+  line-height: 122%;
+}
+
+p,
+div,
+li,
+a {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 164%;
+}
+
 section.blog.grid {
   margin-bottom: 130px;
 }
 
 .blog.grid .row {
   row-gap: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
 }
 
 .grid-box .img {
-  background-color: #EFEFEF;
+  background-color: #efefef;
   width: 100%;
   aspect-ratio: 5 / 4;
   border-radius: 9px;
@@ -112,8 +180,9 @@ section.blog.grid {
 .border-gradient {
   margin-top: 30px;
   border-radius: 20px;
+  box-sizing: border-box;
   display: inline-block;
-  background: linear-gradient(to right, #BF35A8, #FA974C) border-box;
+  background: linear-gradient(to right, #bf35a8, #fa974c) border-box;
   padding: 1px;
 }
 
@@ -130,7 +199,7 @@ section.blog.grid {
 }
 
 .border-gradient a:hover {
-  background: linear-gradient(to right, #BF35A8, #FA974C) border-box;
+  background: linear-gradient(to right, #bf35a8, #fa974c) border-box;
   color: #fff;
 }
 
