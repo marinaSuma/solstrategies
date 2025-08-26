@@ -1,5 +1,4 @@
 <template>
-  <section class="blog grid page-blog">
     <div id="hero">
       <div class="container">
         <div class="w-l center text-center">
@@ -13,6 +12,7 @@
         </div>
       </div>
     </div>
+    <section class="blog grid page-blog">
 
     <div class="container">
       <div class="w-l center">
@@ -38,7 +38,7 @@
         </div>
       </div>
     </div>
-  </section>
+    </section>
 </template>
 
 <script setup>
