@@ -5,9 +5,7 @@
         <div class="container">
             <div class="w-l center text-center">
                 <Text tag="h1" variant="heading1" data-split data-linereveal>Our Blog </Text>
-                <div class="w-s center text">
-                    <p>Stay in the loop with the latest in crypto, plus exclusive updates <br> on what we’re building.</p>
-                </div>
+                <Text class="desc w-s center text" variant="body16">Stay in the loop with the latest in crypto, plus exclusive updates <br> on what we’re building.</Text>
             </div>
         </div>
     </div>     
