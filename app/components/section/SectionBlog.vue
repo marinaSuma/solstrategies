@@ -6,7 +6,7 @@
             <div class="w-l center text-center">
                 <Text tag="h1" variant="heading1" data-split data-linereveal>Our Blog </Text> 
 
-                <Text class="description color-gray" data-split data-linereveal>
+                <Text class="description color-gray" data-split data-linereveal reveal-delay="0.6">
                  tay in the loop with the latest in crypto, plus exclusive updates <br> on what we’re building.
                 </Text>
             </div>
