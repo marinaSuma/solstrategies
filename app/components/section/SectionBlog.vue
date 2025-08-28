@@ -4,8 +4,8 @@
     <div id="hero">
         <div class="container">
             <div class="w-l center text-center">
-                <h1 class="fmb-5" data-aos="fade-up">Our Blog</h1>
-                <div class="w-s center text" data-aos="fade-up">
+                <Text tag="h1" variant="heading1" data-split data-linereveal>Our Blog </Text>
+                <div class="w-s center text">
                     <p>Stay in the loop with the latest in crypto, plus exclusive updates <br> on what we’re building.</p>
                 </div>
             </div>
