@@ -59,22 +59,26 @@ const blogSection = ref(null)
 let ctx
 
 onMounted(() => {
-  ctx = gsap.context(() => {
-    gsap.from('.grid-box', {
-      y: 50,          // empieza 50px abajo
-      opacity: 0,     // empieza invisible
-      duration: 0.8,
-      stagger: 0.15,  // escalonado
-      ease: 'power2.out',
+  // Selecciona todos los elementos con la clase .grid-box
+  const gridItems = document.querySelectorAll('.grid-box');
+
+  // Itera sobre cada elemento y aplica la animación
+  gridItems.forEach((item, index) => {
+    gsap.from(item, {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      delay: index * 0.1, // Retraso escalonado
       scrollTrigger: {
-        trigger: blogSection.value,
-        start: 'top 80%',  // cuando la sección entra en la pantalla
-        end: 'bottom top',
-        toggleActions: 'play none none reverse',
-      }
-    })
-  }, blogSection.value)
-})
+        trigger: item,
+        start: 'top 80%', // Inicia la animación cuando el elemento está al 80% de la vista
+        end: 'bottom 20%',
+        scrub: true,
+        markers: false,
+      },
+    });
+  });
+});
 
 onUnmounted(() => {
   ctx?.revert()
