@@ -34,7 +34,16 @@
       padding-top: 80px;
     }
 
+    
+    
+    
     /* Tipografía */
+    
+    p, div, li, a {
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 164%;
+    }
     h1, 
     h2, 
     h3, 
@@ -43,18 +52,14 @@
     h6 {
       font-weight: 300;
     }
-    h1 { font-size: 70px; line-height: 106%; }
-    h2 { font-size: 60px; line-height: 100%; }
-    h3 { font-size: 52px; line-height: 100%; }
-    h4 { font-size: 48px; line-height: 122%; }
-    h5 { font-size: 35px; line-height: 122%; }
-    h6 { font-size: 28px; line-height: 122%; }
+    h1, h1 div { font-size: 70px; line-height: 106%; }
+    h2, h2 div { font-size: 60px; line-height: 100%; }
+    h3, h3 div { font-size: 52px; line-height: 100%; }
+    h4, h4 div { font-size: 48px; line-height: 122%; }
+    h5, h5 div { font-size: 35px; line-height: 122%; }
+    h6, h6 div { font-size: 28px; line-height: 122%; }
 
-    p, div, li, a {
-      font-size: 17px;
-      font-weight: 400;
-      line-height: 164%;
-    }
+    
 
     a, a.btn, input[type='submit'] {
         text-decoration: none;
