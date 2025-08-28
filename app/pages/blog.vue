@@ -8,7 +8,6 @@
 </template>
 
 <script setup>
-import SectionHeroBlog from '~/components/section/SectionHeroBlog.vue'
 import SectionBlog from '~/components/section/SectionBlog.vue'
 import SectionCta from '~/components/section/SectionCta.vue'
 import seo from '~~/config/seo.json'
