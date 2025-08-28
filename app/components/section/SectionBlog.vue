@@ -40,6 +40,7 @@
 </template>
 
 <script setup>
+import { onMounted, ref } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -54,33 +55,27 @@ const posts = [
   { date: 'May 20th 2025', title: 'How Crypto is Transforming Traditional Finance', img: '', url: '#' }
 ]
 
-import { ref, onMounted, onUnmounted } from 'vue'
 const blogSection = ref(null)
-let ctx
 
 onMounted(() => {
-  // Selecciona todos los elementos con la clase .grid-box
-  const gridItems = document.querySelectorAll('.grid-box');
-
-  // Itera sobre cada elemento y aplica la animación
-  gridItems.forEach((item, index) => {
-    gsap.from(item, {
+  const boxes = blogSection.value.querySelectorAll('.grid-box')
+  
+  boxes.forEach((box, index) => {
+    gsap.from(box, {
+      y: 70,
       opacity: 0,
-      y: 50,
-      duration: 1,
-      delay: index * 0.1, // Retraso escalonado
+      duration: 0.8,
+      ease: 'power2.out',
       scrollTrigger: {
-        trigger: item,
-        start: 'top 80%', // Inicia la animación cuando el elemento está al 80% de la vista
-        end: 'bottom 20%',
-        scrub: true,
-        markers: false,
+        trigger: box,
+        start: 'top 90%',    // cuando cada caja entra en pantalla
+        end: 'bottom top',
+        toggleActions: 'play none none reverse',
       },
-    });
-  });
-});
-
-onUnmounted(() => {
-  ctx?.revert()
+      delay: index * 0.15     // escalonado relativo
+    })
+  })
 })
+
+
 </script>
