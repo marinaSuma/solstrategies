@@ -85,11 +85,11 @@ onUnmounted(() => {
   overflow: hidden;
   display: flex;
   align-items: center;
-  flex-direction: column;
   width: 100%;
   min-height: 100vh;
 
   @include mx.mobile {
+    flex-direction: column;
     min-height: auto;
     padding-top: fn.toVw(160);
   }
@@ -111,14 +111,15 @@ onUnmounted(() => {
 }
 
 .wrapper {
-  display: flex;
-  gap: fn.toVw(46);
-  align-items: flex-end;
+    display: flex;
+    gap: calc(46 / var(--base-vw) * var(--base-multiplier));
+    flex-direction: column;
+    align-items: center;
 
   @include mx.mobile {
     flex-direction: column;
     gap: fn.toVw(14);
-    align-items: flex-start;
+    // align-items: flex-start;
   }
 
   .title-wrapper {
@@ -134,6 +135,7 @@ onUnmounted(() => {
       font-size: fn.toVw(125);
       font-weight: 300;
       line-height: 1.008;
+      text-align: center;
 
       @include mx.mobile {
         font-size: fn.toVw(60);
@@ -150,6 +152,7 @@ onUnmounted(() => {
     flex-direction: column;
     gap: fn.toVw(67);
     justify-content: flex-end;
+    align-items: center;
 
     @include mx.mobile {
       gap: fn.toVw(40);
@@ -158,6 +161,7 @@ onUnmounted(() => {
     .description__text {
       width: 100%;
       max-width: fn.toVw(530);
+      text-align: center;
     }
 
     .buttons {
