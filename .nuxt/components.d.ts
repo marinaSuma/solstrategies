@@ -33,7 +33,7 @@ interface _GlobalComponents {
     'MotionLogoMarquee': typeof import("../app/components/motion/MotionLogoMarquee.vue")['default']
     'MotionSlider': typeof import("../app/components/motion/MotionSlider.vue")['default']
     'PopupCookies': typeof import("../app/components/popup/PopupCookies.vue")['default']
-    'SectionBlogSectionHero': typeof import("../app/components/section/BlogSectionHero.vue")['default']
+    'SectionBlog': typeof import("../app/components/section/SectionBlog.vue")['default']
     'SectionCta': typeof import("../app/components/section/SectionCta.vue")['default']
     'SectionGrowth': typeof import("../app/components/section/SectionGrowth.vue")['default']
     'SectionHero': typeof import("../app/components/section/SectionHero.vue")['default']
@@ -143,7 +143,7 @@ interface _GlobalComponents {
     'LazyMotionLogoMarquee': LazyComponent<typeof import("../app/components/motion/MotionLogoMarquee.vue")['default']>
     'LazyMotionSlider': LazyComponent<typeof import("../app/components/motion/MotionSlider.vue")['default']>
     'LazyPopupCookies': LazyComponent<typeof import("../app/components/popup/PopupCookies.vue")['default']>
-    'LazySectionBlogSectionHero': LazyComponent<typeof import("../app/components/section/BlogSectionHero.vue")['default']>
+    'LazySectionBlog': LazyComponent<typeof import("../app/components/section/SectionBlog.vue")['default']>
     'LazySectionCta': LazyComponent<typeof import("../app/components/section/SectionCta.vue")['default']>
     'LazySectionGrowth': LazyComponent<typeof import("../app/components/section/SectionGrowth.vue")['default']>
     'LazySectionHero': LazyComponent<typeof import("../app/components/section/SectionHero.vue")['default']>
@@ -259,7 +259,7 @@ export const MotionCarousel: typeof import("../app/components/motion/MotionCarou
 export const MotionLogoMarquee: typeof import("../app/components/motion/MotionLogoMarquee.vue")['default']
 export const MotionSlider: typeof import("../app/components/motion/MotionSlider.vue")['default']
 export const PopupCookies: typeof import("../app/components/popup/PopupCookies.vue")['default']
-export const SectionBlogSectionHero: typeof import("../app/components/section/BlogSectionHero.vue")['default']
+export const SectionBlog: typeof import("../app/components/section/SectionBlog.vue")['default']
 export const SectionCta: typeof import("../app/components/section/SectionCta.vue")['default']
 export const SectionGrowth: typeof import("../app/components/section/SectionGrowth.vue")['default']
 export const SectionHero: typeof import("../app/components/section/SectionHero.vue")['default']
@@ -369,7 +369,7 @@ export const LazyMotionCarousel: LazyComponent<typeof import("../app/components/
 export const LazyMotionLogoMarquee: LazyComponent<typeof import("../app/components/motion/MotionLogoMarquee.vue")['default']>
 export const LazyMotionSlider: LazyComponent<typeof import("../app/components/motion/MotionSlider.vue")['default']>
 export const LazyPopupCookies: LazyComponent<typeof import("../app/components/popup/PopupCookies.vue")['default']>
-export const LazySectionBlogSectionHero: LazyComponent<typeof import("../app/components/section/BlogSectionHero.vue")['default']>
+export const LazySectionBlog: LazyComponent<typeof import("../app/components/section/SectionBlog.vue")['default']>
 export const LazySectionCta: LazyComponent<typeof import("../app/components/section/SectionCta.vue")['default']>
 export const LazySectionGrowth: LazyComponent<typeof import("../app/components/section/SectionGrowth.vue")['default']>
 export const LazySectionHero: LazyComponent<typeof import("../app/components/section/SectionHero.vue")['default']>
