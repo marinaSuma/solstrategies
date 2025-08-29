@@ -8,7 +8,7 @@
       <div class="wrapper">
         <div class="title-wrapper">
           <div class="title__text">
-            <Text class="title" tag="h1" data-split data-linereveal reveal-notrigger reveal-waitpreloader> Building <strong>Solana’s</strong> Future </Text>
+            <Text class="title" tag="h1" data-split data-linereveal reveal-notrigger reveal-waitpreloader> Building <strong>Solana’s</strong> <br>Future </Text>
           </div>
         </div>
 
@@ -22,13 +22,14 @@
           <div class="buttons">
             <ButtonCta class="cta" variant="black">Stay Informed</ButtonCta>
           </div>
+          <div class="small">
+            <Text class="color-gray">Subscribe to receive the latest SOL Strategies news and developments.</Text>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="logo">
-      <Text class="logo__title color-gray">Subscribe to receive the latest SOL Strategies news and developments.</Text>
-    </div>
+    
   </section>
 </template>
 
@@ -183,32 +184,10 @@ onUnmounted(() => {
   }
 }
 
-.logo {
-  display: flex;
-  flex-direction: column;
-  gap: fn.toVw(28);
-  justify-content: center;
-
-  width: 100%;
-  margin-top: fn.toVw(83);
-
-  @include mx.mobile {
-    gap: fn.toVw(20);
-  }
-
-  @include mx.desktop {
-    position: absolute;
-    bottom: fn.toVw(30);
-    left: 0;
-    margin-top: 0;
-  }
-
-  .logo__title {
+.small {
+  .small text {
     text-align: center;
   }
 
-  .logo__wrapper {
-    display: flex;
-  }
 }
 </style>

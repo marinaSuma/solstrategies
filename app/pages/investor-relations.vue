@@ -10,6 +10,7 @@
 
 <script setup>
 import seo from '~~/config/seo.json';
+import '~/assets/styles/investorStyles.scss' 
 
 useHead({
   titleTemplate: null,
