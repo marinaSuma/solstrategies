@@ -132,7 +132,7 @@ onUnmounted(() => {
     }
 
     .title {
-      font-size: fn.toVw(125);
+      font-size: 70px;
       font-weight: 300;
       line-height: 1.008;
       text-align: center;
