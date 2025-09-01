@@ -23,7 +23,7 @@
             <ButtonCta class="cta" variant="black">Stay Informed</ButtonCta>
           </div>
           <div class="small">
-            <Text class="color-gray">Subscribe to receive the latest SOL Strategies news and developments.</Text>
+            <Text class="color-gray"  data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.18">Subscribe to receive the latest SOL Strategies news and developments.</Text>
           </div>
         </div>
       </div>

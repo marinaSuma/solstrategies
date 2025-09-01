@@ -1,5 +1,9 @@
 
+// -------------------- //
+
 // HERO
+
+//-------------------- //
 
 .hero {
   position: relative;
@@ -122,8 +126,11 @@
 
 
 
+// -------------------- //
 
 // OVERVIEW
+
+// -------------------- //
 
 .overview {
   position: relative;
@@ -151,11 +158,11 @@
   }
 
   .title {
-    margin-bottom: fn.toVw(-150);
+    // margin-bottom: fn.toVw(-150);
 
-    @include mx.mobile {
-      margin-bottom: fn.toVw(-100);
-    }
+    // @include mx.mobile {
+    //   margin-bottom: fn.toVw(-100);
+    // }
   }
 
   .ticker {
@@ -184,10 +191,12 @@
 
     .ticker__tape {
       height: 46px;
-      margin-top: calc(fn.toVw(98) - fn.toVw(64));
+      // margin-top: calc(fn.toVw(98) - fn.toVw(64));
+      margin-top: 60px;
 
       @include mx.mobile {
-        margin-top: fn.toVw(46);
+        // margin-top: fn.toVw(46);
+         margin-top: 40px;
       }
     }
   }
