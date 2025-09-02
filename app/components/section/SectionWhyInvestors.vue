@@ -6,17 +6,17 @@
     </div>
 
     <div ref="elList" class="list">
-      <CardWhy class="content" background="/invcard1.webp" title="Solanameets Wall Street" number="1">
+      <CardWhyInvestors class="content" background="/invcard1.webp">
         <template #desc>
           <p data-split>Solanameets Wall Street</p>
         </template>
-      </CardWhy>
-      <CardWhy class="content" background="/invcard2.webp" title="Thank you for subscribing! " number="2">
+      </CardWhyInvestors>
+      <CardWhyInvestors class="content" background="/invcard2.webp">
         <template #desc>
           <p data-split>Thank you for subscribing! </p>
         </template>
-      </CardWhy>
-      <CardWhy class="content" background="/invcard3.webp" title="Sign up to receive Sol Strategies updates" number="3">
+      </CardWhyInvestors>
+      <CardWhyInvestors class="content" background="/invcard3.webp">
         <template #desc>
           <p data-split>Sign up to receiveSol Strategies updates </p>
           
@@ -26,7 +26,7 @@
             <li data-split>Key tokenization catalysts emerge.</li>
           </ul>
         </template>
-      </CardWhy>
+      </CardWhyInvestors>
     </div>
   </section>
 </template>
