@@ -16,7 +16,7 @@
                 <Text class="title" tag="h1" data-split> Solana <br> meets Wall Street </Text>
               </div>
             </div>
-            <Text data-split>Innovation Built for Long-Term</Text>
+            <Text class="text" data-split>Innovation Built for Long-Term</Text>
           </div>
           <div class="bottom">
             <div class="buttons">
@@ -39,7 +39,7 @@
                 <Text class="title" tag="h1" data-split> Thank you for subscribing! </Text>
               </div>
             </div>
-            <Text data-split>Please check your email to confirm your subscription.</Text>
+            <Text class="text" data-split>Please check your email to confirm your subscription.</Text>
           </div>
       </CardWhyInvestors>
 
@@ -54,7 +54,7 @@
           </div>
           <div class="bottom">
            
-            <Text data-split>Form</Text>
+            <Text class="text" data-split>Form</Text>
           </div>
           
       </CardWhyInvestors>
