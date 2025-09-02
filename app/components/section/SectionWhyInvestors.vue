@@ -23,7 +23,7 @@
               <ButtonCta class="cta">solstrategies.io</ButtonCta>
               <ButtonCta class="cta" variant="black">JUNE 2025</ButtonCta>
             </div>
-            <p class="small" data-split></p>solstrategies.io</p>
+            <p class="small" data-split>solstrategies.io</p>
           </div>
   
       </CardWhyInvestors>
