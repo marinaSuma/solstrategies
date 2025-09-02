@@ -373,9 +373,30 @@
 
 
 
+  .media-img {
+    object-fit: contain;
+    margin: 0;
+    width: auto;
+  }
 
+  .media-img img.logo  {
+    height: 50px;
+  }
 
+  .media-img img.iso  {
+    height: 50px;
+  }
+  .media-img.iso img {
+    object-fit: contain;
+    height: 50px;
+  }
 
+.content.card{
+  .top,.bottom{
+  position: relative;
+  z-index: 1;
+  }
+}
 
   
 }

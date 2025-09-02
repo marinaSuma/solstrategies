@@ -8,7 +8,7 @@
     <div ref="elList" class="list">
       <CardWhyInvestors class="content" background="/invcard1.webp">
           <div class="top">
-             <MediaImg src="SolLogo.svg" img-class="logo" alt="Logo" />
+             <MediaImg src="SolLogo.svg" class="logo" alt="Logo" />
           </div>
           <div class="center">
             <div class="title-wrapper">
@@ -31,7 +31,7 @@
 
       <CardWhyInvestors class="content" background="/invcard2.webp">
           <div class="top">
-             <MediaImg src="logo.png" img-class="iso" alt="Logo" />
+             <MediaImg src="logo.png" class="iso" alt="Logo" />
           </div>
           <div class="center">
             <div class="title-wrapper">
@@ -225,19 +225,6 @@ onUnmounted(() => {
 
 }
 
-.media-img {
-object-fit: contain;
-margin: 0;
-width: auto;
-}
-
-.media-img img.logo  {
-    height: 50px;
-}
-
-.media-img img.iso  {
-  height: 50px;
-}
 
 .card.content:first-child {
   position: relative;
@@ -253,21 +240,37 @@ width: auto;
 .card.content:not(:first-child) {
   justify-content: flex-start;
   gap: 60px;
+  
     h1.title {
     font-size: 53px;
     line-height: 110%;
     font-weight: 300;
-    text-align: center;
     color:#000;
-    text-align: left;
+    
   }
 
 
   p{
     font-size: 16px;
-    text-align: center;
     color: #000;
   }
+
+}
+
+.card.content:nth-child(2) {
+  align-items: center;
+  
+    h1.title {
+    text-align: center;
+    text-align: center;
+    
+  }
+
+
+  p{
+    text-align: center;
+  }
+
 }
 
 
