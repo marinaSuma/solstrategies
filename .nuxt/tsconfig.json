@@ -149,7 +149,7 @@
         "./imports"
       ],
       "#app-manifest": [
-        "./manifest/meta/dev.json"
+        "./manifest/meta/dev"
       ],
       "#components": [
         "./components"
@@ -225,8 +225,6 @@
     "../node_modules/@nuxtjs/device/node_modules",
     "../node_modules/@vueuse/nuxt/node_modules",
     "../node_modules/nuxt-purgecss/node_modules",
-    "../node_modules/@nuxt/eslint/node_modules",
-    "../node_modules/@nuxtjs/stylelint-module/node_modules",
     "../node_modules/@nuxtjs/critters/node_modules",
     "../node_modules/nuxt-site-config/node_modules",
     "../node_modules/@nuxtjs/robots/node_modules",

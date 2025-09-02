@@ -122,6 +122,12 @@
       "#schema-org/*": [
         "../node_modules/nuxt-schema-org/dist/runtime/*"
       ],
+      "#link-checker": [
+        "../node_modules/nuxt-link-checker/dist/runtime"
+      ],
+      "#link-checker/*": [
+        "../node_modules/nuxt-link-checker/dist/runtime/*"
+      ],
       "#seo-utils": [
         "../node_modules/nuxt-seo-utils/dist/runtime"
       ],
@@ -154,6 +160,9 @@
       ],
       "#internal/nuxt-robots/*": [
         "../node_modules/@nuxtjs/robots/dist/runtime/server/composables/*"
+      ],
+      "#link-checker/content-provider": [
+        "../node_modules/nuxt-link-checker/dist/runtime/server/providers/noop"
       ]
     },
     "lib": [
@@ -184,8 +193,6 @@
     "../node_modules/@nuxtjs/device/node_modules",
     "../node_modules/@vueuse/nuxt/node_modules",
     "../node_modules/nuxt-purgecss/node_modules",
-    "../node_modules/@nuxt/eslint/node_modules",
-    "../node_modules/@nuxtjs/stylelint-module/node_modules",
     "../node_modules/@nuxtjs/critters/node_modules",
     "../node_modules/nuxt-site-config/node_modules",
     "../node_modules/@nuxtjs/robots/node_modules",

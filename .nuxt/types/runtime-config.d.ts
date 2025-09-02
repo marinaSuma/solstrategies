@@ -182,6 +182,8 @@ import { RuntimeConfig as UserRuntimeConfig, PublicRuntimeConfig as UserPublicRu
    },
 
    tradingview: {
+      overrideDefaults: boolean,
+
       experimental: {
          anonymousCrossOrigin: boolean,
       },

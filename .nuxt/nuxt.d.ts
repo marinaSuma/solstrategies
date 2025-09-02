@@ -1,9 +1,8 @@
 /// <reference types="@vueuse/nuxt" />
-/// <reference types="@nuxtjs/device" />
+/// <reference types="@nuxt/devtools" />
 /// <reference types="@nuxt/image" />
+/// <reference types="@nuxtjs/device" />
 /// <reference types="nuxt-purgecss" />
-/// <reference types="@nuxt/eslint" />
-/// <reference types="@nuxtjs/stylelint-module" />
 /// <reference types="@nuxtjs/critters" />
 /// <reference types="@nuxtjs/seo" />
 /// <reference types="nuxt-svgo" />
@@ -12,7 +11,6 @@
 /// <reference types="@nuxt/scripts" />
 /// <reference types="@nuxt/devtools" />
 /// <reference types="@nuxt/telemetry" />
-/// <reference types="@nuxt/devtools" />
 /// <reference path="types/builder-env.d.ts" />
 /// <reference path="types/plugins.d.ts" />
 /// <reference path="types/build.d.ts" />
@@ -37,6 +35,5 @@
 /// <reference path="schema/nuxt.schema.d.ts" />
 /// <reference path="module/nuxt-scripts.d.ts" />
 /// <reference path="types/nitro.d.ts" />
-/// <reference path="./eslint-typegen.d.ts" />
 
 export {}

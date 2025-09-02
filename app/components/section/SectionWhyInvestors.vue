@@ -6,18 +6,20 @@
     </div>
 
     <div ref="elList" class="list">
-      <CardWhy class="content" background="/why-1.png" title="24/7 decentralized trading" number="1">
+      <CardWhy class="content" background="/invcard1-min.png" title="Solanameets Wall Street" number="1">
         <template #desc>
-          <p data-split>Creating new financial markets that operate continuously with instant settlement and global accessibility.</p>
+          <p data-split>Solanameets Wall Street</p>
         </template>
       </CardWhy>
-      <CardWhy class="content" background="/why-2.png" title="Instant global payments" number="2">
+      <CardWhy class="content" background="/invcard2-min.png" title="Thank you for subscribing! " number="2">
         <template #desc>
-          <p data-split>Enabling programmable financial products that didn't exist before, from tokenized equities to real-time settlement.</p>
+          <p data-split>Thank you for subscribing! </p>
         </template>
       </CardWhy>
-      <CardWhy class="content" background="/why-3.png" title="Exponential Growth" number="3">
+      <CardWhy class="content" background="/invcard3-min.png" title="Sign up to receive Sol Strategies updates" number="3">
         <template #desc>
+          <p data-split>Sign up to receiveSol Strategies updates </p>
+          
           <ul>
             <li data-split>$160B Solana DEX volume (May 2025)</li>
             <li data-split>Digital asset market growth: $3.3T → $11.7T by 2030</li>
@@ -99,97 +101,3 @@ onUnmounted(() => {
   ctx?.revert();
 });
 </script>
-
-<style scoped lang="scss">
-.why {
-  position: relative;
-  min-height: 100vh;
-
-  @include mx.mobile {
-    padding: 0 fn.toVw($layout-container-mobile);
-  }
-}
-
-.text {
-  display: flex;
-  flex-direction: column;
-  gap: fn.toVw(30);
-
-  margin-bottom: fn.toVw(93);
-
-  text-align: center;
-
-  @include mx.mobile {
-    gap: fn.toVw(27);
-    margin-bottom: fn.toVw(74);
-  }
-
-  .title {
-    font-weight: 300;
-    line-height: normal;
-
-    b {
-      font-weight: 500;
-    }
-  }
-
-  .desc {
-    width: 100%;
-    max-width: fn.toVw(242);
-    margin: 0 auto;
-  }
-}
-
-.list {
-  position: relative;
-
-  overflow: hidden;
-
-  width: 100%;
-  max-width: fn.toVw(1135);
-  height: 100%;
-  margin: 0 auto;
-
-  @include mx.mobile {
-    max-width: 100%;
-  }
-
-  .content-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    perspective: 250vw;
-  }
-
-  .content {
-    position: absolute;
-    inset: 0;
-    transform-origin: 50% 10%;
-    transform-style: preserve-3d;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    &:not(:nth-child(1)) {
-      transform: translate(0, 100vh);
-    }
-
-    &:nth-child(1) {
-      position: relative;
-    }
-
-    &:nth-child(2) {
-      background-color: #8966a9;
-    }
-
-    &:nth-child(3) {
-      background-color: #85998e;
-    }
-
-    &:deep(.line) {
-      transform: translateY(105%);
-    }
-  }
-}
-</style>

@@ -37,10 +37,14 @@ interface _GlobalComponents {
     'SectionCta': typeof import("../app/components/section/SectionCta.vue")['default']
     'SectionGrowth': typeof import("../app/components/section/SectionGrowth.vue")['default']
     'SectionHero': typeof import("../app/components/section/SectionHero.vue")['default']
+    'SectionHeroInvestors': typeof import("../app/components/section/SectionHeroInvestors.vue")['default']
     'SectionMilestones': typeof import("../app/components/section/SectionMilestones.vue")['default']
+    'SectionMilestonesInvestors': typeof import("../app/components/section/SectionMilestonesInvestors.vue")['default']
     'SectionOverview': typeof import("../app/components/section/SectionOverview.vue")['default']
+    'SectionOverviewInvestors': typeof import("../app/components/section/SectionOverviewInvestors.vue")['default']
     'SectionTestimonial': typeof import("../app/components/section/SectionTestimonial.vue")['default']
     'SectionWhy': typeof import("../app/components/section/SectionWhy.vue")['default']
+    'SectionWhyInvestors': typeof import("../app/components/section/SectionWhyInvestors.vue")['default']
     'SeparationLine': typeof import("../app/components/separation/SeparationLine.vue")['default']
     'Text': typeof import("../app/components/text/Text.vue")['default']
     'TextLogo': typeof import("../app/components/text/TextLogo.vue")['default']
@@ -147,10 +151,14 @@ interface _GlobalComponents {
     'LazySectionCta': LazyComponent<typeof import("../app/components/section/SectionCta.vue")['default']>
     'LazySectionGrowth': LazyComponent<typeof import("../app/components/section/SectionGrowth.vue")['default']>
     'LazySectionHero': LazyComponent<typeof import("../app/components/section/SectionHero.vue")['default']>
+    'LazySectionHeroInvestors': LazyComponent<typeof import("../app/components/section/SectionHeroInvestors.vue")['default']>
     'LazySectionMilestones': LazyComponent<typeof import("../app/components/section/SectionMilestones.vue")['default']>
+    'LazySectionMilestonesInvestors': LazyComponent<typeof import("../app/components/section/SectionMilestonesInvestors.vue")['default']>
     'LazySectionOverview': LazyComponent<typeof import("../app/components/section/SectionOverview.vue")['default']>
+    'LazySectionOverviewInvestors': LazyComponent<typeof import("../app/components/section/SectionOverviewInvestors.vue")['default']>
     'LazySectionTestimonial': LazyComponent<typeof import("../app/components/section/SectionTestimonial.vue")['default']>
     'LazySectionWhy': LazyComponent<typeof import("../app/components/section/SectionWhy.vue")['default']>
+    'LazySectionWhyInvestors': LazyComponent<typeof import("../app/components/section/SectionWhyInvestors.vue")['default']>
     'LazySeparationLine': LazyComponent<typeof import("../app/components/separation/SeparationLine.vue")['default']>
     'LazyText': LazyComponent<typeof import("../app/components/text/Text.vue")['default']>
     'LazyTextLogo': LazyComponent<typeof import("../app/components/text/TextLogo.vue")['default']>
@@ -263,10 +271,14 @@ export const SectionBlog: typeof import("../app/components/section/SectionBlog.v
 export const SectionCta: typeof import("../app/components/section/SectionCta.vue")['default']
 export const SectionGrowth: typeof import("../app/components/section/SectionGrowth.vue")['default']
 export const SectionHero: typeof import("../app/components/section/SectionHero.vue")['default']
+export const SectionHeroInvestors: typeof import("../app/components/section/SectionHeroInvestors.vue")['default']
 export const SectionMilestones: typeof import("../app/components/section/SectionMilestones.vue")['default']
+export const SectionMilestonesInvestors: typeof import("../app/components/section/SectionMilestonesInvestors.vue")['default']
 export const SectionOverview: typeof import("../app/components/section/SectionOverview.vue")['default']
+export const SectionOverviewInvestors: typeof import("../app/components/section/SectionOverviewInvestors.vue")['default']
 export const SectionTestimonial: typeof import("../app/components/section/SectionTestimonial.vue")['default']
 export const SectionWhy: typeof import("../app/components/section/SectionWhy.vue")['default']
+export const SectionWhyInvestors: typeof import("../app/components/section/SectionWhyInvestors.vue")['default']
 export const SeparationLine: typeof import("../app/components/separation/SeparationLine.vue")['default']
 export const Text: typeof import("../app/components/text/Text.vue")['default']
 export const TextLogo: typeof import("../app/components/text/TextLogo.vue")['default']
@@ -373,10 +385,14 @@ export const LazySectionBlog: LazyComponent<typeof import("../app/components/sec
 export const LazySectionCta: LazyComponent<typeof import("../app/components/section/SectionCta.vue")['default']>
 export const LazySectionGrowth: LazyComponent<typeof import("../app/components/section/SectionGrowth.vue")['default']>
 export const LazySectionHero: LazyComponent<typeof import("../app/components/section/SectionHero.vue")['default']>
+export const LazySectionHeroInvestors: LazyComponent<typeof import("../app/components/section/SectionHeroInvestors.vue")['default']>
 export const LazySectionMilestones: LazyComponent<typeof import("../app/components/section/SectionMilestones.vue")['default']>
+export const LazySectionMilestonesInvestors: LazyComponent<typeof import("../app/components/section/SectionMilestonesInvestors.vue")['default']>
 export const LazySectionOverview: LazyComponent<typeof import("../app/components/section/SectionOverview.vue")['default']>
+export const LazySectionOverviewInvestors: LazyComponent<typeof import("../app/components/section/SectionOverviewInvestors.vue")['default']>
 export const LazySectionTestimonial: LazyComponent<typeof import("../app/components/section/SectionTestimonial.vue")['default']>
 export const LazySectionWhy: LazyComponent<typeof import("../app/components/section/SectionWhy.vue")['default']>
+export const LazySectionWhyInvestors: LazyComponent<typeof import("../app/components/section/SectionWhyInvestors.vue")['default']>
 export const LazySeparationLine: LazyComponent<typeof import("../app/components/separation/SeparationLine.vue")['default']>
 export const LazyText: LazyComponent<typeof import("../app/components/text/Text.vue")['default']>
 export const LazyTextLogo: LazyComponent<typeof import("../app/components/text/TextLogo.vue")['default']>

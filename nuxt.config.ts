@@ -4,6 +4,7 @@ import variables from './config/variables.json';
 import seo from './config/seo.json';
 
 export default defineNuxtConfig({
+  srcDir: 'app/', // 👈 MUY IMPORTANTE: ahora Nuxt busca todo dentro de /app
   site: {
     url: seo.site,
     name: seo.title,
@@ -60,7 +61,7 @@ export default defineNuxtConfig({
 
   // css
   css: [
-  'bootstrap/dist/css/bootstrap-grid.css', // solo la grid
+  // 'bootstrap/dist/css/bootstrap-grid.css', // solo la grid
   '~/assets/styles/app.scss',                  // tus estilos principales
   ],
 
@@ -71,8 +72,8 @@ export default defineNuxtConfig({
     '@nuxtjs/device',
     '@vueuse/nuxt',
     'nuxt-purgecss',
-    '@nuxt/eslint',
-    '@nuxtjs/stylelint-module',
+    // '@nuxt/eslint',
+    // '@nuxtjs/stylelint-module',
     '@nuxtjs/critters',
     '@nuxtjs/seo',
     'nuxt-svgo',

@@ -2,6 +2,8 @@
   <section ref="el" class="hero">
     <div class="bg">
       <!-- <MediaImg :provider="false" src="/thumbnail.jpg" alt="Logo" /> -->
+        <MediaImg src="/hInv.webp" class="bgA" alt="Background" />
+        <!-- <MediaImg src="/hInv2.svg" class="bg2" alt="Background" /> -->
     </div>
 
     <div class="container">
@@ -20,7 +22,7 @@
           </div>
 
           <div class="buttons">
-            <ButtonCta class="cta" variant="black">Stay Informed</ButtonCta>
+            <ButtonCta class="cta" variant="black">Stay Informed <span class="arrow"><MediaImg src="/arrow-white.svg" alt="Arrow" /></span></ButtonCta>
           </div>
           <div class="small">
             <Text class="color-gray"  data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.18">Subscribe to receive the latest SOL Strategies news and developments.</Text>
