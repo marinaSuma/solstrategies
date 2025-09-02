@@ -139,141 +139,149 @@ onUnmounted(() => {
 <style scoped lang="scss">
 
 
-  .card {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    height: fn.toVw(615);
-    padding: 50px;
-    border-radius: fn.toVw(55);
-    color: $color-white;
-    background-color: #ef8268;
+.card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: fn.toVw(615);
+  padding: 50px;
+  border-radius: fn.toVw(55);
+  color: $color-white;
+  background-color: #ef8268;
 
-    @include mx.mobile {
-      height: fn.toVw(438);
-      padding: 20px 30px;
-      border-radius: fn.toVw(24);
-    }
+  @include mx.mobile {
+    height: fn.toVw(438);
+    padding: 20px 30px;
+    border-radius: fn.toVw(24);
+  }
 
 
-    &.active {
-      .bottom {
-        .desc {
-          ul,
-          &:deep(ul) {
-            li {
-              &::before {
-                transform: scale(1);
-              }
+  &.active {
+    .bottom {
+      .desc {
+        ul,
+        &:deep(ul) {
+          li {
+            &::before {
+              transform: scale(1);
             }
           }
         }
       }
     }
+  }
 
 
-    h1.title {
-      color: #000;
-      font-weight: 200;
+  h1.title {
+    color: #000;
+    font-weight: 200;
+  }
+
+  p {
+    color: #000;
+    font-size: 19.893px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 86%;
+    margin-top: 20px;
+
+    &.small{
+      font-size: 16px;
     }
+  }
 
-    p {
-      color: #000;
-      font-size: 19.893px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 86%;
-      margin-top: 20px;
+  .bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 
-      &.small{
-        font-size: 16px;
-      }
-    }
+    .buttons {
+      display: flex;
+      gap: 30px;
 
-    .bottom {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-
-      .buttons {
-        display: flex;
-        gap: 30px;
-
-        .btn.fill {
-          text-transform: uppercase;
-          border-radius: 30px;
-          &.white {
-            border: 1px solid #000;
-            background: #F5F5F5;
-            color: #000;
-          }
-
-          &.black {
-            border: 1px solid #000;
-            background: #000;
-          }
+      .btn.fill {
+        text-transform: uppercase;
+        border-radius: 30px;
+        &.white {
+          border: 1px solid #000;
+          background: #F5F5F5;
+          color: #000;
         }
 
-      }
-    }
-
-    .media-img {
-    object-fit: contain;
-    margin: 0;
-    width: auto;
-
-      &.logo img{
-        height: 50px;
-      }
-      &.iso img{
-        height: 60px;
+        &.black {
+          border: 1px solid #000;
+          background: #000;
+        }
       }
 
     }
+  }
 
-    .media-img.logo img {
-       height: 50px;
-    }
+  .media-img {
+  object-fit: contain;
+  margin: 0;
+  width: auto;
 
-    .media-img.iso img {
+    &.logo img{
       height: 50px;
     }
-
+    &.iso img{
+      height: 60px;
+    }
 
   }
+
+  .media-img.logo img {
+      height: 50px;
+  }
+
+  .media-img.iso img {
+    height: 50px;
+  }
+
+
+}
 
  
 
-  .card.content:first-child {
-    position: relative;
-    text-align: left;
-    align-items: flex-start;
+.card.content:first-child {
+  position: relative;
+  text-align: left;
+  align-items: flex-start;
 
-     h1.title {
-      font-size: 70px;
-      line-height: 80%;
-    }
+    h1.title {
+    font-size: 70px;
+    line-height: 80%;
+  }
+}
+
+.card.content:not(:first-child) {
+  justify-content: flex-start;
+  gap: 60px;
+    h1.title {
+    font-size: 53px;
+    line-height: 110%;
+    font-weight: 300;
+    text-align: center;
+    color:#000;
+    text-align: left;
   }
 
-  .card.content:not(:first-child) {
-    justify-content: flex-start;
-    gap: 60px;
-     h1.title {
-      font-size: 53px;
-      line-height: 110%;
-      font-weight: 300;
-      text-align: center;
-      color: #000;
-    }
 
-    p{
-      font-size: 16px;
-      text-align: center;
-      color: #000;
-    }
+  p{
+    font-size: 16px;
+    text-align: center;
+    color: #000;
+  }
+}
+
+
+.card.content:last-child, .card.content:last-child h1 {
+  align-items: self-start;
+  text-align: left;
 }
 
 </style>
