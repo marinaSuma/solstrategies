@@ -6,17 +6,17 @@
     </div>
 
     <div ref="elList" class="list">
-      <CardWhy class="content" background="/invcard1-min.png" title="Solanameets Wall Street" number="1">
+      <CardWhy class="content" background="/invcard1.webp" title="Solanameets Wall Street" number="1">
         <template #desc>
           <p data-split>Solanameets Wall Street</p>
         </template>
       </CardWhy>
-      <CardWhy class="content" background="/invcard2-min.png" title="Thank you for subscribing! " number="2">
+      <CardWhy class="content" background="/invcard2.webp" title="Thank you for subscribing! " number="2">
         <template #desc>
           <p data-split>Thank you for subscribing! </p>
         </template>
       </CardWhy>
-      <CardWhy class="content" background="/invcard3-min.png" title="Sign up to receive Sol Strategies updates" number="3">
+      <CardWhy class="content" background="/invcard3.webp" title="Sign up to receive Sol Strategies updates" number="3">
         <template #desc>
           <p data-split>Sign up to receiveSol Strategies updates </p>
           
