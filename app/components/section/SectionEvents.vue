@@ -1,6 +1,5 @@
 <template>
-  
-<section class="new-latest-financial-bg">
+<section ref="el" class="new-latest-financial-bg">
   <div class="container">
     <Text class="title" tag="h1" data-split data-linereveal reveal-notrigger reveal-waitpreloader> Upcoming Events </Text>
 		<div class="new-latest-financial-grid">
@@ -62,6 +61,13 @@
 </section>
 </template>
 
+
+
+<script setup>
+
+const el = useTemplateRef('el');
+let ctx;
+</script>
 
 <style scoped lang="scss">
 
