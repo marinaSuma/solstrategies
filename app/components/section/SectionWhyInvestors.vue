@@ -220,32 +220,32 @@ onUnmounted(() => {
     }
   }
 
-  .media-img {
-  object-fit: contain;
-  margin: 0;
-  width: auto;
 
-    &.logo img{
-      height: 50px;
-    }
-    &.iso img{
-      height: 60px;
-    }
-
-  }
-
-  .media-img.logo img {
-      height: 50px;
-  }
-
-  .media-img.iso img {
-    height: 50px;
-  }
 
 
 }
 
- 
+.media-img {
+object-fit: contain;
+margin: 0;
+width: auto;
+
+  &.logo img{
+    height: 50px;
+  }
+  &.iso img{
+    height: 60px;
+  }
+
+}
+
+.media-img.logo img {
+    height: 50px;
+}
+
+.media-img.iso img {
+  height: 50px;
+}
 
 .card.content:first-child {
   position: relative;
