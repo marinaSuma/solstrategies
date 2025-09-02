@@ -3,29 +3,17 @@
     <div v-if="props.background" class="bg">
       <MediaImg :src="props.background" alt="Background of card" />
     </div>
-
-    <!-- <div class="top">
-      <Text class="title" variant="heading1medium60" data-split>{{ props.title }}</Text>
-      <Text class="number" variant="heading1medium60" data-split>(0{{ props.number }})</Text>
-    </div>
-
-    <div class="bottom">
-      <Text class="desc" variant="heading1medium60" tag="span">
-        <slot name="desc" />
-      </Text>
-    </div> -->
+    <slot />
   </div>
 </template>
 
+
+
 <script setup>
 const props = defineProps({
-  title: String,
-  number: String,
-  desc: String,
-  background: String,
+  background: String
 });
 </script>
-
 
 <style scoped lang="scss">
 .card {
