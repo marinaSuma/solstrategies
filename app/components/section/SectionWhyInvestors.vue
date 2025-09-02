@@ -23,7 +23,7 @@
               <ButtonCta class="cta">solstrategies.io</ButtonCta>
               <ButtonCta class="cta" variant="black">JUNE 2025</ButtonCta>
             </div>
-            <Text class="small" data-split>solstrategies.io</Text>
+            <Text tag="p" class="small" data-split>solstrategies.io</Text>
           </div>
   
       </CardWhyInvestors>
@@ -39,7 +39,7 @@
                 <Text class="title" tag="h1" data-split> Thank you for subscribing! </Text>
               </div>
             </div>
-            <Text class="text" data-split>Please check your email to confirm your subscription.</Text>
+            <Text tag="p" class="text" data-split>Please check your email to confirm your subscription.</Text>
           </div>
       </CardWhyInvestors>
 
@@ -54,7 +54,7 @@
           </div>
           <div class="bottom">
            
-            <Text class="text" data-split>Form</Text>
+            <Text tag="p" class="text" data-split>Form</Text>
           </div>
           
       </CardWhyInvestors>
