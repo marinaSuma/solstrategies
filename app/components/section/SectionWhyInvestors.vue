@@ -23,48 +23,40 @@
               <ButtonCta class="cta">solstrategies.io</ButtonCta>
               <ButtonCta class="cta" variant="black">JUNE 2025</ButtonCta>
             </div>
-            <p class="small" data-split>solstrategies.io</p>
+            <Text class="small" data-split>solstrategies.io</Text>
           </div>
   
       </CardWhyInvestors>
 
+
       <CardWhyInvestors class="content" background="/invcard2.webp">
           <div class="top">
-             <MediaImg src="SolLogo.svg" alt="Logo" />
+             <MediaImg src="logo.png" alt="Logo" />
           </div>
           <div class="center">
             <div class="title-wrapper">
               <div class="title__text">
-                <Text class="title" tag="h1" data-split> Solanameets Wall Street </Text>
+                <Text class="title" tag="h1" data-split> Thank you for subscribing! </Text>
               </div>
             </div>
-            <p data-split>Innovation Built for Long-Term</p>
-          </div>
-          <div class="bottom">
-            <div class="buttons">
-              <ButtonCta class="cta">solstrategies.io</ButtonCta>
-              <ButtonCta class="cta" variant="black">JUNE 2025</ButtonCta>
-            </div>
+            <p data-split>Please check your email to confirm your subscription.</p>
           </div>
       </CardWhyInvestors>
+
+
       <CardWhyInvestors class="content" background="/invcard3.webp">
           <div class="top">
-             <MediaImg src="SolLogo.svg" alt="Logo" />
-          </div>
-          <div class="center">
-            <div class="title-wrapper">
-              <div class="title__text">
-                <Text class="title" tag="h1" data-split> Solanameets Wall Street </Text>
+              <div class="title-wrapper">
+                <div class="title__text">
+                  <Text class="title" tag="h1" data-split>Sign up to receiveSol Strategies updates </Text>
+                </div>
               </div>
-            </div>
-            <p data-split>Innovation Built for Long-Term</p>
           </div>
           <div class="bottom">
-              <div class="buttons">
-                <ButtonCta class="cta">solstrategies.io</ButtonCta>
-                <ButtonCta class="cta" variant="black">JUNE 2025</ButtonCta>
-            </div>
+           
+            <p data-split>Form</p>
           </div>
+          
       </CardWhyInvestors>
     </div>
   </section>
