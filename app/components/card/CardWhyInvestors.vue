@@ -38,8 +38,6 @@ const props = defineProps({
     }
 
 
-
-
     &.active {
       .bottom {
         .desc {
@@ -54,38 +52,11 @@ const props = defineProps({
         }
       }
     }
-  }
-
-  .bg {
-    position: absolute;
-    z-index: 0;
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-  }
-
-  .media-img.logo img {
-    object-fit: contain;
-    height: 50px;
-    margin: 0;
-  }
 
 
-
-  .card.content:first-child {
-    position: relative;
-    text-align: left;
-    align-items: flex-start;
-  }
-
-
-  .card.content{
     h1.title {
       color: #000;
-      font-size: 80px;
       font-weight: 200;
-      line-height: 80%;
     }
 
     p {
@@ -128,10 +99,61 @@ const props = defineProps({
       }
     }
 
+    .media-img {
+    object-fit: contain;
+    margin: 0;
+
+      &.logo img{
+        height: 50px;
+      }
+      &.iso img{
+        height: 60px;
+      }
+
+    }
 
 
 
   }
+
+  .bg {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .card.content:first-child {
+    position: relative;
+    text-align: left;
+    align-items: flex-start;
+
+     h1.title {
+      font-size: 80px;
+      line-height: 80%;
+    }
+  }
+
+  .card.content:not(:first-child) {
+    justify-content: flex-start;
+    gap: 60px;
+     h1.title {
+      font-size: 83px;
+      line-height: 80%;
+      font-weight: 300;
+      text-align: center;
+      color: #000;
+    }
+
+    p{
+      font-size: 16px;
+      text-align: center;
+      color: #000;
+    }
+}
 
 
 // .top {
