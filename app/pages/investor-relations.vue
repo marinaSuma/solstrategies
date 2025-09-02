@@ -2,6 +2,7 @@
   <div :class="$route.name">
     <SectionHeroInvestors />
     <SectionWhyInvestors />
+    <SectionEvents />
     <SectionOverviewInvestors />
     <SectionMilestonesInvestors />
     <SectionCta />
