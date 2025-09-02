@@ -54,63 +54,7 @@ const props = defineProps({
     }
 
 
-    h1.title {
-      color: #000;
-      font-weight: 200;
-    }
-
-    Text {
-      color: #000;
-      font-size: 19.893px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 86%;
-      margin-top: 20px;
-
-      &.small{
-        font-size: 14px;
-      }
-    }
-
-    .bottom {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-
-      .buttons {
-        display: flex;
-        gap: 30px;
-
-        .btn.fill {
-          text-transform: uppercase;
-          border-radius: 30px;
-          &.white {
-            border: 1px solid #000;
-            background: #F5F5F5;
-            color: #000;
-          }
-
-          &.black {
-            border: 1px solid #000;
-            background: #000;
-          }
-        }
-
-      }
-    }
-
-    .media-img {
-    object-fit: contain;
-    margin: 0;
-
-      &.logo img{
-        height: 50px;
-      }
-      &.iso img{
-        height: 60px;
-      }
-
-    }
+   
 
 
 
@@ -123,6 +67,65 @@ const props = defineProps({
 
     width: 100%;
     height: 100%;
+  }
+
+
+  .card.content h1.title {
+    color: #000;
+    font-weight: 200;
+  }
+
+  .card.content Text {
+    color: #000;
+    font-size: 19.893px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 86%;
+    margin-top: 20px;
+
+    &.small{
+      font-size: 14px;
+    }
+  }
+
+  .bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+    .buttons {
+      display: flex;
+      gap: 30px;
+
+      .btn.fill {
+        text-transform: uppercase;
+        border-radius: 30px;
+        &.white {
+          border: 1px solid #000;
+          background: #F5F5F5;
+          color: #000;
+        }
+
+        &.black {
+          border: 1px solid #000;
+          background: #000;
+        }
+      }
+
+    }
+  }
+
+  .media-img {
+    object-fit: contain;
+    margin: 0;
+
+      &.logo img{
+        height: 50px;
+      }
+      &.iso img{
+        height: 60px;
+      }
+
   }
 
 
@@ -153,7 +156,7 @@ const props = defineProps({
       text-align: center;
       color: #000;
     }
-}
+  }
 
 
 // .top {
