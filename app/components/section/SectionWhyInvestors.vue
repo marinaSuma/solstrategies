@@ -7,25 +7,63 @@
 
     <div ref="elList" class="list">
       <CardWhyInvestors class="content" background="/invcard1.webp">
-        <template #desc>
-          <p data-split>Solanameets Wall Street</p>
-        </template>
+          <div class="top">
+             <MediaImg src="SolLogo.svg" alt="Logo" />
+          </div>
+          <div class="center">
+            <div class="title-wrapper">
+              <div class="title__text">
+                <Text class="title" tag="h1" data-split> Solanameets Wall Street </Text>
+              </div>
+            </div>
+            <p data-split>Innovation Built for Long-Term</p>
+          </div>
+          <div class="bottom">
+            <div class="buttons">
+              <ButtonCta class="cta">solstrategies.io</ButtonCta>
+              <ButtonCta class="cta" variant="black">JUNE 2025</ButtonCta>
+            </div>
+          </div>
+  
       </CardWhyInvestors>
+
       <CardWhyInvestors class="content" background="/invcard2.webp">
-        <template #desc>
-          <p data-split>Thank you for subscribing! </p>
-        </template>
+          <div class="top">
+             <MediaImg src="SolLogo.svg" alt="Logo" />
+          </div>
+          <div class="center">
+            <div class="title-wrapper">
+              <div class="title__text">
+                <Text class="title" tag="h1" data-split> Solanameets Wall Street </Text>
+              </div>
+            </div>
+            <p data-split>Innovation Built for Long-Term</p>
+          </div>
+          <div class="bottom">
+            <div class="buttons">
+              <ButtonCta class="cta">solstrategies.io</ButtonCta>
+              <ButtonCta class="cta" variant="black">JUNE 2025</ButtonCta>
+            </div>
+          </div>
       </CardWhyInvestors>
       <CardWhyInvestors class="content" background="/invcard3.webp">
-        <template #desc>
-          <p data-split>Sign up to receiveSol Strategies updates </p>
-          
-          <ul>
-            <li data-split>$160B Solana DEX volume (May 2025)</li>
-            <li data-split>Digital asset market growth: $3.3T → $11.7T by 2030</li>
-            <li data-split>Key tokenization catalysts emerge.</li>
-          </ul>
-        </template>
+          <div class="top">
+             <MediaImg src="SolLogo.svg" alt="Logo" />
+          </div>
+          <div class="center">
+            <div class="title-wrapper">
+              <div class="title__text">
+                <Text class="title" tag="h1" data-split> Solanameets Wall Street </Text>
+              </div>
+            </div>
+            <p data-split>Innovation Built for Long-Term</p>
+          </div>
+          <div class="bottom">
+              <div class="buttons">
+                <ButtonCta class="cta">solstrategies.io</ButtonCta>
+                <ButtonCta class="cta" variant="black">JUNE 2025</ButtonCta>
+            </div>
+          </div>
       </CardWhyInvestors>
     </div>
   </section>
