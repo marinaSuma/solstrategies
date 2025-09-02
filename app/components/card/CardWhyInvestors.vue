@@ -59,7 +59,7 @@ const props = defineProps({
       font-weight: 200;
     }
 
-    p {
+    Text {
       color: #000;
       font-size: 19.893px;
       font-style: normal;
@@ -148,7 +148,7 @@ const props = defineProps({
       color: #000;
     }
 
-    p{
+    Text{
       font-size: 16px;
       text-align: center;
       color: #000;
