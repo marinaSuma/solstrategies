@@ -13,7 +13,7 @@
           <div class="center">
             <div class="title-wrapper">
               <div class="title__text">
-                <Text class="title" tag="h1" data-split> Solanameets Wall Street </Text>
+                <Text class="title" tag="h1" data-split> Solana <br> meets Wall Street </Text>
               </div>
             </div>
             <p data-split>Innovation Built for Long-Term</p>
@@ -23,6 +23,7 @@
               <ButtonCta class="cta">solstrategies.io</ButtonCta>
               <ButtonCta class="cta" variant="black">JUNE 2025</ButtonCta>
             </div>
+            <p class="small" data-split></p>solstrategies.io</p>
           </div>
   
       </CardWhyInvestors>
