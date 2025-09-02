@@ -23,7 +23,7 @@
               <ButtonCta class="cta">solstrategies.io</ButtonCta>
               <ButtonCta class="cta" variant="black">JUNE 2025</ButtonCta>
             </div>
-            <Text tag="p" class="small" data-split>solstrategies.io</Text>
+            <Text tag="p" class="small">solstrategies.io</Text>
           </div>
   
       </CardWhyInvestors>
@@ -39,7 +39,7 @@
                 <Text class="title" tag="h1" data-split> Thank you for subscribing! </Text>
               </div>
             </div>
-            <Text tag="p" class="text" data-split>Please check your email to confirm your subscription.</Text>
+            <Text tag="p" class="text">Please check your email to confirm your subscription.</Text>
           </div>
       </CardWhyInvestors>
 
@@ -48,13 +48,13 @@
           <div class="top">
               <div class="title-wrapper">
                 <div class="title__text">
-                  <Text class="title" tag="h1" data-split>Sign up to receiveSol Strategies updates </Text>
+                  <Text class="title" tag="h1">Sign up to receiveSol Strategies updates </Text>
                 </div>
               </div>
           </div>
           <div class="bottom">
            
-            <Text tag="p" class="text" data-split>Form</Text>
+            <Text tag="p" class="text">Form</Text>
           </div>
           
       </CardWhyInvestors>
@@ -189,7 +189,7 @@ onUnmounted(() => {
       margin-top: 20px;
 
       &.small{
-        font-size: 14px;
+        font-size: 16px;
       }
     }
 
@@ -223,6 +223,7 @@ onUnmounted(() => {
     .media-img {
     object-fit: contain;
     margin: 0;
+    width: auto;
 
       &.logo img{
         height: 50px;
@@ -233,6 +234,13 @@ onUnmounted(() => {
 
     }
 
+    .media-img.logo img {
+       height: 50px;
+    }
+
+    .media-img.iso img {
+      height: 50px;
+    }
 
 
   }
@@ -245,7 +253,7 @@ onUnmounted(() => {
     align-items: flex-start;
 
      h1.title {
-      font-size: 80px;
+      font-size: 70px;
       line-height: 80%;
     }
   }
@@ -254,8 +262,8 @@ onUnmounted(() => {
     justify-content: flex-start;
     gap: 60px;
      h1.title {
-      font-size: 83px;
-      line-height: 80%;
+      font-size: 53px;
+      line-height: 110%;
       font-weight: 300;
       text-align: center;
       color: #000;
@@ -268,45 +276,4 @@ onUnmounted(() => {
     }
 }
 
-
-// .top {
-//   position: relative;
-//   z-index: 2;
-
-//   display: flex;
-//   justify-content: space-between;
-
-//   font-weight: 400;
-
-// }
-
-// .bottom {
-//   position: relative;
-//   z-index: 2;
-//   max-width: fn.toVw(478);
-
-//   .desc {
-//     @include mxt.font-body22;
-
-//     ul,
-//     &:deep(ul) {
-//       li {
-//         position: relative;
-//         padding-left: 1em;
-
-//         &::before {
-//           content: '•';
-
-//           position: absolute;
-//           top: 0;
-//           left: 0;
-//           transform: scale(0);
-
-//           transition: transform $transition-default;
-//           transition-delay: 0.35s;
-//         }
-//       }
-//     }
-//   }
-// }
 </style>
