@@ -8,7 +8,7 @@
     <div ref="elList" class="list">
       <CardWhyInvestors class="content" background="/invcard1.webp">
           <div class="top">
-             <MediaImg src="SolLogo.svg" alt="Logo" />
+             <MediaImg src="SolLogo.svg" class="logo media-img" alt="Logo" />
           </div>
           <div class="center">
             <div class="title-wrapper">

@@ -16,28 +16,28 @@ const props = defineProps({
 </script>
 
 <style scoped lang="scss">
+
 .card {
   position: relative;
-
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   width: 100%;
   height: fn.toVw(615);
-  padding: fn.toVw(85) fn.toVw(115) fn.toVw(92) fn.toVw(109);
+  padding: 20px 30px;
   border-radius: fn.toVw(55);
-
   color: $color-white;
-
   background-color: #ef8268;
 
   @include mx.mobile {
     height: fn.toVw(438);
-    padding: fn.toVw(67) fn.toVw(26) fn.toVw(63) fn.toVw(28);
+    padding: 20px 30px;
     border-radius: fn.toVw(24);
   }
+
+
+
 
   &.active {
     .bottom {
@@ -57,74 +57,109 @@ const props = defineProps({
 
 .bg {
   position: absolute;
-  z-index: 1;
+  z-index: 0;
   inset: 0;
 
   width: 100%;
   height: 100%;
 }
 
-.top {
-  position: relative;
-  z-index: 2;
-
-  display: flex;
-  justify-content: space-between;
-
-  font-weight: 400;
-
-  .title,
-  .number {
-    font-weight: inherit;
-
-    @include mx.mobile {
-      font-size: fn.toVw(32);
-    }
-  }
-
-  .title {
-    max-width: fn.toVw(428);
-
-    @include mx.mobile {
-      max-width: fn.toVw(222);
-      font-weight: 400;
-    }
-  }
-
-  .number {
-    @include mx.mobile {
-      font-weight: 300;
-    }
-  }
+.media-img.logo img {
+  object-fit: contain;
+  height: 50px;
+  margin: 0;
 }
 
-.bottom {
+
+
+.card.content:first-child {
   position: relative;
-  z-index: 2;
-  max-width: fn.toVw(478);
+  text-align: left;
+  align-items: flex-start;
+}
 
-  .desc {
-    @include mxt.font-body22;
 
-    ul,
-    &:deep(ul) {
-      li {
-        position: relative;
-        padding-left: 1em;
+.card.content{
+  h1.title {
+    color: #000;
+    font-size: 80px;
+    font-weight: 200;
+  }
 
-        &::before {
-          content: '•';
+  p {
+    color: #000;
+    font-size: 19.893px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 86%;
+  }
 
-          position: absolute;
-          top: 0;
-          left: 0;
-          transform: scale(0);
 
-          transition: transform $transition-default;
-          transition-delay: 0.35s;
-        }
+  .buttons {
+    display: flex;
+    gap: 30px;
+
+
+    .btn.fill {
+      text-transform: uppercase;
+      border-radius: 30px;
+      .white {
+        border: 1px solid #000;
+        background: #F5F5F5;
+        color: #000;
+      }
+
+      .black {
+        border: 1px solid #000;
+        background: #000;
       }
     }
+
   }
+
+
+
 }
+
+
+// .top {
+//   position: relative;
+//   z-index: 2;
+
+//   display: flex;
+//   justify-content: space-between;
+
+//   font-weight: 400;
+
+// }
+
+// .bottom {
+//   position: relative;
+//   z-index: 2;
+//   max-width: fn.toVw(478);
+
+//   .desc {
+//     @include mxt.font-body22;
+
+//     ul,
+//     &:deep(ul) {
+//       li {
+//         position: relative;
+//         padding-left: 1em;
+
+//         &::before {
+//           content: '•';
+
+//           position: absolute;
+//           top: 0;
+//           left: 0;
+//           transform: scale(0);
+
+//           transition: transform $transition-default;
+//           transition-delay: 0.35s;
+//         }
+//       }
+//     }
+//   }
+// }
 </style>
