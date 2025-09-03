@@ -321,6 +321,11 @@
 .events{
   padding-bottom: 130px;
 
+  @include mx.mobile {
+    padding-top: 100px;
+    padding-bottom: 30px;
+  }
+
   .financial-grid {
     display: flex;
     gap: 70px;
@@ -330,6 +335,7 @@
     @include mx.mobile {
       flex-direction: column;
       padding-left: 0;
+      margin-top: 60px;
     }
   }
 
@@ -582,7 +588,7 @@
     
   }
 
-  
+
 
 
 }
