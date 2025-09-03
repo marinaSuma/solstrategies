@@ -1,9 +1,9 @@
 <template>
   <section ref="el" class="why">
-    <div ref="elText" class="text">
+    <!-- <div ref="elText" class="text">
       <Text class="title" variant="heading1medium60" data-split data-linereveal> Why <b>Solana Matters</b> </Text>
       <Text class="desc color-gray" data-split data-linereveal reveal-delay="0.15"> The infrastructure layer of tomorrow's finance </Text>
-    </div>
+    </div> -->
 
     <div ref="elList" class="list">
       <CardWhyInvestors class="content" background="/invcard1.webp">
@@ -11,12 +11,10 @@
              <MediaImg src="SolLogo.svg" class="logo" alt="Logo" />
           </div>
           <div class="center">
-            <div class="title-wrapper">
-              <div class="title__text">
-                <Text class="title" tag="h1" data-split> Solana <br> meets Wall Street </Text>
-              </div>
+            <div ref="elText" class="text">
+              <Text class="title" tag="h1" data-split data-linereveal>  Solana <br> meets Wall Street </Text>
+              <Text class="desc color-gray" data-split data-linereveal reveal-delay="0.15"> Innovation Built for Long-Term </Text>
             </div>
-            <Text class="text" data-split>Innovation Built for Long-Term</Text>
           </div>
           <div class="bottom">
             <div class="buttons">
@@ -34,27 +32,21 @@
              <MediaImg src="logo.png" class="iso" alt="Logo" />
           </div>
           <div class="center">
-            <div class="title-wrapper">
-              <div class="title__text">
-                <Text class="title" tag="h1" data-split> Thank you for subscribing! </Text>
-              </div>
+            <div ref="elText" class="text">
+              <Text class="title" tag="h1" data-split> <strong>Thank you</strong> for subscribing! </Text>
+              <Text class="desc color-gray" data-split > Please check your email to confirm your subscription. </Text>
             </div>
-            <Text tag="p" class="text">Please check your email to confirm your subscription.</Text>
+            
           </div>
       </CardWhyInvestors>
 
 
       <CardWhyInvestors class="content" background="/invcard3.webp">
           <div class="top">
-              <div class="title-wrapper">
-                <div class="title__text">
-                  <Text class="title" tag="h1">Sign up to receiveSol Strategies updates </Text>
-                </div>
-              </div>
-          </div>
-          <div class="bottom">
-           
-            <Text tag="p" class="text">Form</Text>
+            <div ref="elText" class="text">
+              <Text class="title" tag="h1Open Keyboard Shortcuts (JSON)" data-split>Sign up to receiveSol Strategies updates </Text>
+              <Text class="desc color-gray" data-split > Form </Text>
+            </div>
           </div>
           
       </CardWhyInvestors>

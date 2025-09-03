@@ -1,9 +1,14 @@
 <template>
-<section ref="el" class="new-latest-financial-bg">
+<section ref="el" class="events">
   <div class="container">
-    <Text class="title" tag="h1" data-split data-linereveal reveal-notrigger reveal-waitpreloader> Upcoming Events </Text>
-		<div class="new-latest-financial-grid">
-			<div class="new-latest-financial-financials">				
+
+     <div class="title">
+      <Text tag="h2" variant="heading1" data-split data-linereveal> Upcoming Events</Text>
+    </div>
+
+
+		<div class="financial-grid">
+			<div class="financials">				
         <div class="new-latest-financials__list">
           
         
@@ -51,7 +56,7 @@
 				</a>
 			</div>
 
-      <div class="new-latest-financial-press">
+      <div class="press">
 
       </div>
 
@@ -70,5 +75,11 @@ let ctx;
 </script>
 
 <style scoped lang="scss">
+   h2.heading1 {
+    color: #000;
+    font-weight: 200;
+    font-size: 30px;
+    font-weight: 300;
+  }
 
 </style>
