@@ -537,4 +537,33 @@
     margin: 50px 0;
     padding-left: 9%;
   }
+
+  .audio-in {
+    margin: 40px 0;
+    audio {
+      width: 100%;
+    }
+  }
+}
+
+
+
+
+// -------------------- //
+
+// VIDEO
+
+// -------------------- //
+
+
+.video {
+    height: 100vh;
+    padding: 30px;
+
+    .video-content {
+      height: 100%;
+      border-radius: 43px;
+      background: lightgray 0px -438.836px / 100% 219.976% no-repeat;
+      overflow: hidden;
+    }
 }

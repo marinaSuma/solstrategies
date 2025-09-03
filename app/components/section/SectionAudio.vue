@@ -7,11 +7,11 @@
   <div class="container">
 
      <div class="title">
-      <Text tag="h2" variant="heading2" data-split data-linereveal> Upcoming Events</Text>
+      <Text tag="h2" variant="heading2" data-split data-linereveal> Recent financial results</Text>
     </div>
 
     <div class="audio-content">
-      <Text class="desc color-gray" data-split data-linereveal reveal-delay="0.15"> Sol Strategies First Quarter 2025 Financial Results Webcast and Conference Call</Text>
+      <Text class="desc " data-split data-linereveal reveal-delay="0.15"> Sol Strategies First Quarter 2025 Financial Results <br> Webcast and Conference Call</Text>
 
       <div class="audio-in">
 
@@ -39,10 +39,11 @@ let ctx;
 <style scoped lang="scss">
   .bg {
     top: 0;
-    right: 0;
+    left: 0;
     pointer-events: none;
     position: absolute;
-    width: 80%;
+    width: 100%;
+    height: 100%;
     z-index: -1;
 
     }
