@@ -57,7 +57,21 @@
 			</div>
 
       <div class="press">
-
+        <div class="top">
+            <MediaImg src="SolLogo.svg" class="logo" alt="Logo" />
+            <Text tag="p" class="small"> solstrategies.io </Text>
+        </div>
+        <Text class="title" tag="h4" data-split data-linereveal reveal-notrigger reveal-waitpreloader>First Quarter 2025 Financial Results </Text>
+        <div class="tags">
+          <ButtonCta class="tag" variant="brown" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.18">Webcast</ButtonCta>
+          <ButtonCta class="tag" variant="yell" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.25">conference call</ButtonCta>
+        </div>
+        <Text tag="p" class="text">CEO Leah Wald, CFO Doug Harris and CTO Max Kaplan will host a webcast and conference call to discuss the results following the release. Participants will have the opportunity to ask questions during the call.</Text>
+        <div class="meta">
+          <Text tag="p" class="date"> <MediaImg src="icon-calendar.svg" class="icon" alt="Icon" /> 03.03.2025 </Text>
+          <Text tag="p" class="clock"> <MediaImg src="icon-clock.svg" class="icon" alt="Icon" /> 4:30 PM EST </Text>
+        </div>
+      
       </div>
 
 
