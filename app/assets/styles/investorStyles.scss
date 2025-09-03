@@ -10,6 +10,7 @@
 
 #main{
   background-color: #f9f9f9;
+  background-color: #FDFDFD;
 }
 
 .hero {
@@ -176,26 +177,6 @@
 
 
 
-
-
-
-
-
-
-
-// -------------------- //
-
-// OVERVIEW
-
-// -------------------- //
-
-
-
-
-
-
-
-
 // -------------------- //
 
 // WHY
@@ -330,3 +311,87 @@
 
 
 
+
+
+
+// -------------------- //
+
+// EVENTS
+
+// -------------------- //
+
+.events{
+
+  .financial-grid {
+    display: flex;
+    gap: 100px;
+    padding-left: 10%;
+    margin-top: 100px;
+  }
+
+
+.new-latest-financials__item {
+  border-bottom: 1px solid #CECECE;
+  padding: 20px 0;
+
+  &.first{
+    padding: 0px 0 60px;
+
+    h4.title {
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      color: #F18339;
+      margin-bottom: 30px;
+    }
+    h2.title {
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 400;
+      margin-bottom: 30px;  
+    }
+    p.text {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 130%;
+    }
+  }
+
+  &:not(.first) {
+    display: flex;
+    align-items: center;
+  }
+  .title {
+    min-width: 200px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 450;
+    letter-spacing: 0.36px;
+    text-transform: uppercase;
+  }
+  .date {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 110%;
+  }
+}
+
+
+.buttons {
+  margin-top: 50px;
+  
+  .violet {
+    border-radius: 10px;
+    background: #5E3EA1;
+    color: #fff;
+    margin-top: 50px;
+  }
+}
+
+
+
+
+
+}

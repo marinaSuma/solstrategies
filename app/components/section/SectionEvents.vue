@@ -3,7 +3,7 @@
   <div class="container">
 
      <div class="title">
-      <Text tag="h2" variant="heading1" data-split data-linereveal> Upcoming Events</Text>
+      <Text tag="h2" variant="heading2" data-split data-linereveal> Upcoming Events</Text>
     </div>
 
 
