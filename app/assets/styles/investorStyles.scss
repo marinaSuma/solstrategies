@@ -304,9 +304,12 @@
 }
 
 
-
-
-
+.overview {
+  .title {
+    text-align: left;
+    justify-items: flex-start;
+  }
+}
 
 
 // -------------------- //
@@ -316,6 +319,7 @@
 // -------------------- //
 
 .events{
+  padding-bottom: 130px;
 
   .financial-grid {
     display: flex;
@@ -391,6 +395,24 @@
     border-radius: 15px;
     background: #FAFAFA;
     padding: 40px;
+    position: relative;
+
+    .border{
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: calc(100% - 40px);
+      height: calc(100% - 40px);
+
+      img{}
+
+      .top{
+
+      }
+      .bottom{
+        
+      }
+    }
 
     .top {
       display: flex;
@@ -420,10 +442,10 @@
         font-size: 14px;
         font-weight: 300;
         padding: 10px 30px;
-        .yell {
+        &.yell {
           background-color: rgba(255, 252, 117, 0.36);
        }
-       .brown {
+       &.brown {
           background-color: #ECC2A6;
         }
       }

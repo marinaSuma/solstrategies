@@ -9,41 +9,37 @@
           <Text tag="h2" variant="heading2" data-split data-linereveal>SOL Strategies Stock</Text>
         </div>
 
-        <div class="ticker">
-
-          <div v-if="!useDevice().isMobile" class="ticker__symbol">
-            <ClientOnly>
-              <SymbolInfo
-                :options="{
-                  ...tradingViewOptions,
-                  width: 600,
-                  height: 230,
-                  symbol: symbolInfo,
-                }" />
-            </ClientOnly>
-          </div>
-
-          <div class="ticker__tape">
-            <ClientOnly>
-              <TickerTape
-                :options="{
-                  ...tradingViewOptions,
-                  height: 46,
-                  showSymbolLogo: true,
-                  isTransparent: false,
-                  displayMode: 'regular',
-                  locale: 'en',
-                  symbols: symbolsTape,
-                }" />
-            </ClientOnly>
-          </div>
-        </div>
-
     </div>
 
+    <div class="ticker">
 
-    
+      <div v-if="!useDevice().isMobile" class="ticker__symbol">
+        <ClientOnly>
+          <SymbolInfo
+            :options="{
+              ...tradingViewOptions,
+              width: 600,
+              height: 230,
+              symbol: symbolInfo,
+            }" />
+        </ClientOnly>
+      </div>
 
+      <div class="ticker__tape">
+        <ClientOnly>
+          <TickerTape
+            :options="{
+              ...tradingViewOptions,
+              height: 46,
+              showSymbolLogo: true,
+              isTransparent: false,
+              displayMode: 'regular',
+              locale: 'en',
+              symbols: symbolsTape,
+            }" />
+        </ClientOnly>
+      </div>
+    </div>
 
   </section>
 </template>

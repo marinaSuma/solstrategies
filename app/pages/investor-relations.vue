@@ -3,6 +3,7 @@
     <SectionHeroInvestors />
     <SectionWhyInvestors />
     <SectionEvents />
+    <SectionAudio />
     <SectionOverviewInvestors />
     <SectionMilestonesInvestors />
     <SectionCta />
