@@ -33,7 +33,7 @@
           </div>
           <div class="center">
             <div ref="elText" class="text">
-              <Text class="title" tag="h2" data-split> <strong>Thank you</strong> for subscribing! </Text>
+              <Text class="title" tag="h2" data-split> <strong>Thank you</strong><br> for subscribing! </Text>
               <Text class="desc color-gray" data-split > Please check your email to confirm your subscription. </Text>
             </div>
             
@@ -44,7 +44,7 @@
       <CardWhyInvestors class="content" background="/invcard3.webp">
           <div class="top">
                <div ref="elText" class="text">
-                <Text class="title" tag="h3" data-split>Sign up to receiveSol Strategies updates </Text>
+                <Text class="title" tag="h3" data-split>Sign up to receive <br><strong>Sol Strategies</strong> updates </Text>
                 <Text class="desc color-gray" data-split > Form </Text>
               </div>
           </div>
@@ -180,8 +180,14 @@ onUnmounted(() => {
   }
 
   h2.title { 
+    text-align: center;
+    font-size: 39px;
+    line-height: 110%;
+  }
+
+  h3.title { 
     text-align: left;
-    font-size: 53px;
+    font-size: 30px;
     line-height: 110%;
   }
   p {

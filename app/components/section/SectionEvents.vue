@@ -52,45 +52,50 @@
           <div class="top"><MediaImg src="press-top.svg" alt="border" /></div>
           <div class="bottom"><MediaImg src="press-bottom.svg" alt="border" /></div>
         </div>
-        <div class="top">
+
+        <div class="press-content">
+          <div class="top">
             <MediaImg src="SolLogo.svg" class="logo" alt="Logo" />
             <Text tag="p" class="small"  data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.18"> solstrategies.io </Text>
-        </div>
-        <Text class="title" tag="h4" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.18">First Quarter 2025 Financial Results </Text>
-        <div class="tags">
-          <ButtonCta class="tag" variant="brown" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.18">Webcast</ButtonCta>
-          <ButtonCta class="tag" variant="yell" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.25">conference call</ButtonCta>
-        </div>
-        <Text tag="p" class="text" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.18">CEO Leah Wald, CFO Doug Harris and CTO Max Kaplan will host a webcast and conference call to discuss the results following the release. Participants will have the opportunity to ask questions during the call.</Text>
-        <div class="meta">
-          <Text tag="p" class="date"> <MediaImg src="icon-calendar.svg" class="icon" alt="Icon" /> 03.03.2025 </Text>
-          <Text tag="p" class="clock"> <MediaImg src="icon-clock.svg" class="icon" alt="Icon" /> 4:30 PM EST </Text>
-        </div>
-      
+          </div>
+          <Text class="title" tag="h4" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.18">First Quarter 2025 <br>Financial Results </Text>
+          <div class="tags">
+            <ButtonCta class="tag" variant="brown" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.18">Webcast</ButtonCta>
+            <ButtonCta class="tag" variant="yell" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.25">conference call</ButtonCta>
+          </div>
+          <Text tag="p" class="text" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.18">CEO Leah Wald, CFO Doug Harris and CTO Max Kaplan will host a webcast and conference call to discuss the results following the release. Participants will have the opportunity to ask questions during the call.</Text>
+          <div class="meta">
+            <Text tag="p" class="date"> <MediaImg src="icon-calendar.svg" class="icon" alt="Icon" /> 03.03.2025 </Text>
+            <Text tag="p" class="clock"> <MediaImg src="icon-clock.svg" class="icon" alt="Icon" /> 4:30 PM EST </Text>
+          </div>
+        
 
-        <div class="teams">
+          <div class="teams">
 
-          <div class="team">
-            <MediaImg src="teamLeah.png" alt="Leah Wald" />
-            <div class="caption">
-              <Text tag="p" class="small"> Leah Wald <br>CEO </Text>
+            <div class="team">
+              <MediaImg src="teamLeah.png" alt="Leah Wald" />
+              <div class="caption">
+                <Text tag="p"> Leah Wald <br>CEO </Text>
+              </div>
+            </div>
+
+            <div class="team">
+              <MediaImg src="teamDoug.png" alt="Doug Harris" />
+              <div class="caption">
+                <Text tag="p">Doug Harris <br>CFO </Text>
+              </div>
+            </div>
+
+            <div class="team">
+              <MediaImg src="teamMax.png" alt="Max Kaplan" />
+              <div class="caption">
+                <Text tag="p"> Max Kaplan <br>CTO </Text>
+              </div>
             </div>
           </div>
 
-          <div class="team">
-            <MediaImg src="teamDoug.png" alt="Doug Harris" />
-            <div class="caption">
-              <Text tag="p" class="small">Doug Harris <br>CFO </Text>
-            </div>
-          </div>
-
-          <div class="team">
-            <MediaImg src="teamMax.png" alt="Max Kaplan" />
-            <div class="caption">
-              <Text tag="p" class="small"> Max Kaplan <br>CTO </Text>
-            </div>
-          </div>
         </div>
+        
       </div>
 
 
