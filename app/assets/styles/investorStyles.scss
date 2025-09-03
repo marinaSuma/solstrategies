@@ -394,7 +394,7 @@
   .press {
     border-radius: 15px;
     background: #FAFAFA;
-    padding: 40px;
+    padding: 40px 60px;
     position: relative;
 
     .border{
@@ -403,14 +403,20 @@
       left: 20px;
       width: calc(100% - 40px);
       height: calc(100% - 40px);
+      background-color: transparent;
 
-      img{}
 
-      .top{
-
+     .top {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
       }
       .bottom{
-        
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
       }
     }
 
