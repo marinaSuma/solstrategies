@@ -1,8 +1,8 @@
 <template>
   <section ref="el" class="why">
     <div ref="elText" class="text">
-      <Text class="title" variant="heading1medium60" data-split data-linereveal> Why <b>Solana Matters</b> </Text>
-      <Text class="desc color-gray" data-split data-linereveal reveal-delay="0.15"> The infrastructure layer of tomorrow's finance </Text>
+      <Text class="title" variant="heading1medium60" data-split data-linereveal>  </Text>
+      <Text class="desc color-gray" data-split data-linereveal reveal-delay="0.15"> </Text>
     </div>
 
     <div ref="elList" class="list">
@@ -12,16 +12,16 @@
           </div>
           <div class="center">
             <div ref="elText" class="text">
-              <Text class="title" tag="h1" data-split data-linereveal>  Solana <br> meets Wall Street </Text>
+              <Text class="title" tag="h2" data-split data-linereveal>  Solana <br> meets Wall Street </Text>
               <Text class="desc color-gray" data-split data-linereveal reveal-delay="0.15"> Innovation Built for Long-Term </Text>
             </div>
           </div>
           <div class="bottom">
             <div class="buttons">
-              <ButtonCta class="cta">solstrategies.io</ButtonCta>
-              <ButtonCta class="cta" variant="black">JUNE 2025</ButtonCta>
+              <ButtonCta class="cta" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.18">solstrategies.io</ButtonCta>
+              <ButtonCta class="cta" variant="black" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.25">JUNE 2025</ButtonCta>
             </div>
-            <Text tag="p" class="small">solstrategies.io</Text>
+            <Text tag="p" class="small" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.18">solstrategies.io</Text>
           </div>
   
       </CardWhyInvestors>
@@ -33,7 +33,7 @@
           </div>
           <div class="center">
             <div ref="elText" class="text">
-              <Text class="title" tag="h3" data-split> <strong>Thank you</strong> for subscribing! </Text>
+              <Text class="title" tag="h2" data-split> <strong>Thank you</strong> for subscribing! </Text>
               <Text class="desc color-gray" data-split > Please check your email to confirm your subscription. </Text>
             </div>
             
@@ -167,10 +167,24 @@ onUnmounted(() => {
   }
 
 
-  h1.title {
+  .title {
     color: #000;
-    font-weight: 200;
+    font-weight: 300;
+
+    &h1 {  
+      text-align: center;
+      font-weight: 200;
+      font-size: 70px;
+      line-height: 80%;
+    }
+
+    &h2 { 
+      text-align: left;
+      font-size: 53px;
+      line-height: 110%;
+    }
   }
+
 
   p {
     color: #000;
@@ -223,24 +237,12 @@ onUnmounted(() => {
   text-align: left;
   align-items: flex-start;
 
-    h1.title {
-    font-size: 70px;
-    line-height: 80%;
-  }
 }
 
 .card.content:not(:first-child) {
   justify-content: flex-start;
   gap: 60px;
   
-    h1.title {
-    font-size: 53px;
-    line-height: 110%;
-    font-weight: 300;
-    color:#000;
-    
-  }
-
 
   p{
     font-size: 16px;
@@ -251,13 +253,6 @@ onUnmounted(() => {
 
 .card.content:nth-child(2) {
   align-items: center;
-  
-    h1.title {
-    text-align: center;
-    text-align: center;
-    
-  }
-
 
   p{
     text-align: center;
