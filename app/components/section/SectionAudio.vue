@@ -15,7 +15,10 @@
 
       <div class="audio-in">
 
-          
+          <audio controls>
+            <source src="/SOLQ325-082625.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
       </div>
 
     </div>
