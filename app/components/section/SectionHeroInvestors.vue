@@ -2,7 +2,7 @@
   <section ref="el" class="hero">
     <div class="bg">
       <!-- <MediaImg :provider="false" src="/thumbnail.jpg" alt="Logo" /> -->
-        <MediaImg src="/hInv.webp" class="bgA" alt="Background" />
+        <MediaImg src="/hInv2.webp" class="bgA" alt="Background" />
         <!-- <MediaImg src="/hInv2.svg" class="bg2" alt="Background" /> -->
     </div>
 
