@@ -173,7 +173,7 @@ onUnmounted(() => {
   }
 
   h1.title {  
-    text-align: center;
+    text-align: left;
     font-weight: 200;
     font-size: 70px;
     line-height: 80%;

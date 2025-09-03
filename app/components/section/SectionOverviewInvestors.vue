@@ -87,40 +87,38 @@ const symbolsTape = [{ proName: symbolInfo }, { proName: 'CRYPTO:BTCUSD' }, { pr
 
 
 
-    .ticker {
-      display: flex;
-      flex-direction: column;
-      gap: fn.toVw(64);
-      justify-content: center;
+  .ticker {
+  display: flex;
+  flex-direction: column;
+  gap: fn.toVw(64);
+  justify-content: center;
 
-      margin-top:70px;
+  margin-top: fn.toVw(-200);
 
-      @include mx.mobile {
-        gap: 0;
-        margin-top: fn.toVw(-100);
-      }
+  @include mx.mobile {
+    gap: 0;
+    margin-top: fn.toVw(-100);
+  }
 
-      .ticker__symbol {
-        width: 100%;
-        max-width: 600px;
-        height: 230px;
-        margin: 0 auto;
+  .ticker__symbol {
+    width: 100%;
+    max-width: 600px;
+    height: 230px;
+    margin: 0 auto;
 
-        @include mx.mobile {
-          display: none;
-        }
-      }
-
-      .ticker__tape {
-        height: 46px;
-        // margin-top: calc(fn.toVw(98) - fn.toVw(64));
-        margin-top: 60px;
-
-        @include mx.mobile {
-          // margin-top: fn.toVw(46);
-          margin-top: 40px;
-        }
-      }
+    @include mx.mobile {
+      display: none;
     }
   }
+
+  .ticker__tape {
+    height: 46px;
+    margin-top: calc(fn.toVw(98) - fn.toVw(64));
+
+    @include mx.mobile {
+      margin-top: fn.toVw(46);
+    }
+  }
+  }
+}
 </style>
