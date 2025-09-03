@@ -1,9 +1,10 @@
 <template>
 <section ref="el" class="video">
- <div class="bg">
-    <MediaImg src="/video-bg.webp" alt="Video Background" />
-  </div>
+
     <div class="video-content">
+       <div class="bg">
+          <MediaImg src="/video-bg.webp" alt="Video Background" />
+        </div>
 
       <div class="video-in">
 

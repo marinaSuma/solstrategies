@@ -361,7 +361,7 @@
       display: flex;
       align-items: center;
     }
-    >h4.title {
+    >div.title {
       min-width: 200px;
       font-size: 18px;
       font-style: normal;
@@ -546,6 +546,7 @@
 
 .audio {
     padding: 110px 0;
+    position: relative;
 
   .audio-content {
     margin: 50px 0;
@@ -573,11 +574,13 @@
 .video {
     height: 100vh;
     padding: 30px;
+    position: relative;
 
     .video-content {
       height: 100%;
       border-radius: 43px;
       background: lightgray 0px -438.836px / 100% 219.976% no-repeat;
       overflow: hidden;
+      position: relative;
     }
 }
