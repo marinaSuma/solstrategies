@@ -171,14 +171,14 @@ onUnmounted(() => {
     color: #000;
     font-weight: 300;
 
-    &h1 {  
+    h1.title {  
       text-align: center;
       font-weight: 200;
       font-size: 70px;
       line-height: 80%;
     }
 
-    &h2 { 
+    h2.title { 
       text-align: left;
       font-size: 53px;
       line-height: 110%;
@@ -253,14 +253,17 @@ onUnmounted(() => {
 
 .card.content:nth-child(2) {
   align-items: center;
+  text-align: center;
 
-  p{
+  p, .title{
     text-align: center;
   }
 
 }
 
-
+.content:last-child {
+    padding: 80px 60px;
+}
 .card.content:last-child, .card.content:last-child h1 {
   align-items: self-start;
   text-align: left;
