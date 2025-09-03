@@ -108,7 +108,7 @@ onUnmounted(() => {
   padding-left: fn.toVw($layout-container-desktop);
 
   @include mx.mobile {
-    padding-top: fn.toVw(200);
+    // padding-top: fn.toVw(200);
     padding-right: fn.toVw($layout-container-mobile);
     padding-left: fn.toVw($layout-container-mobile);
   }

@@ -79,10 +79,6 @@ const symbolsTape = [{ proName: symbolInfo }, { proName: 'CRYPTO:BTCUSD' }, { pr
     width: 80%;
     z-index: -1;
 
-      @include mx.mobile {
-        display: none;
-      }
-
     }
 
 
@@ -93,12 +89,8 @@ const symbolsTape = [{ proName: symbolInfo }, { proName: 'CRYPTO:BTCUSD' }, { pr
   gap: fn.toVw(64);
   justify-content: center;
 
-  margin-top: fn.toVw(-200);
+  margin-top:0;
 
-  @include mx.mobile {
-    gap: 0;
-    margin-top: fn.toVw(-100);
-  }
 
   .ticker__symbol {
     width: 100%;
@@ -106,18 +98,12 @@ const symbolsTape = [{ proName: symbolInfo }, { proName: 'CRYPTO:BTCUSD' }, { pr
     height: 230px;
     margin: 0 auto;
 
-    @include mx.mobile {
-      display: none;
-    }
   }
 
   .ticker__tape {
     height: 46px;
     margin-top: calc(fn.toVw(98) - fn.toVw(64));
 
-    @include mx.mobile {
-      margin-top: fn.toVw(46);
-    }
   }
   }
 }

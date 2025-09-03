@@ -12,7 +12,7 @@
           </div>
           <div class="center">
             <div ref="elText" class="text">
-              <Text class="title" tag="h2" data-split data-linereveal>  Solana <br> meets Wall Street </Text>
+              <Text class="title" tag="h1" data-split data-linereveal>  Solana <br> meets Wall Street </Text>
               <Text class="desc color-gray" data-split data-linereveal reveal-delay="0.15"> Innovation Built for Long-Term </Text>
             </div>
           </div>

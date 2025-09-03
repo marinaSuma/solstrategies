@@ -326,7 +326,14 @@
     gap: 70px;
     padding-left: 10%;
     margin-top: 100px;
+
+    @include mx.mobile {
+      flex-direction: column;
+      padding-left: 0;
+    }
   }
+
+
 
 
   .new-latest-financials__item {
@@ -397,6 +404,8 @@
     padding: 50px 60px 60px;
     position: relative;
 
+    
+
     .border{
       position: absolute;
       top: 20px;
@@ -411,13 +420,33 @@
         top: 0;
         right: 0;
         width: 100%;
+
+        @include mx.mobile {
+          height: calc(100% - 20px);
+          left: 10px;
+          right: 10px;
+          width: calc(100% - 20px);
+        }
       }
       .bottom{
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
+        @include mx.mobile {
+          height: calc(100% - 20px);
+          left: 10px;
+          bottom: 10px;
+          width: calc(100% - 20px);
+        }
       }
+
+     
+    }
+
+    .press-content {
+      position: relative;
+      z-index: 1;
     }
 
     .top {
@@ -429,10 +458,17 @@
      .logo img {
         height: 30px;
         width: auto;
+        @include mx.mobile {
+          height: 24px;
+        }
       }
 
       p.small {
         font-size: 11px;
+      }
+
+      @include mx.mobile {
+        gap: 20px;
       }
     }
 
@@ -458,6 +494,10 @@
        }
        &.brown {
           background-color: #ECC2A6;
+        }
+
+        @include mx.mobile {
+          padding: 10px 20px;
         }
       }
     }
@@ -523,11 +563,21 @@
       font-weight: 300;
       line-height: 119.02%; /* 16.024px */
       }
+
+      @include mx.mobile {
+        flex-wrap: nowrap;
+        flex-direction: column;
+      }
     }
      
 
 
       
+    }
+
+
+    @include mx.mobile {
+      padding: 50px 30px 60px;
     }
     
   }
@@ -572,14 +622,19 @@
 
 
 .video {
-    height: 100vh;
-    padding: 30px;
-    position: relative;
+  height: 100vh;
+  padding: 30px;
+  position: relative;
 
-    .video-content {
-      height: 100%;
-      border-radius: 43px;
-      overflow: hidden;
-      position: relative;
-    }
+  .video-content {
+    height: 100%;
+    border-radius: 43px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  @include mx.mobile {
+    height: 400px;
+    padding: 20px;
+  }
 }
