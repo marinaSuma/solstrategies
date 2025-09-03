@@ -60,8 +60,8 @@
           </div>
           <Text class="title" tag="h4" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.18">First Quarter 2025 <br>Financial Results </Text>
           <div class="tags">
-            <ButtonCta class="tag" variant="brown" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.18">Webcast</ButtonCta>
-            <ButtonCta class="tag" variant="yell" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.25">conference call</ButtonCta>
+            <ButtonCta class="tag" variant="brown">Webcast</ButtonCta>
+            <ButtonCta class="tag" variant="yell">conference call</ButtonCta>
           </div>
           <Text tag="p" class="text" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.18">CEO Leah Wald, CFO Doug Harris and CTO Max Kaplan will host a webcast and conference call to discuss the results following the release. Participants will have the opportunity to ask questions during the call.</Text>
           <div class="meta">
