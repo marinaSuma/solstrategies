@@ -67,6 +67,30 @@
           <Text tag="p" class="clock"> <MediaImg src="icon-clock.svg" class="icon" alt="Icon" /> 4:30 PM EST </Text>
         </div>
       
+
+        <div class="teams">
+
+          <div class="team">
+            <MediaImg src="teamLeah.png" alt="Leah Wald" />
+            <div class="caption">
+              <Text tag="p" class="small"> Leah Wald <br>CEO </Text>
+            </div>
+          </div>
+
+          <div class="team">
+            <MediaImg src="teamDoug.png" alt="Doug Harris" />
+            <div class="caption">
+              <Text tag="p" class="small">Doug Harris <br>CFO </Text>
+            </div>
+          </div>
+
+          <div class="team">
+            <MediaImg src="teamMax.png" alt="Max Kaplan" />
+            <div class="caption">
+              <Text tag="p" class="small"> Max Kaplan <br>CTO </Text>
+            </div>
+          </div>
+        </div>
       </div>
 
 

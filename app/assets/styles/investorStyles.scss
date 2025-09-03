@@ -486,6 +486,18 @@
 
       
     }
+
+    .teams{
+      display: flex;
+      gap: 20px;
+
+      .caption p{
+        color: #FFF;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 119.02%; /* 16.024px */
+      }
+    }
     
   }
 

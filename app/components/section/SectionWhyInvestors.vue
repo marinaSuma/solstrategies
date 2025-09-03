@@ -170,22 +170,20 @@ onUnmounted(() => {
   .title {
     color: #000;
     font-weight: 300;
-
-    h1.title {  
-      text-align: center;
-      font-weight: 200;
-      font-size: 70px;
-      line-height: 80%;
-    }
-
-    h2.title { 
-      text-align: left;
-      font-size: 53px;
-      line-height: 110%;
-    }
   }
 
+  h1.title {  
+    text-align: center;
+    font-weight: 200;
+    font-size: 70px;
+    line-height: 80%;
+  }
 
+  h2.title { 
+    text-align: left;
+    font-size: 53px;
+    line-height: 110%;
+  }
   p {
     color: #000;
     font-size: 19.893px;
