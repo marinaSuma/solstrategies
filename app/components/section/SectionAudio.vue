@@ -1,5 +1,9 @@
 <template>
 <section ref="el" class="audio">
+
+  <div class="bg">
+    <MediaImg src="/audio-bg.webp" alt="Audio Background" />
+  </div>
   <div class="container">
 
      <div class="title">
@@ -27,3 +31,17 @@
 const el = useTemplateRef('el');
 let ctx;
 </script>
+
+
+<style scoped lang="scss">
+  .bg {
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 80%;
+    z-index: -1;
+
+    }
+
+</style>

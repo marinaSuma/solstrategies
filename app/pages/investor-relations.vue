@@ -4,6 +4,7 @@
     <SectionWhyInvestors />
     <SectionEvents />
     <SectionAudio />
+    <SectionVideo />
     <SectionOverviewInvestors />
     <SectionMilestonesInvestors />
     <SectionCta />

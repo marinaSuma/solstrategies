@@ -502,6 +502,7 @@
       .media-img {
         aspect-ratio: 4 / 5;
         object-fit: contain;
+        height: auto;
       }
      }
      
@@ -520,4 +521,20 @@
   
 
 
+}
+
+
+// -------------------- //
+
+// AUDIO
+
+// -------------------- //
+
+.audio {
+    padding: 110px 0;
+
+  .audio-content {
+    margin: 50px 0;
+    padding-left: 9%;
+  }
 }
