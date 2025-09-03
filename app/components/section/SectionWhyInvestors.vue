@@ -1,9 +1,9 @@
 <template>
   <section ref="el" class="why">
-    <!-- <div ref="elText" class="text">
+    <div ref="elText" class="text">
       <Text class="title" variant="heading1medium60" data-split data-linereveal> Why <b>Solana Matters</b> </Text>
       <Text class="desc color-gray" data-split data-linereveal reveal-delay="0.15"> The infrastructure layer of tomorrow's finance </Text>
-    </div> -->
+    </div>
 
     <div ref="elList" class="list">
       <CardWhyInvestors class="content" background="/invcard1.webp">
@@ -33,7 +33,7 @@
           </div>
           <div class="center">
             <div ref="elText" class="text">
-              <Text class="title" tag="h1" data-split> <strong>Thank you</strong> for subscribing! </Text>
+              <Text class="title" tag="h3" data-split> <strong>Thank you</strong> for subscribing! </Text>
               <Text class="desc color-gray" data-split > Please check your email to confirm your subscription. </Text>
             </div>
             
@@ -43,10 +43,10 @@
 
       <CardWhyInvestors class="content" background="/invcard3.webp">
           <div class="top">
-            <div ref="elText" class="text">
-              <Text class="title" tag="h1Open Keyboard Shortcuts (JSON)" data-split>Sign up to receiveSol Strategies updates </Text>
-              <Text class="desc color-gray" data-split > Form </Text>
-            </div>
+               <div ref="elText" class="text">
+                <Text class="title" tag="h3" data-split>Sign up to receiveSol Strategies updates </Text>
+                <Text class="desc color-gray" data-split > Form </Text>
+              </div>
           </div>
           
       </CardWhyInvestors>

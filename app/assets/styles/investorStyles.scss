@@ -212,7 +212,7 @@
   }
 
 
-  .text {
+  >.text {
     display: none;
     flex-direction: column;
     gap: fn.toVw(30);
