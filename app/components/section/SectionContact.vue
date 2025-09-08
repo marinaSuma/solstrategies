@@ -126,6 +126,12 @@ onMounted(() => {
     position: absolute;
     z-index: -1;
     width: 100%;
+
+    @include mx.mobile {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
 }
 
 
@@ -170,6 +176,10 @@ onMounted(() => {
     right: 40px;
     z-index: 3;
     width: 24px;
+    @include mx.mobile {
+      right: 30px;
+      top: 26px;
+    }
   }
 
   #request .cerrar:hover{
@@ -206,7 +216,7 @@ onMounted(() => {
     font-weight: 300;
     line-height: 99%;
     @include mx.mobile {
-      font-size: 45px;
+      font-size: 38px;
     }
   }
 
