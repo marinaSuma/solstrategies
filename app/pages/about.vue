@@ -1,6 +1,7 @@
 <template>
   <div :class="$route.name">
     <SectionHeroAbout />
+    <SectionAboutProgramable />
     <SectionCta />
   </div>
 </template>
