@@ -11,25 +11,7 @@
     
     <div class="container">
       <div class="wrapper">
-        <div class="title-wrapper">
-          <div class="title__text">
-            <Text class="title" tag="h2" data-split data-linereveal reveal-notrigger reveal-waitpreloader> Building Solana's <br><b>Financial Future</b> </Text>
-          </div>
-        </div>
-
-        <div class="description">
-          <div class="w-medium">
-            <div class="description__text">
-              <Text class="color-gray" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader>
-                <b>Our mission</b> is to be the institutional backbone of the Solana ecosystem; bridging traditional finance with decentralized infrastructure.
-              </Text>
-              <Text class="color-gray" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.22">
-                <b>Our vision</b> is to build the infrastructure that powers the next generation of financial markets.
-              </Text>
-            </div>
-          </div>
-
-        </div>
+        
       </div>
     </div>
 
