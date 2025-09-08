@@ -7,6 +7,7 @@
     </div>
     <div id="request">
       <!-- <div class="cerrar cerrarmenu"><img src="form-close.svg" width="30px" alt=""></div> -->
+      <div class="cerrarmenu" @click="toggleForm">Cerrar</div>
       <div class="request-in">
         <div class="request-content">
           <h2><strong>Get in touch</strong> with us</h2>
@@ -18,6 +19,8 @@
       </div>
     </div>
     <div class="bodycerrar"></div>
+    
+    <div class="bodycerrar" @click="toggleForm"></div>
   </div>
 
 
@@ -32,28 +35,23 @@
 const el = useTemplateRef('el');
 let ctx;
 
-  let active = false;
-
   import { ref, onMounted } from 'vue';
   import gsap from 'gsap';
 
-  const active = ref(false);
+  const active = ref(false);  // esto reemplaza la anterior
 
   const toggleForm = () => {
     if (active.value) {
-      // Close
       gsap.to("#request", { right: "-100%" });
       document.body.classList.remove("formopen");
       active.value = false;
     } else {
-      // Open
       gsap.to("#request", { right: 0 });
       document.body.classList.add("formopen");
       active.value = true;
     }
   };
 
-  // Inicializamos la posición del request
   onMounted(() => {
     gsap.set("#request", { right: "-100%" });
   });
