@@ -3,11 +3,10 @@
   <section class="contactform">
     <div id="request">
       <div class="cerrar cerrarmenu">
-        <p>CERRAR MENU</p>
+         <MediaImg src="/closeContact.svg" alt="Close Form" />
       </div>
       <div class="request-in">
         <div class="request-content">
-          <h2></h2>
           <Text tag="h2" variant="heading2" data-split data-linereveal><strong>Let's talk!</strong> <br>We're here to help</Text>
           <Text tag="p" variant="text1" data-split data-linereveal>Drop us a message</Text>
           <Text tag="p" variant="text2" data-split data-linereveal>Please provide your info and we'll connect with you soon.</Text>
@@ -197,34 +196,24 @@ onMounted(() => {
 
 
 
-  #request p.text1 {
-    margin-bottom: 7px;
-    color: #000;
+  p.font-text1 {
     font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 6px;
   }
 
-  #request p.text2 {
-    color: #686868;
+  p.font-text2 {
     font-size: 18px;
+    color: #686868;
   }
 
-  /*
 
-  body.page-dealers{
-    transition: all 0.5s ease-out;
-  }
-  */
 
 
   body.formopen {
     overflow: hidden;
     position: relative;
-  /*
-    
-    height: 100%!important;
-  */
   }
-
   header.menuopen {
   /*    transform: translateX(-20%);*/
   }
@@ -261,13 +250,18 @@ onMounted(() => {
     justify-content: space-between;
     gap: 10px;
     flex-wrap: wrap;
-    margin: 30px 0 0;
+    margin: 30px -10px 0;
 }
 
   .form-group {
     margin-bottom: 22px;
   }
 
+
+  .col-sm-6 {
+    width: 50%;
+    padding: 0 5px;
+  }
 
   .form-group.boton {
     margin-bottom: 0px;
@@ -284,22 +278,17 @@ onMounted(() => {
   }
 
   input#enviar {
-    background: var(--red);
-    border-radius: 100px;
-    height: 49px;
-    padding: 0 50px;
-    padding-left: 70px;
-    font-size: 16px;
-    color: #fff;
+    background: #000;
     background-position: 49px 18px;
-    background-size: auto;
     background-repeat: no-repeat;
-    background-image: url(images/enviar.svg);
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -o-transition: 0.4s;
-    transition: 0.4s;
+    background-size: auto;
     border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    height: 41px;
+    padding: 0 50px;
+    transition: .4s;
   }
 
 
@@ -361,9 +350,9 @@ onMounted(() => {
   .floating-label label {
     color: #9F9F9F;
     font-size: 16px;
-    padding: 0 12px;
+    padding: 0 172px;
     position: absolute;
-    top: 27%;
+    top: 10px;
     left: 0;
   }
 
@@ -378,5 +367,13 @@ onMounted(() => {
   }
 
 
+  textarea.form-control {
+    resize: none;
+    height: 140px;
+  }
+
+  .cerrarmenu{}
+
+  .cerrarmenu img{}
 
 </style>
