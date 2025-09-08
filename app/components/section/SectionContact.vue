@@ -1,5 +1,5 @@
 <template>
-  <div class="btn border btn-request"><a>Contact us</a></div>
+  
   <section class="contactform">
     <div id="request">
       <div class="cerrar cerrarmenu">
@@ -29,7 +29,7 @@
 
 let ctx;
 
-import { onMounted, ref } from 'vue';
+import { onMounted } from 'vue';
 import gsap from 'gsap';
 
 let active = false;
@@ -37,25 +37,30 @@ let active = false;
 onMounted(() => {
   const buttons = document.querySelectorAll(".btn-request, .cerrarmenu, .bodycerrar");
 
-  gsap.set("#request", {
-    right: "-100%" // Inicialmente, la caja está fuera de la pantalla
-  });
+  // Configuración inicial
+  gsap.set("#request", { right: "-100%" });
+
+  // Timeline para abrir/cerrar
+  const tl = gsap.timeline({ paused: true })
+    .to("#request", { right: 0, duration: 0.5, ease: "power2.out" }, 0) // animación del panel
+    .call(() => document.body.classList.add("formopen"), null, 0); // clase al mismo tiempo
+
+  const tlClose = gsap.timeline({ paused: true })
+    .to("#request", { right: "-100%", duration: 0.5, ease: "power2.in" }, 0)
+    .call(() => document.body.classList.remove("formopen"), null, 0);
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       if (active) {
         active = false;
-        gsap.to("#request", { right: "-100%" });
-        document.body.classList.remove("formopen");
+        tlClose.restart(); // cerrar
       } else {
         active = true;
-        gsap.to("#request", { right: 0 });
-        document.body.classList.add("formopen");
+        tl.restart(); // abrir
       }
     });
   });
 });
-
 
 </script>
 
@@ -101,7 +106,7 @@ onMounted(() => {
     border-radius: 30px 0px 0px 30px;
     right: -100%;
     transition: all 0.5s;
-    z-index: 999;
+    z-index: 9999;
     box-shadow: 0px 25px 55px 0px rgba(0, 0, 0, 0.05);
     overflow: auto;
     -webkit-transition: 0.4s;
@@ -115,7 +120,7 @@ onMounted(() => {
 
   #request.show {
       right: 0;
-      transition: all 0.5s;
+      transition: all 0.3s;
   }
 
 
