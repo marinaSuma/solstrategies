@@ -1,27 +1,27 @@
 <template>
 <section ref="el" class="contactform">
 
-  <div class="form-modal">
     <div class="bg">
       <MediaImg src="/audio-bg.webp" alt="Audio Background" />
     </div>
-    <div id="request">
-      <!-- <div class="cerrar cerrarmenu"><img src="form-close.svg" width="30px" alt=""></div> -->
-      <div class="cerrarmenu" @click="toggleForm">Cerrar</div>
+    <div id="request" ref="requestRef">
       <div class="request-in">
         <div class="request-content">
           <h2><strong>Get in touch</strong> with us</h2>
           <p>Please provide your info and we'll connect with you soon.</p>
           <div class="form mt-5">
-
+            <!-- tu formulario aquí -->
+          </div>
+          <!-- Botón de cerrar -->
+          <div class="cerrar cerrarmenu" @click="closeForm">
+            <img src="form-close.svg" width="30" alt="Cerrar">
           </div>
         </div>
       </div>
     </div>
-    <div class="bodycerrar"></div>
-    
-    <div class="bodycerrar" @click="toggleForm"></div>
-  </div>
+
+    <!-- Fondo para cerrar al hacer clic -->
+    <div class="bodycerrar" @click="closeForm"></div>
 
 
 
@@ -35,26 +35,40 @@
 const el = useTemplateRef('el');
 let ctx;
 
-  import { ref, onMounted } from 'vue';
-  import gsap from 'gsap';
+import { ref, onMounted } from 'vue';
+import gsap from 'gsap';
 
-  const active = ref(false);  // esto reemplaza la anterior
+const active = ref(false);
 
-  const toggleForm = () => {
-    if (active.value) {
-      gsap.to("#request", { right: "-100%" });
-      document.body.classList.remove("formopen");
-      active.value = false;
-    } else {
-      gsap.to("#request", { right: 0 });
-      document.body.classList.add("formopen");
-      active.value = true;
-    }
-  };
+// Referencia al contenedor del formulario
+const requestRef = ref(null);
 
-  onMounted(() => {
-    gsap.set("#request", { right: "-100%" });
-  });
+// Función para abrir/cerrar el formulario
+const toggleForm = () => {
+  if (active.value) {
+    document.body.classList.remove("formopen");
+    gsap.to(requestRef.value, { right: "-100%" });
+    active.value = false;
+  } else {
+    document.body.classList.add("formopen");
+    gsap.to(requestRef.value, { right: 0 });
+    active.value = true;
+  }
+};
+
+// Para cerrar el formulario con clic en fondo o botón de cerrar
+const closeForm = () => {
+  if (active.value) {
+    document.body.classList.remove("formopen");
+    gsap.to(requestRef.value, { right: "-100%" });
+    active.value = false;
+  }
+};
+
+onMounted(() => {
+  // Inicialmente, ocultamos el formulario fuera de pantalla
+  gsap.set(requestRef.value, { right: "-100%" });
+});
 
 </script>
 
@@ -100,7 +114,7 @@ let ctx;
     border-radius: 30px 0px 0px 30px;
     right: -100%;
     transition: all 0.5s;
-    z-index: 21;
+    z-index: 999;
     box-shadow: 0px 25px 55px 0px rgba(0, 0, 0, 0.05);
     overflow: auto;
     -webkit-transition: 0.4s;
