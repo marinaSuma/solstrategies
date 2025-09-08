@@ -14,8 +14,8 @@
 
       <!-- Botón de cerrar -->
       <div class="cerrar cerrarmenu" @click="closeForm">
+         <!-- <img :src="formClose" width="30" alt="Cerrar" /> -->
         <p>cerrar menu</p>
-        <!-- <img :src="formClose" width="30" alt="Cerrar" /> -->
       </div>
     </div>
 
@@ -27,31 +27,35 @@
 
 
 <script setup>
-
-const el = useTemplateRef('el');
-let ctx;
-
 import { ref, onMounted } from 'vue';
 import gsap from 'gsap';
 
-const active = ref(false);  // esto reemplaza la anterior
+const requestRef = ref(null);   // ref del formulario
+const active = ref(false);      // estado abierto/cerrado
 
 const toggleForm = () => {
   if (active.value) {
-    gsap.to("#request", { right: "-100%" });
+    gsap.to(requestRef.value, { right: "-100%" });
     document.body.classList.remove("formopen");
     active.value = false;
   } else {
-    gsap.to("#request", { right: 0 });
+    gsap.to(requestRef.value, { right: 0 });
     document.body.classList.add("formopen");
     active.value = true;
   }
 };
 
-onMounted(() => {
-  gsap.set("#request", { right: "-100%" });
-});
+const closeForm = () => {
+  if (active.value) {
+    gsap.to(requestRef.value, { right: "-100%" });
+    document.body.classList.remove("formopen");
+    active.value = false;
+  }
+};
 
+onMounted(() => {
+  gsap.set(requestRef.value, { right: "-100%" });
+});
 </script>
 
 
