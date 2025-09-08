@@ -34,36 +34,22 @@ let ctx;
 import { ref, onMounted } from 'vue';
 import gsap from 'gsap';
 
-const active = ref(false);
+const active = ref(false);  // esto reemplaza la anterior
 
-// Referencia al contenedor del formulario
-const requestRef = ref(null);
-
-// Función para abrir/cerrar el formulario
 const toggleForm = () => {
   if (active.value) {
+    gsap.to("#request", { right: "-100%" });
     document.body.classList.remove("formopen");
-    gsap.to(requestRef.value, { right: "-100%" });
     active.value = false;
   } else {
+    gsap.to("#request", { right: 0 });
     document.body.classList.add("formopen");
-    gsap.to(requestRef.value, { right: 0 });
     active.value = true;
   }
 };
 
-// Para cerrar el formulario con clic en fondo o botón de cerrar
-const closeForm = () => {
-  if (active.value) {
-    document.body.classList.remove("formopen");
-    gsap.to(requestRef.value, { right: "-100%" });
-    active.value = false;
-  }
-};
-
 onMounted(() => {
-  // Inicialmente, ocultamos el formulario fuera de pantalla
-  gsap.set(requestRef.value, { right: "-100%" });
+  gsap.set("#request", { right: "-100%" });
 });
 
 </script>
