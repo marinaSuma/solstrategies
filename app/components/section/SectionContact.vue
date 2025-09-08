@@ -106,7 +106,7 @@ onMounted(() => {
     border-radius: 30px 0px 0px 30px;
     right: -100%;
     transition: all 0.5s;
-    z-index: 9999;
+    z-index: 99999;
     box-shadow: 0px 25px 55px 0px rgba(0, 0, 0, 0.05);
     overflow: auto;
     -webkit-transition: 0.4s;
