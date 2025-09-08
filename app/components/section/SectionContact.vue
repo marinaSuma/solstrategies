@@ -45,7 +45,7 @@
               </label>
             </div>
 
-            <div class="form-group floating-label col-sm-6">
+            <div class="form-group floating-label col-sm-12">
               <input type="text" id="inquiry" name="inquiry" class="form-control" placeholder=" " />
               <label for="inquiry">
                   <span class="label-text">Type of Inquiry</span>
@@ -128,6 +128,8 @@ onMounted(() => {
 .bgForm {
     position: absolute;
     z-index: -1;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -153,7 +155,7 @@ onMounted(() => {
     transition: 0.4s;
 
     @include mx.mobile {
-     width: 90%;
+     width: 93%;
     }
   }
 
@@ -190,6 +192,9 @@ onMounted(() => {
     align-items: center;
     min-height: 100%;
     overflow: auto;
+    @include mx.mobile {
+      padding: 60px 30px;
+    }
   }
 
   #request .request-content {
@@ -204,6 +209,9 @@ onMounted(() => {
     font-style: normal;
     font-weight: 300;
     line-height: 99%;
+    @include mx.mobile {
+      font-size: 45px;
+    }
   }
 
 
@@ -218,11 +226,17 @@ onMounted(() => {
     font-size: 22px;
     font-weight: 500;
     margin-bottom: 6px;
+    @include mx.mobile {
+      font-size: 18px;
+    }
   }
 
   p.font-text2 {
     font-size: 18px;
     color: #686868;
+    @include mx.mobile {
+      font-size: 16px;
+    }
   }
 
 
@@ -272,6 +286,9 @@ onMounted(() => {
 
   .form-group {
     margin-bottom: 22px;
+    @include mx.mobile {
+     margin-bottom: 10px;
+    }
   }
 
 
@@ -282,6 +299,9 @@ onMounted(() => {
     -ms-flex-positive: 1;
     flex-grow: 0;
     padding: 0 5px;
+    @include mx.mobile {
+     flex-basis: 100%;
+    }
   }
 
   .col-sm-12.floating-label {
@@ -400,6 +420,9 @@ onMounted(() => {
   textarea.form-control {
     resize: none;
     height: 140px;
+    @include mx.mobile {
+      height: 120px;
+    }
   }
 
   .cerrarmenu{}
