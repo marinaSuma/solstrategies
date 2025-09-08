@@ -37,7 +37,7 @@ let ctx;
 	const buttons = document.querySelectorAll(".btn-request, .cerrarmenu, .bodycerrar");
 
 	gsap.set("#request", {
-	  right: "-100%" // Inicialmente, la caja está fuera de la pantalla
+	  right: "-100%", // Inicialmente, la caja está fuera de la pantalla
 	});
 
 	buttons.forEach((button) => {
@@ -84,7 +84,7 @@ let ctx;
 
 
   .btn-request:hover{
-    cursor: pointer
+    cursor: pointer;
   }
 
 
@@ -102,7 +102,7 @@ let ctx;
     transition: all 0.5s;
     z-index: 21;
     box-shadow: 0px 25px 55px 0px rgba(0, 0, 0, 0.05);
-    overflow: auto
+    overflow: auto;
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
     -o-transition: 0.4s;
@@ -122,7 +122,7 @@ let ctx;
     position: absolute;
     top: 66px;
     right: 40px;
-    z-index: 3
+    z-index: 3;
   }
 
   #request .cerrar:hover{
@@ -251,7 +251,7 @@ let ctx;
     -moz-transition: 0.4s;
     -o-transition: 0.4s;
     transition: 0.4s;
-    border: none
+    border: none;
   }
 
 
