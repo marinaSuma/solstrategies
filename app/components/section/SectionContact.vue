@@ -1,23 +1,19 @@
 <template>
-<section ref="el" class="contactform">
+<section ref="el" class="contactform" id="request" ref="requestRef">
 
     <div class="bg">
       <MediaImg src="/audio-bg.webp" alt="Audio Background" />
     </div>
-    <div id="request" ref="requestRef">
-      <div class="request-in">
-        <div class="request-content">
-          <h2><strong>Get in touch</strong> with us</h2>
-          <p>Please provide your info and we'll connect with you soon.</p>
-          <div class="form mt-5">
-            <!-- tu formulario aquí -->
-          </div>
-          <!-- Botón de cerrar -->
-          <div class="cerrar cerrarmenu" @click="closeForm">
-            <p>cerrar menu</p>
-            <!-- <img :src="formClose" width="30" alt="Cerrar" /> -->
-          </div>
-        </div>
+    <div class="request-content">
+      <h2><strong>Get in touch</strong> with us</h2>
+      <p>Please provide your info and we'll connect with you soon.</p>
+      <div class="form mt-5">
+        <!-- tu formulario aquí -->
+      </div>
+      <!-- Botón de cerrar -->
+      <div class="cerrar cerrarmenu" @click="closeForm">
+        <p>cerrar menu</p>
+        <!-- <img :src="formClose" width="30" alt="Cerrar" /> -->
       </div>
     </div>
 
