@@ -112,7 +112,7 @@
                 </ul>
 
                 <div class="mobile-menu__cta">
-                  <ButtonCta class="btn-request"> Contact Us </ButtonCta>
+                  <ButtonCta class="btn-request" @click="handleCloseMenu"> Contact Us </ButtonCta>
                 </div>
               </aside>
             </div>
