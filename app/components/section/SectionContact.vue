@@ -7,8 +7,8 @@
       </div>
       <div class="request-in">
         <div class="request-content">
-          <h2><strong>Get in touch</strong> <br>with us</h2>
-          <p>Please provide your info and we'll connect with you soon.</p>
+          <h2><strong>Let's talk!</strong> <br>We're here to help</h2>
+          <p><strong>Drop us a message</strong><br>Please provide your info and we’ll connect with you soon.</p>
           <div class="form mt-5">
             
             <div class="col-md-6 form-group floating-label">
