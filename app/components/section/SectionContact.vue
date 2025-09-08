@@ -1,6 +1,6 @@
 <template>
   <div class="btn border btn-request"><a>Contact us</a></div>
-  <section class="contactform" id="request" ref="el">
+  <section class="contactform">
     <div id="request">
       <div class="cerrar cerrarmenu">
         <p>CERRAR MENU</p>
@@ -27,13 +27,11 @@
 
 <script setup>
 
-const el = useTemplateRef('el');
 let ctx;
 
 import { onMounted, ref } from 'vue';
 import gsap from 'gsap';
 
-const el = ref(null);
 let active = false;
 
 onMounted(() => {
