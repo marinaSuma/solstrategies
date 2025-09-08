@@ -12,10 +12,17 @@
           <Text tag="p" variant="text2" data-split data-linereveal>Please provide your info and we'll connect with you soon.</Text>
           <div class="form mt-5">
             
-            <div class="orm-group floating-label col-sm-6">
+            <div class="form-group floating-label col-sm-6">
               <input type="text" id="full_name" name="full_name" class="form-control" placeholder=" " required />
               <label for="full_name">
                   <span class="label-text">Full Name</span><span class="required">*</span>
+              </label>
+            </div>
+
+            <div class="form-group floating-label col-sm-6">
+              <input type="text" id="company_name" name="company_name" class="form-control" placeholder=" " required />
+              <label for="company_name">
+                  <span class="label-text">Company Name</span><span class="required">*</span>
               </label>
             </div>
 
@@ -259,8 +266,19 @@ onMounted(() => {
 
 
   .col-sm-6 {
-    width: 50%;
-    padding: 0 5px;
+    flex-basis: 1;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 50%;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+
+  .col-sm-12 {
+    flex-basis: 1;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 100%;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
   }
 
   .form-group.boton {
@@ -350,7 +368,7 @@ onMounted(() => {
   .floating-label label {
     color: #9F9F9F;
     font-size: 16px;
-    padding: 0 172px;
+    padding: 0 17px;
     position: absolute;
     top: 10px;
     left: 0;
