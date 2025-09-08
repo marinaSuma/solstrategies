@@ -1,11 +1,12 @@
 <template>
   
   <section class="contactform">
-    <div class="bg">
-      <MediaImg class="bgTop" src="/ctc-bgTop.webp" alt="Contact Background" />
-      <MediaImg class="bgBottom" src="/ctc-bgBot.webp" alt="Contact Background" />
-    </div>
+    
     <div id="request">
+      <div class="bg">
+        <MediaImg class="bgTop" src="/ctc-bgTop.webp" alt="Contact Background" />
+        <MediaImg class="bgBottom" src="/ctc-bgBot.webp" alt="Contact Background" />
+      </div>
       <div class="cerrar cerrarmenu">
          <MediaImg src="/closeContact.svg" alt="Close Form" />
       </div>
@@ -149,6 +150,10 @@ onMounted(() => {
     -moz-transition: 0.4s;
     -o-transition: 0.4s;
     transition: 0.4s;
+
+    @include mx.mobile {
+     width: 90%;
+    }
   }
 
 
@@ -275,7 +280,8 @@ onMounted(() => {
     -ms-flex-preferred-size: 0;
     flex-basis: 50%;
     -ms-flex-positive: 1;
-    flex-grow: 1;
+    flex-grow: 0;
+    padding: 0 5px;
   }
 
   .col-sm-12.floating-label {
@@ -283,7 +289,8 @@ onMounted(() => {
     -ms-flex-preferred-size: 0;
     flex-basis: 100%;
     -ms-flex-positive: 1;
-    flex-grow: 1;
+    flex-grow: 0;
+    padding: 0 5px;
   }
 
   .form-group.boton {
