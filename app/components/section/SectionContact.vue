@@ -59,7 +59,10 @@
               </label>
             </div>
             <div class="col-sm-12">
-              <div class="form-group"><input id="enviar" type="submit" value="Submit" class="button" /></div>
+              <div class="form-group buttons">
+                <input id="enviar" type="submit" value="Submit" class="cta" />
+                
+              </div>
             </div>
           </div>
         </div>
