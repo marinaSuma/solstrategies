@@ -1,27 +1,20 @@
 <template>
-<section ref="el" class="audio">
+<section ref="el" class="banner">
 
   <div class="bg">
     <MediaImg src="/about-bg2.webp" alt="Programable Background" />
   </div>
   <div class="container">
-
+    <div class="shape top">
+      <MediaImg src="/aboutShapeTop.svg" alt="Shape" />
+    </div>
      <div class="title">
-      <Text tag="h2" variant="heading2" data-split data-linereveal>We believe Solana will be the <b>future of programmable finance</b> </Text>
+      <Text tag="h2" variant="heading2" data-split data-linereveal>We believe Solana will <br> be the <b>future of programmable <br>finance</b> </Text>
+    </div>
+    <div class="shape bottom">
+      <MediaImg src="/aboutShapeBottom.svg" alt="Shape" />
     </div>
 
-    <div class="audio-content">
-      <Text class="desc " data-split data-linereveal reveal-delay="0.15"> Sol Strategies First Quarter 2025 Financial Results <br> Webcast and Conference Call</Text>
-
-      <div class="audio-in">
-
-          <audio controls>
-            <source src="/SOLQ325-082625.mp3" type="audio/mpeg" />
-            Your browser does not support the audio element.
-          </audio>
-      </div>
-
-    </div>
 
   </div>
 </section>
@@ -45,7 +38,18 @@ let ctx;
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-color: #F4F4F4;
+    background-color: #fafaf6;
     }
+
+  .title .font-heading2 {
+    text-align: center;
+  }
+
+  section.banner {
+    position: relative;
+    height: 440px;
+    display: flex;
+    align-items: center;
+}
 
 </style>

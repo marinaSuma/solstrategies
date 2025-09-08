@@ -17,14 +17,16 @@
           </div>
         </div>
 
-        <div class="description w-medium">
-          <div class="description__text">
-            <Text class="color-gray" tag="p" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.18">
-              <b>Our mission</b> is to be the institutional backbone of the Solana ecosystem; bridging traditional finance with decentralized infrastructure.
-            </Text>
-            <Text class="color-gray" tag="p" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.22">
-              <b>Our vision</b> is to build the infrastructure that powers the next generation of financial markets.
-            </Text>
+        <div class="description">
+          <div class="w-medium">
+            <div class="description__text">
+              <Text class="color-gray" tag="p" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.18">
+                <b>Our mission</b> is to be the institutional backbone of the Solana ecosystem; bridging traditional finance with decentralized infrastructure.
+              </Text>
+              <Text class="color-gray" tag="p" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.22">
+                <b>Our vision</b> is to build the infrastructure that powers the next generation of financial markets.
+              </Text>
+            </div>
           </div>
 
         </div>
