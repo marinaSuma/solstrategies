@@ -10,14 +10,17 @@
       <div class="wrapper">
         <div class="title-wrapper">
           <div class="title__text">
-            <Text class="title" tag="h1" data-split data-linereveal reveal-notrigger reveal-waitpreloader> Solana meets <b>Wall Street</b> </Text>
+            <Text class="title" tag="h1" data-split data-linereveal reveal-notrigger reveal-waitpreloader> Building Solana's <br><strong>Financial Future</strong> </Text>
           </div>
         </div>
 
         <div class="description">
           <div class="description__text">
             <Text class="color-gray" tag="p" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.15">
-              A publicly traded company providing infrastructure for the Solana blockchain ecosystem, the fastest growing project in crypto.
+              <strong>Our mission</strong> is to be the institutional backbone of the Solana ecosystem; bridging traditional finance with decentralized infrastructure.
+            </Text>
+            <Text class="color-gray" tag="p" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.15">
+              <strong>Our vision</strong> is to build the infrastructure that powers the next generation of financial markets.
             </Text>
           </div>
 
