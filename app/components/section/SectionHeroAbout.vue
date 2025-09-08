@@ -118,7 +118,7 @@ let ctx;
     flex-direction: column;
     gap: fn.toVw(67);
     align-self: end;
-    max-width: 360px;
+
 
     @include mx.mobile {
       gap: fn.toVw(40);
@@ -128,9 +128,9 @@ let ctx;
      
       width: 100%;
 
-      // p + p {
-      //   margin-top: 20px;
-      // }
+      p + p {
+        margin-top: 20px;
+      }
     }
 
   }
