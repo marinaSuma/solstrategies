@@ -1,61 +1,64 @@
 <template>
-  <section class="contactform" id="request" ref="requestRef">
-    <div class="bg">
-      <MediaImg src="/audio-bg.webp" alt="Audio Background" />
-    </div>
-
-    <div class="request-content">
-      <h2><strong>Get in touch</strong> with us</h2>
-      <p>Please provide your info and we'll connect with you soon.</p>
-
-      <div class="form mt-5">
-        <!-- tu formulario aquí -->
+  <section class="contactform" id="request" ref="el">
+    <div id="request">
+      <div class="cerrar cerrarmenu">
+        <p>CERRAR MENU</p>
       </div>
-
-      <!-- Botón de cerrar -->
-      <div class="cerrar cerrarmenu" @click="closeForm">
-         <!-- <img :src="formClose" width="30" alt="Cerrar" /> -->
-        <p>cerrar menu</p>
+      <div class="request-in">
+        <div class="request-content">
+          <h2><strong>Get in touch</strong> with us</h2>
+          <p>Please provide your info and we’ll connect with you soon.</p>
+          <div class="form mt-5">
+            FORMULARIO
+          </div>
+        </div>
       </div>
     </div>
-
-    <!-- Fondo para cerrar al hacer clic -->
-    <div class="bodycerrar" @click="closeForm"></div>
+    <div class="bodycerrar"></div>
   </section>
+
+
+
+
 </template>
 
 
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import gsap from 'gsap';
 
-const requestRef = ref(null);   // ref del formulario
-const active = ref(false);      // estado abierto/cerrado
+const el = useTemplateRef('el');
+let ctx;
 
-const toggleForm = () => {
-  if (active.value) {
-    gsap.to(requestRef.value, { right: "-100%" });
-    document.body.classList.remove("formopen");
-    active.value = false;
-  } else {
-    gsap.to(requestRef.value, { right: 0 });
-    document.body.classList.add("formopen");
-    active.value = true;
-  }
-};
+	let active = false;
 
-const closeForm = () => {
-  if (active.value) {
-    gsap.to(requestRef.value, { right: "-100%" });
-    document.body.classList.remove("formopen");
-    active.value = false;
-  }
-};
+	const buttons = document.querySelectorAll(".btn-request, .cerrarmenu, .bodycerrar");
 
-onMounted(() => {
-  gsap.set(requestRef.value, { right: "-100%" });
-});
+	gsap.set("#request", {
+	  right: "-100%" // Inicialmente, la caja está fuera de la pantalla
+	});
+
+	buttons.forEach((button) => {
+	  button.addEventListener("click", () => {
+		if (active) {
+		  // close
+		  active = false;
+		  gsap.to("#request", {
+			right: "-100%" // Cuando se cierra, la caja vuelve a estar fuera de la pantalla
+		  }, "0");
+			 document.body.classList.remove("formopen");
+		} else {
+		  // open
+		  active = true;
+		  gsap.to("#request", {
+			right: 0, // Cuando se abre, la caja se mueve a la posición 0 desde la derecha
+		  }, "0");
+		  // Agrega la clase ".menuopen" al body cuando se abre la caja
+		  document.body.classList.add("formopen");
+		}
+	  });
+	});
+
+
 </script>
 
 

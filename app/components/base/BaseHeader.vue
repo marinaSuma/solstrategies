@@ -63,8 +63,7 @@
         </ul>
 
         <div class="cta">
-          <!-- <ButtonCta @click="toggleForm" class="btn-request">Contact Us</ButtonCta> -->
-         <button @click="toggleForm" class="btn-request">Contact UsSSS</button>
+          <ButtonCta> Contact Us </ButtonCta>
         </div>
 
         <!-- Mobile: Menu Toggle -->
@@ -112,7 +111,7 @@
                 </ul>
 
                 <div class="mobile-menu__cta">
-                  <ButtonCta @click="toggleForm" class="btn-request">Contact Us</ButtonCta>
+                  <ButtonCta @click="handleCloseMenu"> Contact Us </ButtonCta>
                 </div>
               </aside>
             </div>
@@ -121,10 +120,6 @@
       </nav>
     </div>
   </header>
-
-
-
-
 </template>
 
 <script setup lang="ts">
