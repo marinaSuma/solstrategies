@@ -129,6 +129,8 @@
       </Text>
     </div>
   </footer>
+
+  <SectionContact />
 </template>
 
 <script setup>
