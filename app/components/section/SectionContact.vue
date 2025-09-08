@@ -7,24 +7,42 @@
       </div>
       <div class="request-in">
         <div class="request-content">
-          <h2><strong>Let's talk!</strong> <br>We're here to help</h2>
-          <p><strong>Drop us a message</strong><br>Please provide your info and we’ll connect with you soon.</p>
+          <h2></h2>
+          <Text tag="h2" variant="heading2" data-split data-linereveal><strong>Let's talk!</strong> <br>We're here to help</Text>
+          <Text tag="p" variant="text1" data-split data-linereveal>Drop us a message</Text>
+          <Text tag="p" variant="text2" data-split data-linereveal>Please provide your info and we'll connect with you soon.</Text>
           <div class="form mt-5">
             
-            <div class="col-md-6 form-group floating-label">
-              <input type="text" id="first_name" name="first_name" class="form-control" placeholder=" " required />
-              <label for="first_name">
+            <div class="orm-group floating-label col-sm-6">
+              <input type="text" id="full_name" name="full_name" class="form-control" placeholder=" " required />
+              <label for="full_name">
                   <span class="label-text">Full Name</span><span class="required">*</span>
               </label>
             </div>
 
-             <div class="col-md-6 form-group floating-label">
-              <input type="text" id="company_name" name="company_name" class="form-control" placeholder=" " required />
-              <label for="company_name">
-                  <span class="label-text">Company Name</span><span class="required">*</span>
+             <div class="form-group floating-label col-sm-6">
+              <input type="text" id="phone" name="phone" class="form-control" placeholder=" " required />
+              <label for="phone">
+                  <span class="label-text">Phone Number</span><span class="required">*</span>
               </label>
             </div>
 
+             <div class="form-group floating-label col-sm-6">
+              <input type="email" id="your_email" name="your_email" class="form-control" placeholder=" " required />
+              <label for="your_email">
+                  <span class="label-text">E-mail</span><span class="required">*</span>
+              </label>
+            </div>
+
+             <div class="form-group floating-label col-sm-12">
+              <textarea name="your_message" cols="40" rows="7" class="form-control" placeholder=""></textarea>
+              <label for="your_message">
+                  <span class="label-text">Type your message</span>
+              </label>
+            </div>
+            <div class="col-sm-12">
+              <div class="form-group"><input id="enviar" type="submit" value="Submit" class="button" /></div>
+            </div>
           </div>
         </div>
       </div>
@@ -176,6 +194,19 @@ onMounted(() => {
     font-weight: 500;
   }
 
+
+
+
+  #request p.text1 {
+    margin-bottom: 7px;
+    color: #000;
+    font-size: 22px;
+  }
+
+  #request p.text2 {
+    color: #686868;
+    font-size: 18px;
+  }
 
   /*
 
