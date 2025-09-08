@@ -3,7 +3,7 @@
   <section class="contactform">
     
     <div id="request">
-      <div class="bg">
+      <div class="bgForm">
         <MediaImg class="bgTop" src="/ctc-bgTop.webp" alt="Contact Background" />
         <MediaImg class="bgBottom" src="/ctc-bgBot.webp" alt="Contact Background" />
       </div>
@@ -42,6 +42,13 @@
               <input type="email" id="your_email" name="your_email" class="form-control" placeholder=" " required />
               <label for="your_email">
                   <span class="label-text">E-mail</span><span class="required">*</span>
+              </label>
+            </div>
+
+            <div class="form-group floating-label col-sm-6">
+              <input type="text" id="inquiry" name="inquiry" class="form-control" placeholder=" " />
+              <label for="inquiry">
+                  <span class="label-text">Type of Inquiry</span>
               </label>
             </div>
 
@@ -118,16 +125,10 @@ onMounted(() => {
 
 
 <style scoped lang="scss">
-  .bg {
-    top: 0;
-    left: 0;
-    pointer-events: none;
+.bgForm {
     position: absolute;
-    width: 100%;
-    height: 100%;
     z-index: -1;
-
-  }
+}
 
 
 
@@ -265,7 +266,6 @@ onMounted(() => {
 .form {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
     flex-wrap: wrap;
     margin: 30px -10px 0;
 }
