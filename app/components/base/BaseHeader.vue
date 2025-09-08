@@ -1,4 +1,5 @@
 <template>
+   <SectionContact />
   <header
     id="header"
     ref="el"
@@ -64,6 +65,7 @@
 
         <div class="cta">
           <ButtonCta> Contact Us </ButtonCta>
+
         </div>
 
         <!-- Mobile: Menu Toggle -->
