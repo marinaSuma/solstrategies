@@ -14,7 +14,8 @@
           </div>
           <!-- Botón de cerrar -->
           <div class="cerrar cerrarmenu" @click="closeForm">
-            <img src="form-close.svg" width="30" alt="Cerrar">
+            <p>cerrar menu</p>
+            <!-- <img :src="formClose" width="30" alt="Cerrar" /> -->
           </div>
         </div>
       </div>
