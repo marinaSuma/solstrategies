@@ -88,37 +88,31 @@ import gsap from 'gsap';
 let active = false;
 
 onMounted(() => {
-  const buttons = document.querySelectorAll(".btn-request, .cerrarmenu, .bodycerrar");
-  const overlay = document.querySelector(".bodycerrar");
-  const panel = document.querySelector("#request");
+  gsap.set("#request", { right: "-100%" });
 
-  // Configuración inicial
-  gsap.set(panel, { right: "-100%" });
-  gsap.set(overlay, { opacity: 0, zIndex: -1 });
+  const tlOpen = gsap.timeline({ paused: true })
+    .to("#request", { right: 0, duration: 0.5, ease: "power2.out" }, 0)
+    .call(() => document.body.classList.add("formopen"), null, 0);
 
-  // Timeline para abrir
-  const tl = gsap.timeline({ paused: true })
-    .to(overlay, { opacity: 0.9, zIndex: 9, duration: 0.3 }, 0) // primero o al mismo tiempo
-    .to(panel, { right: 0, duration: 0.5, ease: "power2.out" }, 0); // animación del panel
-
-  // Timeline para cerrar
   const tlClose = gsap.timeline({ paused: true })
-    .to(panel, { right: "-100%", duration: 0.5, ease: "power2.in" }, 0)
-    .to(overlay, { opacity: 0, zIndex: -1, duration: 0.3 }, 0);
+    .to("#request", { right: "-100%", duration: 0.5, ease: "power2.in" }, 0)
+    .call(() => document.body.classList.remove("formopen"), null, 0);
 
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      if (active) {
-        active = false;
-        tlClose.restart();
-      } else {
-        active = true;
-        tl.restart();
-      }
-    });
+  let active = false;
+
+  document.addEventListener("click", (e) => {
+    const target = e.target.closest(".btn-request, .cerrarmenu, .bodycerrar");
+    if (!target) return;
+
+    if (active) {
+      active = false;
+      tlClose.restart();
+    } else {
+      active = true;
+      tlOpen.restart();
+    }
   });
 });
-
 </script>
 
 
