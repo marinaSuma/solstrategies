@@ -8,9 +8,23 @@
       <div class="request-in">
         <div class="request-content">
           <h2><strong>Get in touch</strong> with us</h2>
-          <p>Please provide your info and we’ll connect with you soon.</p>
+          <p>Please provide your info and we'll connect with you soon.</p>
           <div class="form mt-5">
-            FORMULARIO
+            
+            <div class="col-md-6 form-group floating-label">
+              <input type="text" id="first_name" name="first_name" class="form-control" placeholder=" " required />
+              <label for="first_name">
+                  <span class="label-text">Full Name</span><span class="required">*</span>
+              </label>
+            </div>
+
+             <div class="col-md-6 form-group floating-label">
+              <input type="text" id="company_name" name="company_name" class="form-control" placeholder=" " required />
+              <label for="company_name">
+                  <span class="label-text">Company Name</span><span class="required">*</span>
+              </label>
+            </div>
+
           </div>
         </div>
       </div>
@@ -36,27 +50,31 @@ let active = false;
 
 onMounted(() => {
   const buttons = document.querySelectorAll(".btn-request, .cerrarmenu, .bodycerrar");
+  const overlay = document.querySelector(".bodycerrar");
+  const panel = document.querySelector("#request");
 
   // Configuración inicial
-  gsap.set("#request", { right: "-100%" });
+  gsap.set(panel, { right: "-100%" });
+  gsap.set(overlay, { opacity: 0, zIndex: -1 });
 
-  // Timeline para abrir/cerrar
+  // Timeline para abrir
   const tl = gsap.timeline({ paused: true })
-    .to("#request", { right: 0, duration: 0.5, ease: "power2.out" }, 0) // animación del panel
-    .call(() => document.body.classList.add("formopen"), null, 0); // clase al mismo tiempo
+    .to(overlay, { opacity: 0.9, zIndex: 9, duration: 0.3 }, 0) // primero o al mismo tiempo
+    .to(panel, { right: 0, duration: 0.5, ease: "power2.out" }, 0); // animación del panel
 
+  // Timeline para cerrar
   const tlClose = gsap.timeline({ paused: true })
-    .to("#request", { right: "-100%", duration: 0.5, ease: "power2.in" }, 0)
-    .call(() => document.body.classList.remove("formopen"), null, 0);
+    .to(panel, { right: "-100%", duration: 0.5, ease: "power2.in" }, 0)
+    .to(overlay, { opacity: 0, zIndex: -1, duration: 0.3 }, 0);
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       if (active) {
         active = false;
-        tlClose.restart(); // cerrar
+        tlClose.restart();
       } else {
         active = true;
-        tl.restart(); // abrir
+        tl.restart();
       }
     });
   });
@@ -82,16 +100,6 @@ onMounted(() => {
 
   }
 
-
-  body.menuopen header .navbar ul li.menu-has-dropdown .dropdown{
-	  opacity: 0; 
-    visibility: hidden;
-  }
-
-
-  .btn-request:hover{
-    cursor: pointer;
-  }
 
 
   #request{
@@ -154,12 +162,6 @@ onMounted(() => {
   }
 
 
-  #request .text.blue {
-    color: #2151C5;
-    margin-bottom: 25px;
-    max-width: 390px;
-  }
-
   #request h2 {
     margin-bottom: 7px;
   }
@@ -196,7 +198,7 @@ onMounted(() => {
   }
 
 
-  body .bodycerrar, body .teamcerrar {
+  body .bodycerrar{
     background-color: #696969;
     mix-blend-mode: multiply;
     position: fixed;
@@ -210,7 +212,7 @@ onMounted(() => {
   }
 
 
-  body.formopen .bodycerrar, body.menuopen .teamcerrar{
+  body.formopen .bodycerrar{
     opacity: 0.9;
     z-index: 9;
     transition: all 0.3s ease-out;
@@ -307,155 +309,29 @@ onMounted(() => {
 
 
 
-
-  .wpcf7-not-valid-tip {
-    color:  var(--red);
-    font-size: 12px;
-    font-weight: normal;
-    display: block;
+  .floating-label {
     position: relative;
-    top: 4px;
-    left: 5px;
   }
 
-
-  .wpcf7-validation-errors, .wpcf7-mail-sent-ok,
-  .wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output,
-  .wpcf7 form.sent .wpcf7-response-output,
-  .wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output, .wpcf7 form .wpcf7-response-output{
-    border: none !important;
-    }
-
-
-  .form-control.wpcf7-not-valid {
-    border-color: var(--red);
-  }
-
-
-
-
-  .form form{
-  /*	position: relative;*/
-  }
-  .wpcf7 form.sent .wpcf7-response-output {
+  .floating-label label {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    margin: 0;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 35px;
-    line-height: 42px;
-    text-align: center;
-    color: #000000;
-    padding-top: 90px;
-    padding-bottom: 40px;
-  }
-
-  .wpcf7 form.sent .wpcf7-response-output:before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 61px;
-    height: 64px;
-    background-image: url(images/check.png);
-    margin: auto;
-    top: 23%;
-  }
-
-
-
-
-
-
-
-
-  select.wpcf7-form-control.wpcf7-select.wpcf7-validates-as-required.form-control.select-hidden,
-  select.wpcf7-form-control.wpcf7-select.form-control.select-hidden{
-    display: none;
-  }
-
-  .select-styled {
-    border: 0.5px solid #2d2d2d;
-    border-radius: 58px;
-    height: 51px;
-    color: #7E7E7E;
-    padding: 0 21px;
+    top: 31%;
+    font-size: 14px;
+    padding: 0 12px;
+    color: rgba(0, 0, 0, 0.40);
     font-family: 'Inter';
-    line-height: 51px;
-    font-size: 14px;
   }
 
-  ul.select-options {
-    background-color: #fff;
-    position: absolute;
-    width: 100%;
-    height: auto;
-    top: 0;
-    height: auto;
-    color: #7E7E7E;
-    padding: 0 21px;
-    font-family: 'Inter';
-    line-height: 51px;
-    border: 0.5px solid #2d2d2d;
-    border-radius: 23px;
-    z-index: 2;
-    padding-top: 13px;
-    padding-bottom: 25px;
+  .floating-label label span.required {
+    color: #F00;
   }
 
-  ul.select-options li {
-    font-size: 14px;
-    line-height: 25px;
-    position: relative;
-    padding-left: 23px;
-  }
 
-  ul.select-options li:first-child {
-    /* visibility: hidden; */
-    padding-bottom: 18px;
-    font-size: 14px;
-    padding-left: 0;
-  }
-
-  ul.select-options li:before {
-    position: absolute;
-    left: 0;
-    top: 6px;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    content: '';
-    background-color: #D9D9D9;
-  }
-
-  ul.select-options li:first-child:before {
+  .floating-label input:focus + label,
+  .floating-label input:not(:placeholder-shown) + label {
     display: none;
   }
 
 
-  ul.select-options li:hover:before {
-    background-color: var(--red);
-    cursor: pointer;
-  }
-
-  .select-styled:after {
-    position: absolute;
-    top: 0;
-    right: 16px;
-    content: '';
-    font-size: 21px;
-    width: 18px;
-    height: 100%;
-    background-image: url(images/select.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
 
 </style>

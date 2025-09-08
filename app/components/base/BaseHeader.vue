@@ -64,7 +64,7 @@
         </ul>
 
         <div class="cta">
-          <ButtonCta class="btn border btn-request"> Contact Us </ButtonCta>
+          <ButtonCta class="btn-request"> Contact Us </ButtonCta>
         </div>
 
         <!-- Mobile: Menu Toggle -->
