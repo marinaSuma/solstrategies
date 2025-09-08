@@ -70,35 +70,37 @@ let ctx;
     right: 0;
     top: 0;
     z-index: -1;
+    width: 100%;
 }
 
 .wrapper {
   display: flex;
   gap: fn.toVw(46);
-  align-items: flex-end;
+  flex-direction: column;
+  max-width: 1110px;
 
   @include mx.mobile {
     flex-direction: column;
     gap: fn.toVw(14);
-    align-items: flex-start;
   }
 
   .title-wrapper {
     flex-shrink: 0;
     width: 100%;
     max-width: fn.toVw(900);
+    align-self: flex-start;
 
     .title__text {
       width: 100%;
     }
 
     .title {
-      font-size: fn.toVw(125);
+      font-size: 70px;
       font-weight: 300;
       line-height: 1.008;
 
       @include mx.mobile {
-        font-size: fn.toVw(60);
+        font-size: 60px;
       }
 
       b {
@@ -111,18 +113,18 @@ let ctx;
     display: flex;
     flex-direction: column;
     gap: fn.toVw(67);
-    justify-content: flex-end;
+    align-self: end;
 
     @include mx.mobile {
       gap: fn.toVw(40);
     }
 
     .description__text {
+      max-width: 360px;
       width: 100%;
-      max-width: fn.toVw(530);
 
       p + p {
-        margin-top: 10px;
+        margin-top: 20px;
       }
     }
 
