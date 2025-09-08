@@ -6,7 +6,7 @@
       <MediaImg src="/audio-bg.webp" alt="Audio Background" />
     </div>
     <div id="request">
-      <div class="cerrar cerrarmenu"><img src="<?php bloginfo('template_url')?>/images/form-close.svg" width="30px" alt=""></div>
+      <!-- <div class="cerrar cerrarmenu"><img src="form-close.svg" width="30px" alt=""></div> -->
       <div class="request-in">
         <div class="request-content">
           <h2><strong>Get in touch</strong> with us</h2>
