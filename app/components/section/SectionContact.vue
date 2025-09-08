@@ -1,15 +1,17 @@
 <template>
-<section ref="el" class="contactform" id="request" ref="requestRef">
-
+  <section class="contactform" id="request" ref="requestRef">
     <div class="bg">
       <MediaImg src="/audio-bg.webp" alt="Audio Background" />
     </div>
+
     <div class="request-content">
       <h2><strong>Get in touch</strong> with us</h2>
       <p>Please provide your info and we'll connect with you soon.</p>
+
       <div class="form mt-5">
         <!-- tu formulario aquí -->
       </div>
+
       <!-- Botón de cerrar -->
       <div class="cerrar cerrarmenu" @click="closeForm">
         <p>cerrar menu</p>
@@ -19,10 +21,7 @@
 
     <!-- Fondo para cerrar al hacer clic -->
     <div class="bodycerrar" @click="closeForm"></div>
-
-
-
-</section>
+  </section>
 </template>
 
 
