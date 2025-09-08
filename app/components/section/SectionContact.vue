@@ -1,4 +1,5 @@
 <template>
+  <div class="btn border btn-request"><a>Contact us</a></div>
   <section class="contactform" id="request" ref="el">
     <div id="request">
       <div class="cerrar cerrarmenu">
@@ -29,34 +30,33 @@
 const el = useTemplateRef('el');
 let ctx;
 
-	let active = false;
+import { onMounted, ref } from 'vue';
+import gsap from 'gsap';
 
-	const buttons = document.querySelectorAll(".btn-request, .cerrarmenu, .bodycerrar");
+const el = ref(null);
+let active = false;
 
-	gsap.set("#request", {
-	  right: "-100%" // Inicialmente, la caja está fuera de la pantalla
-	});
+onMounted(() => {
+  const buttons = document.querySelectorAll(".btn-request, .cerrarmenu, .bodycerrar");
 
-	buttons.forEach((button) => {
-	  button.addEventListener("click", () => {
-		if (active) {
-		  // close
-		  active = false;
-		  gsap.to("#request", {
-			right: "-100%" // Cuando se cierra, la caja vuelve a estar fuera de la pantalla
-		  }, "0");
-			 document.body.classList.remove("formopen");
-		} else {
-		  // open
-		  active = true;
-		  gsap.to("#request", {
-			right: 0, // Cuando se abre, la caja se mueve a la posición 0 desde la derecha
-		  }, "0");
-		  // Agrega la clase ".menuopen" al body cuando se abre la caja
-		  document.body.classList.add("formopen");
-		}
-	  });
-	});
+  gsap.set("#request", {
+    right: "-100%" // Inicialmente, la caja está fuera de la pantalla
+  });
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (active) {
+        active = false;
+        gsap.to("#request", { right: "-100%" });
+        document.body.classList.remove("formopen");
+      } else {
+        active = true;
+        gsap.to("#request", { right: 0 });
+        document.body.classList.add("formopen");
+      }
+    });
+  });
+});
 
 
 </script>
