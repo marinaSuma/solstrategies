@@ -17,7 +17,7 @@
           </div>
         </div>
 
-        <div class="description">
+        <div class="description w-medium">
           <div class="description__text">
             <Text class="color-gray" tag="p" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.18">
               <b>Our mission</b> is to be the institutional backbone of the Solana ecosystem; bridging traditional finance with decentralized infrastructure.
@@ -119,21 +119,26 @@ let ctx;
     gap: fn.toVw(67);
     align-self: end;
 
-
     @include mx.mobile {
       gap: fn.toVw(40);
     }
 
     .description__text {
-     
+      // max-width: 360px;
       width: 100%;
 
-      p + p {
-        margin-top: 20px;
-      }
+      // p + p {
+      //   margin-top: 20px;
+      // }
     }
 
   }
+}
+
+
+
+.w-medium {
+  max-width: 360px;
 }
 
 </style>
