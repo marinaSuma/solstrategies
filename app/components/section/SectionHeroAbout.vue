@@ -1,8 +1,7 @@
 <template>
   <section ref="el" class="hero">
-    <div class="bg">
-      <MediaVideo class="desktop" src="/hero.mp4" />
-      <MediaVideo class="mobile" src="/hero-m.mp4" />
+    <div class="bg-right">
+      <MediaImg src="/about-bgTop.png" alt="About Background" />
       <!-- <MediaImg :provider="false" src="/thumbnail.jpg" alt="Logo" /> -->
     </div>
 
@@ -10,7 +9,7 @@
       <div class="wrapper">
         <div class="title-wrapper">
           <div class="title__text">
-            <Text class="title" tag="h1" data-split data-linereveal reveal-notrigger reveal-waitpreloader> Building Solana's <br><strong>Financial Future</strong> </Text>
+            <Text class="title" tag="h2" data-split data-linereveal reveal-notrigger reveal-waitpreloader> Building Solana's <br><strong>Financial Future</strong> </Text>
           </div>
         </div>
 
@@ -64,13 +63,13 @@ let ctx;
   }
 }
 
-.bg {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
 
-  width: 100%;
-  height: 100%;
+.bg-right {
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
 }
 
 .wrapper {
@@ -121,6 +120,10 @@ let ctx;
     .description__text {
       width: 100%;
       max-width: fn.toVw(530);
+
+      p + p {
+        margin-top: 10px;
+      }
     }
 
   }
