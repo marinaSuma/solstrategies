@@ -34,37 +34,39 @@ let ctx;
 
   let active = false;
 
-	const buttons = document.querySelectorAll(".btn-request, .cerrarmenu, .bodycerrar");
+  import { ref, onMounted } from 'vue';
+  import gsap from 'gsap';
 
-	gsap.set("#request", {
-	  right: "-100%", // Inicialmente, la caja está fuera de la pantalla
-	});
+  const active = ref(false);
 
-	buttons.forEach((button) => {
-	  button.addEventListener("click", () => {
-		if (active) {
-		  // close
-		  active = false;
-		  gsap.to("#request", {
-			right: "-100%" // Cuando se cierra, la caja vuelve a estar fuera de la pantalla
-		  }, "0");
-			 document.body.classList.remove("formopen");
-		} else {
-		  // open
-		  active = true;
-		  gsap.to("#request", {
-			right: 0, // Cuando se abre, la caja se mueve a la posición 0 desde la derecha
-		  }, "0");
-		  // Agrega la clase ".menuopen" al body cuando se abre la caja
-		  document.body.classList.add("formopen");
-		}
-	  });
-	});
+  const toggleForm = () => {
+    if (active.value) {
+      // Close
+      gsap.to("#request", { right: "-100%" });
+      document.body.classList.remove("formopen");
+      active.value = false;
+    } else {
+      // Open
+      gsap.to("#request", { right: 0 });
+      document.body.classList.add("formopen");
+      active.value = true;
+    }
+  };
+
+  // Inicializamos la posición del request
+  onMounted(() => {
+    gsap.set("#request", { right: "-100%" });
+  });
 
 </script>
 
 
-<style scoped lang="css">
+
+
+
+
+
+<style scoped lang="scss">
   .bg {
     top: 0;
     left: 0;
