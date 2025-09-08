@@ -118,13 +118,14 @@ let ctx;
     flex-direction: column;
     gap: fn.toVw(67);
     align-self: end;
+    max-width: 360px;
 
     @include mx.mobile {
       gap: fn.toVw(40);
     }
 
     .description__text {
-      max-width: 360px;
+     
       width: 100%;
 
       // p + p {
