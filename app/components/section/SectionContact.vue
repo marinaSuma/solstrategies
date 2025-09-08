@@ -7,7 +7,7 @@
       </div>
       <div class="request-in">
         <div class="request-content">
-          <h2><strong>Get in touch</strong> with us</h2>
+          <h2><strong>Get in touch</strong> <br>with us</h2>
           <p>Please provide your info and we'll connect with you soon.</p>
           <div class="form mt-5">
             
@@ -164,11 +164,16 @@ onMounted(() => {
 
   #request h2 {
     margin-bottom: 7px;
+    color: #000;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 99%;
   }
 
 
   #request h2 strong{
-    color: var(--red)
+    font-weight: 500;
   }
 
 
@@ -220,7 +225,13 @@ onMounted(() => {
 
 
 
-  .form{}
+.form {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 30px 0 0;
+}
 
   .form-group {
     margin-bottom: 22px;
@@ -232,15 +243,13 @@ onMounted(() => {
   }
 
   .form-control {
-    border: 0.5px solid #2d2d2d;
-    border-radius: 58px;
-    height: 51px;
-    padding: 0 21px;
-    color: #7E7E7E;
-    font-family: 'Inter';
-    font-size: 14px;
-    font-weight: 400;
+    height: 41px;
     line-height: 160.5%;
+    padding: 0 21px;
+    border-radius: 10px;
+    border: 1px solid #DFDFDF;
+    background: #FFF;
+    width: 100%;
   }
 
   input#enviar {
@@ -311,15 +320,20 @@ onMounted(() => {
 
   .floating-label {
     position: relative;
+    flex-basis: 1;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
   }
 
   .floating-label label {
-    position: absolute;
-    top: 31%;
-    font-size: 14px;
+    color: #9F9F9F;
+    font-size: 16px;
     padding: 0 12px;
-    color: rgba(0, 0, 0, 0.40);
-    font-family: 'Inter';
+    position: absolute;
+    top: 27%;
+    left: 0;
   }
 
   .floating-label label span.required {
