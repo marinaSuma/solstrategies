@@ -1,6 +1,10 @@
 <template>
   
   <section class="contactform">
+    <div class="bg">
+      <MediaImg class="bgTop" src="/ctc-bgTop.webp" alt="Contact Background" />
+      <MediaImg class="bgBottom" src="/ctc-bgBot.webp" alt="Contact Background" />
+    </div>
     <div id="request">
       <div class="cerrar cerrarmenu">
          <MediaImg src="/closeContact.svg" alt="Close Form" />
@@ -161,6 +165,7 @@ onMounted(() => {
     top: 66px;
     right: 40px;
     z-index: 3;
+    width: 24px;
   }
 
   #request .cerrar:hover{
@@ -265,7 +270,7 @@ onMounted(() => {
   }
 
 
-  .col-sm-6 {
+  .col-sm-6.floating-label {
     flex-basis: 1;
     -ms-flex-preferred-size: 0;
     flex-basis: 50%;
@@ -273,7 +278,7 @@ onMounted(() => {
     flex-grow: 1;
   }
 
-  .col-sm-12 {
+  .col-sm-12.floating-label {
     flex-basis: 1;
     -ms-flex-preferred-size: 0;
     flex-basis: 100%;
