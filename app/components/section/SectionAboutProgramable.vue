@@ -5,7 +5,8 @@
     <MediaImg src="/about-bg2.webp" alt="Programable Background" />
   </div>
   <div class="container">
-    <div class="shape top">
+    <div class="title-container">
+      <div class="shape top">
       <MediaImg src="/aboutShapeTop.svg" alt="Shape" />
     </div>
      <div class="title">
@@ -14,6 +15,9 @@
     <div class="shape bottom">
       <MediaImg src="/aboutShapeBottom.svg" alt="Shape" />
     </div>
+
+    </div>
+    
 
 
   </div>
@@ -30,6 +34,12 @@ let ctx;
 
 
 <style scoped lang="scss">
+  section.banner {
+    position: relative;
+    height: 570px;
+    display: flex;
+    align-items: center;
+  }
   .bg {
     top: 0;
     left: 0;
@@ -41,15 +51,29 @@ let ctx;
     background-color: #fafaf6;
     }
 
-  .title .font-heading2 {
-    text-align: center;
+  .title-container{
+    max-width: 900px;
+    margin: 0 auto;
+    .title {
+      margin: 20px 0;
+      .font-heading2 {
+        text-align: center;
+        font-size: 60px;
+      }
+    }
+    .shape {
+      height: 70px;
+      img {
+        object-fit: contain;
+      }
+    }
   }
 
-  section.banner {
-    position: relative;
-    height: 440px;
-    display: flex;
-    align-items: center;
-}
+
+  
+
+
+
+  
 
 </style>
