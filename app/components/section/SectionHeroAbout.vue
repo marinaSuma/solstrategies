@@ -5,11 +5,15 @@
       <!-- <MediaImg :provider="false" src="/thumbnail.jpg" alt="Logo" /> -->
     </div>
 
+
+
+
+    
     <div class="container">
       <div class="wrapper">
         <div class="title-wrapper">
           <div class="title__text">
-            <Text class="title" tag="h2" data-split data-linereveal reveal-notrigger reveal-waitpreloader> Building Solana's <br><strong>Financial Future</strong> </Text>
+            <Text class="title" tag="h2" data-split data-linereveal reveal-notrigger reveal-waitpreloader> Building Solana's <br><b>Financial Future</b> </Text>
           </div>
         </div>
 
@@ -18,8 +22,6 @@
             <Text class="color-gray" tag="p" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.18">
               <strong>Our mission</strong> is to be the institutional backbone of the Solana ecosystem; bridging traditional finance with decentralized infrastructure.
             </Text>
-          </div>
-          <div class="description__text">
             <Text class="color-gray" tag="p" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.22">
               <strong>Our vision</strong> is to build the infrastructure that powers the next generation of financial markets.
             </Text>
@@ -125,7 +127,7 @@ let ctx;
       max-width: 360px;
       width: 100%;
 
-      + .description__text {
+      p + p {
         margin-top: 20px;
       }
     }
