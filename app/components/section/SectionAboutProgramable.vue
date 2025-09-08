@@ -63,9 +63,9 @@ let ctx;
     }
     .shape {
       height: 70px;
-      img {
-        object-fit: contain;
-      }
+    }
+    .shape img {
+      object-fit: contain;
     }
   }
 

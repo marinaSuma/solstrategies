@@ -19,7 +19,7 @@
 
         <div class="description">
             <div class="description__text">
-              <Text class="color-gray" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader>
+              <Text class="color-gray" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.15">
                 <b>Our mission</b> is to be the institutional <br> backbone of the Solana ecosystem; <br> bridging traditional finance with <br> decentralized infrastructure.
               </Text>
               <Text class="color-gray" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.22">
@@ -127,9 +127,9 @@ let ctx;
       // max-width: 360px;
       width: 100%;
 
-      // p + p {
-      //   margin-top: 20px;
-      // }
+      p + p {
+        margin-top: 20px;
+      }
     }
 
   }
