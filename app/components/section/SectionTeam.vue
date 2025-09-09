@@ -1,5 +1,5 @@
 <template>
-  <section ref="el" class="hero">
+  <section ref="el" class="team">
     <div class="bg-bottom">
       <MediaImg src="/about-bgTop.png" alt="About Background" />
       <!-- <MediaImg :provider="false" src="/thumbnail.jpg" alt="Logo" /> -->
@@ -12,7 +12,9 @@
     <div class="container">
       <div class="about-grid">
         <div class="title-container">
-
+                <Text class="titleTeam" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.15">  <span class="num">01</span>
+                  Leadership Team
+                </Text>
         </div>
         <div class="team-container" ref="teamSection">
            <div class="description">
@@ -28,30 +30,32 @@
               </div>
           </div>
 
-          
-          <div
-          v-for="(team, index) in teams"
-          :key="team.title"
-          class="team-item"
-        >
-          <div class="img">
-            <img :src="team.img" :alt="team.title" />
-          </div>
-          <div class="content">
-            <div class="name-container">
-              <h6>{{ team.title }}</h6>
-              <div class="social">
-                <a v-if="team.insta" :href="team.insta" class="social-link">IG</a>
-                <a v-if="team.twitter" :href="team.twitter" class="social-link">TW</a>
+          <div class="team-grid">
+            <div
+              v-for="(team, index) in teams"
+              :key="team.title"
+              class="team-item"
+            >
+              <div class="img">
+                <img :src="team.img" :alt="team.title" />
               </div>
-            </div>
-            
-            <div class="description">{{ team.description }}</div>
-            <div class="linkTeam">
-              <a :href="team.url" class="btn">Read bio</a>
-            </div>
+              <div class="content">
+                <div class="name-container">
+                  <h6>{{ team.title }}</h6>
+                  <div class="social">
+                    <a v-if="team.insta" :href="team.insta" class="social-link">IG</a>
+                    <a v-if="team.twitter" :href="team.twitter" class="social-link">TW</a>
+                  </div>
+                </div>
+                
+                <div class="description">{{ team.description }}</div>
+                <div class="linkTeam">
+                  <a :href="team.url" class="btn">Read bio</a>
+                </div>
+              </div>
+              </div>
           </div>
-        </div>
+          
         </div>
       </div>
     </div>
@@ -135,92 +139,51 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
-.hero {
+section.team {
+  padding: 130px 0;
   position: relative;
+}
+.bg-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
 
-  overflow: hidden;
+.about-grid {
   display: flex;
-  align-items: center;
+  border-top: 1px solid #D0D0D0;
+  padding-top: 34px;
+}
 
-  width: 100%;
-  min-height: 100vh;
+.about-grid .title-container {
+  flex: 0 0 28%;
+}
 
-  @include mx.mobile {
-    flex-direction: column;
-    min-height: auto;
-    padding-top: fn.toVw(160);
-  }
+.team-container {
+  flex: 1;
+  padding-left: 40px;
+}
 
-  .container {
-    @include mx.desktop {
-      margin-top: fn.toVw(-100);
-    }
-  }
+.team-container .description {
+  display: flex;
+  justify-content: space-between;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 55px;
+}
+
+.team-container .description .description__text {
+  flex: 0 0 50%;
+  padding: 0 15px;
 }
 
 
-.bg-right {
-    pointer-events: none;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-}
 
-.wrapper {
-  display: flex;
-  max-width: 1110px;
-
-  @include mx.mobile {
-    flex-direction: column;
-    gap: fn.toVw(14);
-  }
-
-  .title-wrapper {
-    flex-shrink: 0;
-    width: 100%;
-    max-width: fn.toVw(900);
-    align-self: flex-start;
-
-    .title__text {
-      width: 100%;
-    }
-
-    .title {
-      font-size: 70px;
-      font-weight: 300;
-      line-height: 1.008;
-
-      @include mx.mobile {
-        font-size: 60px;
-      }
-
-      b {
-        font-weight: 500;
-      }
-    }
-  }
-
-  .description {
-    display: flex;
-    flex-direction: column;
-    gap: fn.toVw(67);
-    align-self: end;
-
-    @include mx.mobile {
-      gap: fn.toVw(40);
-    }
-
-    .description__text {
-      // max-width: 360px;
-      width: 100%;
-
-      // p + p {
-      //   margin-top: 20px;
-      // }
-    }
-
-  }
+.description__text p {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 </style>

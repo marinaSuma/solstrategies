@@ -53,7 +53,7 @@ let ctx;
     }
 
   .title-container{
-    max-width: 810px;
+    max-width: 850px;
     margin: 0 auto;
     position: relative;
     .title {
