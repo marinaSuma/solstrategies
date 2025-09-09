@@ -52,7 +52,7 @@ let ctx;
     }
 
   .title-container{
-    max-width: 900px;
+    max-width: 810px;
     margin: 0 auto;
     .title {
       margin: 20px 0;
@@ -63,10 +63,11 @@ let ctx;
     }
     .shape {
       height: 70px;
+       .media-img img {
+        width: auto;
+      }
     }
-    .shape img {
-      object-fit: contain;
-    }
+   
   }
 
 
