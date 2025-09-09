@@ -42,7 +42,7 @@
                 <h6>{{ team.title }}</h6>
                 <div class="social">
                   <a :href="insta.url" class="social-link"></a>
-                  <a :href="twit.url" class="social-link"></a>
+                  <a :href="twitter.url" class="social-link"></a>
                 </div>
               </div>
               
