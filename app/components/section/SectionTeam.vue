@@ -1,7 +1,7 @@
 <template>
   <section ref="el" class="team">
     <div class="bg-bottom">
-      <MediaImg src="/about-bgTop.png" alt="About Background" />
+      <MediaImg src="/team-bg.png" alt="Team Background" />
       <!-- <MediaImg :provider="false" src="/thumbnail.jpg" alt="Logo" /> -->
     </div>
 
@@ -97,7 +97,8 @@
                   </div>
                 </div>
                 
-                <a class="text" :href="team.url">{{ team.description }}</a>
+                <!-- <a class="text" :href="team.url">{{ team.description }}</a> -->
+                <a class="text" :href="team.url" v-html="team.description"></a>
                 <div class="linkTeam">
                   <a :href="team.url" class="btn">Read bio <MediaImg class="bioArrow" src="/bio.svg" alt="Read bio" /></a>
                 </div>
@@ -123,7 +124,7 @@ let ctx;
 const teams = [
 { 
     title: 'Leah Wald',
-    description: 'Chief Executive Officer and Board Member',
+    description: 'Chief Executive Officer <br> and Board Member',
     img: '/team1.png',
     url: '#',
     linkedin: 'https://linkedin.com/',
