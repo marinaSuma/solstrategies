@@ -67,7 +67,7 @@ const el = useTemplateRef('el');
 let ctx;
 
 
-const posts = [
+const teams = [
 { title: 'Leah Wald', description: 'Chief Executive Officer and Board Member', img: '/team1.png', url: '#' },
 { title: 'Max Kaplan', description: 'Chief Technology Officer', img: '/team2.png', url: '#' },
 { title: 'Doug Harris', description: 'Chief Financial Officer', img: '/team3.png', url: '#' },
