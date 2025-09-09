@@ -1,7 +1,7 @@
 <template>
 <section ref="el" class="banner">
 
-  <div class="bg">
+  <div class="bg fadeinUp">
     <MediaImg src="/about-bg2.webp" alt="Programable Background" />
   </div>
   <div class="container">
