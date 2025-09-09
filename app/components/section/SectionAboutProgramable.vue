@@ -61,16 +61,11 @@ let ctx;
         font-size: 60px;
       }
     }
-    .shape {
-      height: 70px;
-       .media-img img {
-        width: auto;
-      }
-    }
 
-    .media-img{
+
+    .shape .media-img{
       width: auto;
-      height: auto;
+      height: 70px;
       img {
         width: auto;
         object-fit: contain;
