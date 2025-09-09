@@ -67,6 +67,15 @@ let ctx;
         width: auto;
       }
     }
+
+    .media-img{
+      width: auto;
+      height: auto;
+      img {
+        width: auto;
+        object-fit: contain;
+      }
+    }
    
   }
 
