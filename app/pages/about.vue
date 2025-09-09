@@ -21,22 +21,24 @@ useSeoMeta({
 // Animación global fadeinUp
 let ctx;
 
-onMounted(() => {
-  ctx = gsap.context(() => {
-    const fadeinUp = document.querySelectorAll(".fadeinUp");
+import { nextTick } from 'vue';
 
-    gsap.set(fadeinUp, { opacity: 0, y: 40 });
+onMounted(async () => {
+  await nextTick(); // espera que todo el DOM del componente hijo esté renderizado
+  const fadeinLeft = document.querySelectorAll(".fadeinLeft");
+  const fadeinUp = document.querySelectorAll(".fadeinUp");
 
-    fadeinUp.forEach((el) => {
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: el,
-          start:"top 80%",
-          end:"bottom 70%",
-          toggleActions:"play none none reverse",
-        }
-      }).to(el, { opacity: 1, y: 0, duration: 0.6 });
-    });
+  gsap.set(fadeinUp, { opacity: 0, y: 40 });
+  gsap.set(fadeinLeft, { opacity: 0, x: -40 });
+
+  fadeinUp.forEach(el => {
+    gsap.timeline({ scrollTrigger: { trigger: el, start:"top 80%" } })
+        .to(el, { opacity: 1, y: 0, duration: 0.6 });
+  });
+
+  fadeinLeft.forEach(el => {
+    gsap.timeline({ scrollTrigger: { trigger: el, start:"top 80%" } })
+        .to(el, { opacity: 1, x: 0, duration: 0.6 });
   });
 });
 

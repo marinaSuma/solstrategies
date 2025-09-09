@@ -163,16 +163,18 @@ const teams = [
  }
 ]
 
-const teamSections = ref([])  // array vacío
+import { ref, onMounted, nextTick } from 'vue'
 
-onMounted(() => {
-  // limpiar array por si hay remount
-  teamSections.value = []
+const teamSectionsRef = ref(null)
+const teamSections = ref([])
 
-  // ya que usamos ref con función, todos los team-container estarán en el array
+onMounted(async () => {
+  await nextTick() // espera que el DOM esté montado
+  // seleccionamos todos los team-container
+  teamSections.value = document.querySelectorAll('.team-container')
+
   teamSections.value.forEach(section => {
     const boxes = section.querySelectorAll('.team-item')
-
     boxes.forEach((box, index) => {
       gsap.from(box, {
         y: 70,
