@@ -105,134 +105,74 @@ const el = useTemplateRef('el');
 
 let ctx;
 
+import { ref, onMounted, nextTick } from "vue";
 
+gsap.registerPlugin(ScrollTrigger);
 
-
-
-import { ref } from "vue";
-
-// Acá guardamos las referencias de cada bloque de team para usarlas con GSAP
 const teamSections = ref([]);
 
-// Estructura de los grupos
+// El mismo teamGroups que ya tienes
 const teamGroups = [
   {
     num: "01",
     title: "Leadership Team",
-    color: "yellow", // esta clase se usará en <span class="num yellow">
+    color: "yellow",
     description: [
       "First publicly listed on the Canadian Securities Exchange (CSE) in 2018 under the ticker $HODL, Cypherpunk Holdings was a trailblazer in blockchain innovation and digital asset investment, originally focusing on privacy-focused cryptocurrencies and technology.",
       "Now, at SOL Strategies, we are dedicated to investing in the Solana ecosystem, managing staking validators, and driving value through strategic engagement in decentralized finance."
     ],
     members: [
-      { 
-        title: 'Leah Wald',
-        description: 'Chief Executive Officer <br> and Board Member',
-        img: '/team1.png',
-        url: '#',
-        linkedin: 'https://linkedin.com/',
-        twitter: 'https://twitter.com/' 
-    },
-    { 
-      title: 'Max Kaplan', 
-      description: 'Chief Technology Officer', 
-      img: '/team2.png', 
-      url: '#' ,
-      linkedin: 'https://linkedin.com/',
-      twitter: 'https://twitter.com/' 
-    },
-    { 
-      title: 'Doug Harris', 
-      description: 'Chief Financial Officer', 
-      img: '/team3.png', 
-      url: '#',
-      linkedin: 'https://linkedin.com/',
-      twitter: 'https://twitter.com/' 
-    },
-    { 
-      title: 'Michael Hubbard', 
-      description: 'Chief Strategy Officer and Board Member', 
-      img: '/team4.png', 
-      url: '#',
-      linkedin: 'https://linkedin.com/',
-      twitter: 'https://twitter.com/' 
-    },
-    { 
-      title: 'Andrew McDonald', 
-      description: 'Director of Operations', 
-      img: '/team5.png', 
-      url: '#',
-      linkedin: 'https://linkedin.com/',
-      twitter: 'https://twitter.com/' 
-    }
+      { title: 'Leah Wald', description: 'Chief Executive Officer <br> and Board Member', img: '/team1.png', url: '#', linkedin: 'https://linkedin.com/', twitter: 'https://twitter.com/' },
+      { title: 'Max Kaplan', description: 'Chief Technology Officer', img: '/team2.png', url: '#', linkedin: 'https://linkedin.com/', twitter: 'https://twitter.com/' },
+      { title: 'Doug Harris', description: 'Chief Financial Officer', img: '/team3.png', url: '#', linkedin: 'https://linkedin.com/', twitter: 'https://twitter.com/' },
+      { title: 'Michael Hubbard', description: 'Chief Strategy Officer and Board Member', img: '/team4.png', url: '#', linkedin: 'https://linkedin.com/', twitter: 'https://twitter.com/' },
+      { title: 'Andrew McDonald', description: 'Director of Operations', img: '/team5.png', url: '#', linkedin: 'https://linkedin.com/', twitter: 'https://twitter.com/' }
     ]
   },
   {
     num: "02",
     title: "Board of Directors",
     color: "red",
-    description: [], // este grupo no tiene texto de descripción, queda vacío
+    description: [],
     members: [
-      { 
-        title: 'Luis Berruga',
-        description: 'Chairman of the Board',
-        img: '/team6.png',
-        url: '#',
-        linkedin: 'https://linkedin.com/',
-        twitter: 'https://twitter.com/' 
-    },
-    { 
-      title: 'Ungad Chadda', 
-      description: 'Director', 
-      img: '/team7.png', 
-      url: '#' ,
-      linkedin: 'https://linkedin.com/',
-      twitter: 'https://twitter.com/' 
-    },
-    { 
-      title: 'Rubsun Ho', 
-      description: 'Director', 
-      img: '/team8.png', 
-      url: '#',
-      linkedin: 'https://linkedin.com/',
-      twitter: 'https://twitter.com/' 
-    },
-    { 
-      title: 'Jose Calderon', 
-      description: 'Director', 
-      img: '/team9.png', 
-      url: '#',
-      linkedin: 'https://linkedin.com/',
-      twitter: 'https://twitter.com/' 
-    },
-    { 
-        title: 'Leah Wald',
-        description: 'Chief Executive Officer <br> and Board Member',
-        img: '/team1.png',
-        url: '#',
-        linkedin: 'https://linkedin.com/',
-        twitter: 'https://twitter.com/' 
-    },
-    { 
-      title: 'Jon Matonis', 
-      description: 'Chief Economist <br> and Board Member', 
-      img: '/team11.png', 
-      url: '#',
-      linkedin: 'https://linkedin.com/',
-      twitter: 'https://twitter.com/' 
-    },
-    { 
-      title: 'Michael Hubbard', 
-      description: 'Chief Strategy Officer and Board Member', 
-      img: '/team4.png', 
-      url: '#',
-      linkedin: 'https://linkedin.com/',
-      twitter: 'https://twitter.com/' 
-    },
+      { title: 'Luis Berruga', description: 'Chairman of the Board', img: '/team6.png', url: '#', linkedin: 'https://linkedin.com/', twitter: 'https://twitter.com/' },
+      { title: 'Ungad Chadda', description: 'Director', img: '/team7.png', url: '#', linkedin: 'https://linkedin.com/', twitter: 'https://twitter.com/' },
+      { title: 'Rubsun Ho', description: 'Director', img: '/team8.png', url: '#', linkedin: 'https://linkedin.com/', twitter: 'https://twitter.com/' },
+      { title: 'Jose Calderon', description: 'Director', img: '/team9.png', url: '#', linkedin: 'https://linkedin.com/', twitter: 'https://twitter.com/' },
+      { title: 'Leah Wald', description: 'Chief Executive Officer <br> and Board Member', img: '/team1.png', url: '#', linkedin: 'https://linkedin.com/', twitter: 'https://twitter.com/' },
+      { title: 'Jon Matonis', description: 'Chief Economist <br> and Board Member', img: '/team11.png', url: '#', linkedin: 'https://linkedin.com/', twitter: 'https://twitter.com/' },
+      { title: 'Michael Hubbard', description: 'Chief Strategy Officer and Board Member', img: '/team4.png', url: '#', linkedin: 'https://linkedin.com/', twitter: 'https://twitter.com/' }
     ]
   }
 ];
 
+// ----------------- Animación GSAP -----------------
+onMounted(async () => {
+  await nextTick();
+
+  // Seleccionamos todos los contenedores de equipo
+  teamSections.value = document.querySelectorAll(".team-container");
+
+  teamSections.value.forEach(section => {
+    const boxes = section.querySelectorAll(".team-item");
+
+    boxes.forEach((box, index) => {
+      gsap.from(box, {
+        y: 70,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        delay: index * 0.15,
+        scrollTrigger: {
+          trigger: box,
+          start: "top 90%",
+          end: "bottom top",
+          toggleActions: "play none none reverse"
+        }
+      });
+    });
+  });
+});
 </script>
 
 <style scoped lang="scss">
