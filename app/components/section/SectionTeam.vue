@@ -16,6 +16,7 @@
             Leadership Team
           </Text>
         </div>
+
         <div class="team-container" ref="el => teamSections.value.push(el)">
            <div class="description fadeinUp">
               <div class="description__text">
@@ -34,19 +35,19 @@
 
             <div v-for="(member, mIndex) in group.members" :key="member.title" class="team-item">
               <div class="img">
-                <a :href="team.url"><img :src="team.img" :alt="team.title" /></a>
+                <a :href="member.url"><img :src="member.img" :alt="member.title" /></a>
               </div>
               <div class="content">
                 <div class="name-container">
-                  <h6><a :href="team.url">{{ team.title }}</a></h6>
+                  <h6><a :href="member.url">{{ team.title }}</a></h6>
                   <div class="social">
-                    <a v-if="team.linkedin" :href="team.linkedin" class="social-link"><MediaImg src="/linkedin.svg" alt="Linkedin" /></a>
-                    <a v-if="team.twitter" :href="team.twitter" class="social-link"><MediaImg src="/twitter.svg" alt="Twitter" /></a>
+                    <a v-if="member.linkedin" :href="member.linkedin" class="social-link"><MediaImg src="/linkedin.svg" alt="Linkedin" /></a>
+                    <a v-if="member.twitter" :href="member.twitter" class="social-link"><MediaImg src="/twitter.svg" alt="Twitter" /></a>
                   </div>
                 </div>
                 
                 <!-- <a class="text" :href="team.url">{{ team.description }}</a> -->
-                <a class="text" :href="team.url" v-html="team.description"></a>
+                <a class="text" :href="member.url" v-html="member.description"></a>
                 <div class="linkTeam">
                   <a :href="team.url" class="btn">Read bio <MediaImg class="bioArrow" src="/bio.svg" alt="Read bio" /></a>
                 </div>
@@ -65,22 +66,23 @@
         </div>
         <div class="team-container" ref="el => teamSections.value.push(el)">
 
-          <div class="team-grid">
+         <div class="team-grid">
+
             <div v-for="(member, mIndex) in group.members" :key="member.title" class="team-item">
               <div class="img">
-                <a :href="team.url"><img :src="team.img" :alt="team.title" /></a>
+                <a :href="member.url"><img :src="member.img" :alt="member.title" /></a>
               </div>
               <div class="content">
                 <div class="name-container">
-                  <h6><a :href="team.url">{{ team.title }}</a></h6>
+                  <h6><a :href="member.url">{{ team.title }}</a></h6>
                   <div class="social">
-                    <a v-if="team.linkedin" :href="team.linkedin" class="social-link"><MediaImg src="/linkedin.svg" alt="Linkedin" /></a>
-                    <a v-if="team.twitter" :href="team.twitter" class="social-link"><MediaImg src="/twitter.svg" alt="Twitter" /></a>
+                    <a v-if="member.linkedin" :href="member.linkedin" class="social-link"><MediaImg src="/linkedin.svg" alt="Linkedin" /></a>
+                    <a v-if="member.twitter" :href="member.twitter" class="social-link"><MediaImg src="/twitter.svg" alt="Twitter" /></a>
                   </div>
                 </div>
                 
                 <!-- <a class="text" :href="team.url">{{ team.description }}</a> -->
-                <a class="text" :href="team.url" v-html="team.description"></a>
+                <a class="text" :href="member.url" v-html="member.description"></a>
                 <div class="linkTeam">
                   <a :href="team.url" class="btn">Read bio <MediaImg class="bioArrow" src="/bio.svg" alt="Read bio" /></a>
                 </div>
