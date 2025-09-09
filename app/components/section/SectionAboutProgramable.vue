@@ -31,43 +31,6 @@
 const el = useTemplateRef('el');
 let ctx;
 
-onMounted(() => {
-  ctx = gsap.context(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: el.value,
-      },
-    });
-
-    const fadeinUp = document.querySelectorAll(".fadeinUp");
-    gsap.set(fadeinUp, {
-		  opacity: 0,
-		  y: 30,
-		});
-
-		fadeinUp.forEach( (el)=> {
-		let tlfadinUp = gsap.timeline({
-			scrollTrigger: {
-			trigger: el,
-			start:"top 85%",
-			end: "bottom 75%",
-			toggleActions:"play none none reverse",
-	//	    markers:true,
-			}
-		})
-		tlfadinUp
-		.to(el, {  opacity: 1, y: 0, duration: 0.6,})
-
-		})  // end foreach
-  }, el.value);
-});
-
-onUnmounted(() => {
-  ctx?.revert();
-});
-
-
-
 </script>
 
 

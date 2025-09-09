@@ -10,14 +10,40 @@
 <script setup>
 import seo from '~~/config/seo.json';
 
-useHead({
-  titleTemplate: null,
-});
+useHead({ titleTemplate: null });
 
 const title = seo.title;
-
 useSeoMeta({
-  title: title,
+  title,
   ogTitle: title,
 });
+
+// Animación global fadeinUp
+let ctx;
+
+onMounted(() => {
+  ctx = gsap.context(() => {
+    const fadeinUp = document.querySelectorAll(".fadeinUp");
+
+    gsap.set(fadeinUp, { opacity: 0, y: 30 });
+
+    fadeinUp.forEach((el) => {
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: el,
+          start:"top 85%",
+          end:"bottom 75%",
+          toggleActions:"play none none reverse",
+        }
+      }).to(el, { opacity: 1, y: 0, duration: 0.6 });
+    });
+  });
+});
+
+onUnmounted(() => {
+  ctx?.revert();
+});
 </script>
+
+
+
