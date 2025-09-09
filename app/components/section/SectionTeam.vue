@@ -16,7 +16,7 @@
                   Leadership Team
                 </Text>
         </div>
-        <div class="team-container" ref="teamSection">
+        <div class="team-container" ref="teamSections">
            <div class="description">
               <div class="description__text">
                 <Text class="color-gray" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.15">
@@ -65,7 +65,7 @@
                   Board of Directors
                 </Text>
         </div>
-        <div class="team-container" ref="teamSection">
+        <div class="team-container" ref="teamSections">
            <div class="description">
               <div class="description__text">
                 <Text class="color-gray" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.15">
@@ -86,18 +86,18 @@
               class="team-item"
             >
               <div class="img">
-                <img :src="team.img" :alt="team.title" />
+                <a :href="team.url"><img :src="team.img" :alt="team.title" /></a>
               </div>
               <div class="content">
                 <div class="name-container">
-                  <h6>{{ team.title }}</h6>
+                  <a :href="team.url"><h6>{{ team.title }}</h6></a>
                   <div class="social">
                     <a v-if="team.linkedin" :href="team.linkedin" class="social-link"><MediaImg src="/linkedin.svg" alt="Linkedin" /></a>
                     <a v-if="team.twitter" :href="team.twitter" class="social-link"><MediaImg src="/twitter.svg" alt="Twitter" /></a>
                   </div>
                 </div>
                 
-                <div class="text">{{ team.description }}</div>
+                <a class="text" :href="team.url">{{ team.description }}</a>
                 <div class="linkTeam">
                   <a :href="team.url" class="btn">Read bio <MediaImg class="bioArrow" src="/bio.svg" alt="Read bio" /></a>
                 </div>
@@ -163,24 +163,26 @@ const teams = [
  }
 ]
 
-const teamSection = ref(null)
+const teamSections = ref([])  // array de refs
 
 onMounted(() => {
-  const boxes = teamSection.value.querySelectorAll('.team-item')
-  
-  boxes.forEach((box, index) => {
-    gsap.from(box, {
-      y: 70,
-      opacity: 0,
-      duration: 0.8,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: box,
-        start: 'top 90%',    // cuando cada caja entra en pantalla
-        end: 'bottom top',
-        toggleActions: 'play none none reverse',
-      },
-      delay: index * 0.15     // escalonado relativo
+  teamSections.value.forEach(section => {
+    const boxes = section.querySelectorAll('.team-item')
+
+    boxes.forEach((box, index) => {
+      gsap.from(box, {
+        y: 70,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: box,
+          start: 'top 90%',
+          end: 'bottom top',
+          toggleActions: 'play none none reverse',
+        },
+        delay: index * 0.15
+      })
     })
   })
 })
@@ -240,7 +242,7 @@ section.team {
     flex-wrap: wrap;   /* permite que los items salten de línea */
     gap: 50px 20px;
     .team-item {
-      flex: 0 0 33.333%; 
+      flex: 0 0 calc(33.333% - 20px); 
       box-sizing: border-box;
       .img {
         border-radius: 6px;
@@ -279,8 +281,9 @@ section.team {
           overflow: visible;
           gap: 7px;
           .bioArrow {
-            width: 10px;
-            height: auto;
+            width: 12px;
+            height: 11px;
+            transform-origin: center bottom;
             display: block;
             overflow: visible;
             -webkit-transition: 0.4s;
