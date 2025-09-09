@@ -30,6 +30,31 @@
 
 const el = useTemplateRef('el');
 let ctx;
+
+onMounted(() => {
+  ctx = gsap.context(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: el.value,
+      },
+    });
+
+    tl.from('.shape', {
+      opacity: 0,
+      xPercent: 40,
+      ease: 'power2.out',
+      duration: 1.0,
+      stagger: 0.15,
+    });
+  }, el.value);
+});
+
+onUnmounted(() => {
+  ctx?.revert();
+});
+
+
+
 </script>
 
 
@@ -63,12 +88,22 @@ let ctx;
     }
 
     .shape {
-      width: fn.toVw(140);
+      width: fn.toVw(190);
       margin-top: fn.toVw(-5);
+      .top {
+        position: relative;
+        left: -80px;
+        width: calc(220 / var(--base-vw) * var(--base-multiplier));
+      }
+      .bottom {
+        position: absolute;
+        right: -150px;
+        top: 150px;
+        width: calc(300 / var(--base-vw) * var(--base-multiplier));
+      }
 
       @include mx.mobile {
-        width: fn.toVw(108);
-        margin-top: fn.toVw(-8);
+        
       }
     }
 
