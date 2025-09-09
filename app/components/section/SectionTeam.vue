@@ -238,7 +238,7 @@ section.team {
 .team-grid {
     display: flex;
     flex-wrap: wrap;   /* permite que los items salten de línea */
-    gap: 20px;
+    gap: 50px 20px;
     .team-item {
       flex: 0 0 33.333%; 
       box-sizing: border-box;
@@ -267,9 +267,33 @@ section.team {
           color: #828282;
           font-size: 16px;
         }
+        .social {
+          display: flex;
+          gap: 16px;
+        }
       }
       .linkTeam {
         margin-top: 15px;
+        a.btn {
+          display: flex;
+          overflow: visible;
+          gap: 7px;
+          .bioArrow {
+            width: 10px;
+            height: auto;
+            display: block;
+            overflow: visible;
+            -webkit-transition: 0.4s;
+            -moz-transition: 0.4s;
+            -o-transition: 0.4s;
+            transition: 0.4s;
+          }
+          &:hover{
+            .bioArrow {
+              transform: rotate(45deg);
+            }
+          }
+        }
       }
   }
 
