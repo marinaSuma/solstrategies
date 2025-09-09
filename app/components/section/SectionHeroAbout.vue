@@ -137,8 +137,4 @@ let ctx;
 
 
 
-.w-medium {
-  max-width: 360px;
-}
-
 </style>

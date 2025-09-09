@@ -9,7 +9,6 @@
 
 <script setup>
 import seo from '~~/config/seo.json';
-import '~/assets/styles/aboutStyles.scss' 
 
 useHead({
   titleTemplate: null,
