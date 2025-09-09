@@ -61,6 +61,9 @@ let ctx;
       .font-heading2 {
         text-align: center;
         font-size: 60px;
+        @include mx.mobile {
+          font-size: 40px;
+        }
       }
     }
 
@@ -75,6 +78,12 @@ let ctx;
         right: -150px;
         top: 150px;
         width: calc(300 / var(--base-vw) * var(--base-multiplier));
+        @include mx.mobile {
+        right: 0;
+        top: unset;
+        bottom: 0;
+         width: calc(120 / var(--base-vw) * var(--base-multiplier));
+        }
       }
 
       @include mx.mobile {

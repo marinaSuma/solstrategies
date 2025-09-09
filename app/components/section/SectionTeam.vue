@@ -38,7 +38,7 @@
               </div>
               <div class="content">
                 <div class="name-container">
-                  <h6><a :href="team.url"></a>{{ team.title }}</a></h6>
+                  <h6><a :href="team.url">{{ team.title }}</a></h6>
                   <div class="social">
                     <a v-if="team.linkedin" :href="team.linkedin" class="social-link"><MediaImg src="/linkedin.svg" alt="Linkedin" /></a>
                     <a v-if="team.twitter" :href="team.twitter" class="social-link"><MediaImg src="/twitter.svg" alt="Twitter" /></a>
@@ -271,6 +271,10 @@ section.team {
   + .about-grid{
     margin-top: 130px;
   }
+ @include mx.mobile {
+    flex-direction: column;
+    row-gap: 30px;
+  }
 }
 
 
@@ -293,6 +297,14 @@ section.team {
         font-weight: 400;
       }
     }
+    @include mx.mobile {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+
+  @include mx.mobile {
+   padding-left: 10px;
   }
 }
 
@@ -370,6 +382,10 @@ section.team {
           }
         }
       }
+  }
+
+  @include mx.mobile {
+    flex-direction: column;
   }
 
 }

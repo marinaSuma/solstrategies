@@ -58,7 +58,9 @@ let ctx;
     flex-direction: column;
     min-height: auto;
     padding-top: fn.toVw(160);
+    padding-bottom: 60px;
   }
+
 
   .container {
     @include mx.desktop {
@@ -104,7 +106,7 @@ let ctx;
       line-height: 1.008;
 
       @include mx.mobile {
-        font-size: 60px;
+        font-size: 50px;
       }
 
       b {
@@ -120,7 +122,7 @@ let ctx;
     align-self: end;
 
     @include mx.mobile {
-      gap: fn.toVw(40);
+      align-self: start;
     }
 
     .description__text {
