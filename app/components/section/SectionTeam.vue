@@ -108,27 +108,6 @@ let ctx;
 
 
 
-const teamGroups = [
-  {
-    num: '01',
-    title: 'Leadership Team',
-    color: 'yellow',
-    description: [
-      'First publicly listed on the Canadian Securities Exchange (CSE)...',
-      'Now, at SOL Strategies, we are dedicated...'
-    ],
-    members: [ /* array de miembros */ ]
-  },
-  {
-    num: '02',
-    title: 'Board of Directors',
-    color: 'red',
-    members: [ /* array de miembros */ ]
-  }
-]
-
-
-
 
 import { ref } from "vue";
 
