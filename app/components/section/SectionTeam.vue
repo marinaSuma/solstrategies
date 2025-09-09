@@ -16,7 +16,7 @@
                   Leadership Team
                 </Text>
         </div>
-        <div class="team-container" ref="teamSections">
+        <div class="team-container" ref="el => teamSections.value.push(el)">
            <div class="description">
               <div class="description__text">
                 <Text class="color-gray" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.15">
@@ -60,13 +60,13 @@
       </div>
 
       <div class="about-grid">
-        <div class="title-container">
+        <div class="title-container fadeinLeft">
                 <Text class="titleTeam" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.15">  <span class="num red">02</span>
                   Board of Directors
                 </Text>
         </div>
-        <div class="team-container" ref="teamSections">
-           <div class="description">
+        <div class="team-container" ref="el => teamSections.value.push(el)">
+           <div class="description fadeinUp">
               <div class="description__text">
                 <Text class="color-gray" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.15">
                   First publicly listed on the Canadian Securities Exchange (CSE) in 2018 under the ticker $HODL, Cypherpunk Holdings was a trailblazer in blockchain innovation and digital asset investment, originally focusing on privacy-focused cryptocurrencies and technology.
@@ -163,9 +163,13 @@ const teams = [
  }
 ]
 
-const teamSections = ref([])  // array de refs
+const teamSections = ref([])  // array vacío
 
 onMounted(() => {
+  // limpiar array por si hay remount
+  teamSections.value = []
+
+  // ya que usamos ref con función, todos los team-container estarán en el array
   teamSections.value.forEach(section => {
     const boxes = section.querySelectorAll('.team-item')
 
