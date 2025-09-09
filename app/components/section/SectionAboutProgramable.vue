@@ -101,14 +101,12 @@ onUnmounted(() => {
     }
 
     .shape {
-      width: fn.toVw(190);
-      margin-top: fn.toVw(-5);
-      .top {
+      &.top {
         position: relative;
         left: -80px;
         width: calc(220 / var(--base-vw) * var(--base-multiplier));
       }
-      .bottom {
+      &.bottom {
         position: absolute;
         right: -150px;
         top: 150px;
