@@ -2,100 +2,101 @@
   <section ref="el" class="team">
     <div class="bg-bottom">
       <MediaImg src="/team-bg.png" alt="Team Background" />
-      <!-- <MediaImg :provider="false" src="/thumbnail.jpg" alt="Logo" /> -->
     </div>
 
-
-
-
-    
     <div class="container">
+      <!-- Iteramos sobre los grupos -->
       <div v-for="(group, gIndex) in teamGroups" :key="gIndex" class="about-grid">
+        
+        <!-- Título dinámico -->
         <div class="title-container fadeinUp">
-          <Text class="titleTeam" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.15">  <span class="num yellow">01</span>
-            Leadership Team
+          <Text
+            class="titleTeam"
+            data-split
+            data-linereveal
+            reveal-notrigger
+            reveal-waitpreloader
+            :reveal-delay="0.15"
+          >
+            <span class="num" :class="group.color">{{ group.num }}</span>
+            {{ group.title }}
           </Text>
         </div>
 
-        <div class="team-container" ref="el => teamSections.value.push(el)">
-           <div class="description fadeinUp">
-              <div class="description__text">
-                <Text class="color-gray" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.15">
-                  First publicly listed on the Canadian Securities Exchange (CSE) in 2018 under the ticker $HODL, Cypherpunk Holdings was a trailblazer in blockchain innovation and digital asset investment, originally focusing on privacy-focused cryptocurrencies and technology.
-                </Text>
-              </div>
-              <div class="description__text">
-                <Text class="color-gray" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.22">
-                  Now, at SOL Strategies, we are dedicated to investing in the Solana ecosystem, managing staking validators, and driving value through strategic engagement in decentralized finance.
-                </Text>
-              </div>
+        <div class="team-container" ref="teamSections">
+          
+          <!-- Descripción solo si existe -->
+          <div v-if="group.description && group.description.length" class="description fadeinUp">
+            <div
+              v-for="(desc, dIndex) in group.description"
+              :key="dIndex"
+              class="description__text"
+            >
+              <Text
+                class="color-gray"
+                variant="body22"
+                data-split
+                data-linereveal
+                reveal-notrigger
+                reveal-waitpreloader
+                :reveal-delay="0.15 + dIndex * 0.07"
+              >
+                {{ desc }}
+              </Text>
+            </div>
           </div>
 
+          <!-- Miembros -->
           <div class="team-grid">
-
-            <div v-for="(member, mIndex) in group.members" :key="member.title" class="team-item">
+            <div
+              v-for="(member, mIndex) in group.members"
+              :key="member.title"
+              class="team-item"
+            >
               <div class="img">
                 <a :href="member.url"><img :src="member.img" :alt="member.title" /></a>
               </div>
               <div class="content">
                 <div class="name-container">
-                  <h6><a :href="member.url">{{ team.title }}</a></h6>
+                  <h6><a :href="member.url">{{ member.title }}</a></h6>
                   <div class="social">
-                    <a v-if="member.linkedin" :href="member.linkedin" class="social-link"><MediaImg src="/linkedin.svg" alt="Linkedin" /></a>
-                    <a v-if="member.twitter" :href="member.twitter" class="social-link"><MediaImg src="/twitter.svg" alt="Twitter" /></a>
+                    <a
+                      v-if="member.linkedin"
+                      :href="member.linkedin"
+                      class="social-link"
+                    >
+                      <MediaImg src="/linkedin.svg" alt="Linkedin" />
+                    </a>
+                    <a
+                      v-if="member.twitter"
+                      :href="member.twitter"
+                      class="social-link"
+                    >
+                      <MediaImg src="/twitter.svg" alt="Twitter" />
+                    </a>
                   </div>
                 </div>
-                
-                <!-- <a class="text" :href="team.url">{{ team.description }}</a> -->
+
+                <!-- Descripción -->
                 <a class="text" :href="member.url" v-html="member.description"></a>
+
+                <!-- Botón bio -->
                 <div class="linkTeam">
-                  <a :href="team.url" class="btn">Read bio <MediaImg class="bioArrow" src="/bio.svg" alt="Read bio" /></a>
+                  <a :href="member.url" class="btn">
+                    Read bio
+                    <MediaImg class="bioArrow" src="/bio.svg" alt="Read bio" />
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-          
         </div>
-      </div>
 
-      <div v-for="(group, gIndex) in teamGroups" :key="gIndex" class="about-grid">
-        <div class="title-container fadeinUp">
-          <Text class="titleTeam" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.15">  <span class="num red">02</span>
-            Board of Directors
-          </Text>
-        </div>
-        <div class="team-container" ref="el => teamSections.value.push(el)">
-
-         <div class="team-grid">
-
-            <div v-for="(member, mIndex) in group.members" :key="member.title" class="team-item">
-              <div class="img">
-                <a :href="member.url"><img :src="member.img" :alt="member.title" /></a>
-              </div>
-              <div class="content">
-                <div class="name-container">
-                  <h6><a :href="member.url">{{ team.title }}</a></h6>
-                  <div class="social">
-                    <a v-if="member.linkedin" :href="member.linkedin" class="social-link"><MediaImg src="/linkedin.svg" alt="Linkedin" /></a>
-                    <a v-if="member.twitter" :href="member.twitter" class="social-link"><MediaImg src="/twitter.svg" alt="Twitter" /></a>
-                  </div>
-                </div>
-                
-                <!-- <a class="text" :href="team.url">{{ team.description }}</a> -->
-                <a class="text" :href="member.url" v-html="member.description"></a>
-                <div class="linkTeam">
-                  <a :href="team.url" class="btn">Read bio <MediaImg class="bioArrow" src="/bio.svg" alt="Read bio" /></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-        </div>
       </div>
     </div>
-
   </section>
 </template>
+
 
 <script setup>
 
@@ -109,143 +110,79 @@ let ctx;
 
 const teamGroups = [
   {
-    members: [
-      { 
-        title: 'Leah Wald',
-        description: 'Chief Executive Officer <br> and Board Member',
-        img: '/team1.png',
-        url: '#',
-        linkedin: 'https://linkedin.com/',
-        twitter: 'https://twitter.com/' 
-    },
-    { 
-      title: 'Max Kaplan', 
-      description: 'Chief Technology Officer', 
-      img: '/team2.png', 
-      url: '#' ,
-      linkedin: 'https://linkedin.com/',
-      twitter: 'https://twitter.com/' 
-    },
-    { 
-      title: 'Doug Harris', 
-      description: 'Chief Financial Officer', 
-      img: '/team3.png', 
-      url: '#',
-      linkedin: 'https://linkedin.com/',
-      twitter: 'https://twitter.com/' 
-    },
-    { 
-      title: 'Michael Hubbard', 
-      description: 'Chief Strategy Officer and Board Member', 
-      img: '/team4.png', 
-      url: '#',
-      linkedin: 'https://linkedin.com/',
-      twitter: 'https://twitter.com/' 
-    },
-    { 
-      title: 'Andrew McDonald', 
-      description: 'Director of Operations', 
-      img: '/team5.png', 
-      url: '#',
-      linkedin: 'https://linkedin.com/',
-      twitter: 'https://twitter.com/' 
-    }
-    ]
+    num: '01',
+    title: 'Leadership Team',
+    color: 'yellow',
+    description: [
+      'First publicly listed on the Canadian Securities Exchange (CSE)...',
+      'Now, at SOL Strategies, we are dedicated...'
+    ],
+    members: [ /* array de miembros */ ]
   },
   {
-    members: [
-      { 
-        title: 'Luis Berruga',
-        description: 'Chairman of the Board',
-        img: '/team6.png',
-        url: '#',
-        linkedin: 'https://linkedin.com/',
-        twitter: 'https://twitter.com/' 
-    },
-    { 
-      title: 'Ungad Chadda', 
-      description: 'Director', 
-      img: '/team7.png', 
-      url: '#' ,
-      linkedin: 'https://linkedin.com/',
-      twitter: 'https://twitter.com/' 
-    },
-    { 
-      title: 'Rubsun Ho', 
-      description: 'Director', 
-      img: '/team8.png', 
-      url: '#',
-      linkedin: 'https://linkedin.com/',
-      twitter: 'https://twitter.com/' 
-    },
-    { 
-      title: 'Jose Calderon', 
-      description: 'Director', 
-      img: '/team9.png', 
-      url: '#',
-      linkedin: 'https://linkedin.com/',
-      twitter: 'https://twitter.com/' 
-    },
-    { 
-        title: 'Leah Wald',
-        description: 'Chief Executive Officer <br> and Board Member',
-        img: '/team1.png',
-        url: '#',
-        linkedin: 'https://linkedin.com/',
-        twitter: 'https://twitter.com/' 
-    },
-    { 
-      title: 'Jon Matonis', 
-      description: 'Chief Economist <br> and Board Member', 
-      img: '/team11.png', 
-      url: '#',
-      linkedin: 'https://linkedin.com/',
-      twitter: 'https://twitter.com/' 
-    },
-    { 
-      title: 'Michael Hubbard', 
-      description: 'Chief Strategy Officer and Board Member', 
-      img: '/team4.png', 
-      url: '#',
-      linkedin: 'https://linkedin.com/',
-      twitter: 'https://twitter.com/' 
-    },
-    ]
+    num: '02',
+    title: 'Board of Directors',
+    color: 'red',
+    members: [ /* array de miembros */ ]
   }
 ]
 
 
 
 
-import { ref, onMounted, nextTick } from 'vue'
+import { ref } from "vue";
 
-const teamSectionsRef = ref(null)
-const teamSections = ref([])
+// Acá guardamos las referencias de cada bloque de team para usarlas con GSAP
+const teamSections = ref([]);
 
-onMounted(async () => {
-  await nextTick() // espera que el DOM esté montado
-  // seleccionamos todos los team-container
-  teamSections.value = document.querySelectorAll('.team-container')
-
-  teamSections.value.forEach(section => {
-    const boxes = section.querySelectorAll('.team-item')
-    boxes.forEach((box, index) => {
-      gsap.from(box, {
-        y: 70,
-        opacity: 0,
-        duration: 0.8,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: box,
-          start: 'top 90%',
-          end: 'bottom top',
-          toggleActions: 'play none none reverse',
-        },
-        delay: index * 0.15
-      })
-    })
-  })
-})
+// Estructura de los grupos
+const teamGroups = [
+  {
+    num: "01",
+    title: "Leadership Team",
+    color: "yellow", // esta clase se usará en <span class="num yellow">
+    description: [
+      "First publicly listed on the Canadian Securities Exchange (CSE) in 2018 under the ticker $HODL, Cypherpunk Holdings was a trailblazer in blockchain innovation and digital asset investment, originally focusing on privacy-focused cryptocurrencies and technology.",
+      "Now, at SOL Strategies, we are dedicated to investing in the Solana ecosystem, managing staking validators, and driving value through strategic engagement in decentralized finance."
+    ],
+    members: [
+      {
+        title: "Doug Harris",
+        description: "Chief Financial Officer",
+        img: "/team3.png",
+        url: "#",
+        linkedin: "https://linkedin.com/",
+        twitter: "https://twitter.com/"
+      },
+      {
+        title: "Other Leader",
+        description: "CEO",
+        img: "/team1.png",
+        url: "#",
+        linkedin: "",
+        twitter: ""
+      }
+      // ➝ Agregá más miembros acá
+    ]
+  },
+  {
+    num: "02",
+    title: "Board of Directors",
+    color: "red",
+    description: [], // este grupo no tiene texto de descripción, queda vacío
+    members: [
+      {
+        title: "John Doe",
+        description: "Board Member",
+        img: "/team2.png",
+        url: "#",
+        linkedin: "",
+        twitter: ""
+      }
+      // ➝ Agregá más miembros acá
+    ]
+  }
+];
 
 </script>
 
