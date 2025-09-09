@@ -7,13 +7,13 @@
   <div class="container">
     <div class="title-container">
       <div class="shape top">
-      <MediaImg src="/aboutShapeTop.svg" alt="Shape" />
-    </div>
+        <MediaImg class="shape-img" src="/aboutShapeTop.svg" alt="Shape" />
+      </div>
      <div class="title">
       <Text tag="h2" variant="heading2" data-split data-linereveal>We believe Solana will be the <b>future of programmable finance</b> </Text>
     </div>
     <div class="shape bottom">
-      <MediaImg src="/aboutShapeBottom.svg" alt="Shape" />
+      <MediaImg class="shape-img" src="/aboutShapeBottom.svg" alt="Shape" />
     </div>
 
     </div>
@@ -63,7 +63,7 @@ let ctx;
     }
 
 
-    .shape .media-img{
+    .shape-img{
       width: auto;
       height: 70px;
       img {
