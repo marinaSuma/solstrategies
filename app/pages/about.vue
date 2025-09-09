@@ -25,15 +25,16 @@ onMounted(() => {
   ctx = gsap.context(() => {
     const fadeinUp = document.querySelectorAll(".fadeinUp");
 
-    gsap.set(fadeinUp, { opacity: 0, y: 30 });
+    gsap.set(fadeinUp, { opacity: 0, y: 40 });
 
     fadeinUp.forEach((el) => {
       gsap.timeline({
         scrollTrigger: {
           trigger: el,
-          start:"top 85%",
-          end:"bottom 75%",
+          start:"top 80%",
+          end:"bottom 70%",
           toggleActions:"play none none reverse",
+          markers:true
         }
       }).to(el, { opacity: 1, y: 0, duration: 0.6 });
     });

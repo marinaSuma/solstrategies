@@ -10,7 +10,7 @@
         <MediaImg src="/aboutShapeTop.svg" alt="Shape" />
       </div>
      <div class="title">
-      <Text tag="h2" variant="heading2" data-split data-linereveal>We believe Solana will be the <b>future of programmable finance</b> </Text>
+      <Text tag="h2" variant="heading2" data-split data-linereveal>We believe Solana will <br> be the <b>future of programmable finance</b> </Text>
     </div>
     <div class="shape bottom fadeinUp">
       <MediaImg src="/aboutShapeBottom.svg" alt="Shape" />
@@ -55,6 +55,7 @@ let ctx;
   .title-container{
     max-width: 810px;
     margin: 0 auto;
+    position: relative;
     .title {
       margin: 20px 0;
       .font-heading2 {
