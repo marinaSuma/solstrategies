@@ -68,11 +68,46 @@ let ctx;
 
 
 const teams = [
-{ title: 'Leah Wald', description: 'Chief Executive Officer and Board Member', img: '/team1.png', url: '#' },
-{ title: 'Max Kaplan', description: 'Chief Technology Officer', img: '/team2.png', url: '#' },
-{ title: 'Doug Harris', description: 'Chief Financial Officer', img: '/team3.png', url: '#' },
-{ title: 'Michael Hubbard', description: 'Chief Strategy Officer and Board Member', img: '/team4.png', url: '#' },
-{ title: 'Andrew McDonald', description: 'Director of Operations', img: '/team5.png', url: '#' }
+{ 
+    title: 'Leah Wald',
+    description: 'Chief Executive Officer and Board Member',
+    img: '/team1.png',
+    url: '#',
+    insta: 'https://instagram.com/',
+    twitter: 'https://twitter.com/' 
+},
+{ 
+  title: 'Max Kaplan', 
+  description: 'Chief Technology Officer', 
+  img: '/team2.png', 
+  url: '#' ,
+  insta: 'https://instagram.com/',
+  twitter: 'https://twitter.com/' 
+},
+{ 
+  title: 'Doug Harris', 
+  description: 'Chief Financial Officer', 
+  img: '/team3.png', 
+  url: '#',
+  insta: 'https://instagram.com/',
+  twitter: 'https://twitter.com/' 
+ },
+{ 
+  title: 'Michael Hubbard', 
+  description: 'Chief Strategy Officer and Board Member', 
+  img: '/team4.png', 
+  url: '#',
+  insta: 'https://instagram.com/',
+  twitter: 'https://twitter.com/' 
+ },
+{ 
+  title: 'Andrew McDonald', 
+  description: 'Director of Operations', 
+  img: '/team5.png', 
+  url: '#',
+  insta: 'https://instagram.com/',
+  twitter: 'https://twitter.com/' 
+ }
 ]
 
 const teamSection = ref(null)
@@ -186,12 +221,6 @@ onMounted(() => {
     }
 
   }
-}
-
-
-
-.w-medium {
-  max-width: 360px;
 }
 
 </style>
