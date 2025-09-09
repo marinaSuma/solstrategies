@@ -34,7 +34,6 @@ onMounted(() => {
           start:"top 80%",
           end:"bottom 70%",
           toggleActions:"play none none reverse",
-          markers:true
         }
       }).to(el, { opacity: 1, y: 0, duration: 0.6 });
     });
