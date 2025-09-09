@@ -286,6 +286,10 @@ section.team {
           gap: 16px;
         }
       }
+
+       a.text {
+        color: #828282;
+      }
       .linkTeam {
         margin-top: 15px;
         a.btn {
