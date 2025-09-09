@@ -10,60 +10,11 @@
 
     
     <div class="container">
-      <div class="about-grid">
-        <div class="title-container">
-                <Text class="titleTeam" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.15">  <span class="num yellow">01</span>
-                  Leadership Team
-                </Text>
-        </div>
-        <div class="team-container" ref="el => teamSections.value.push(el)">
-           <div class="description">
-              <div class="description__text">
-                <Text class="color-gray" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.15">
-                  First publicly listed on the Canadian Securities Exchange (CSE) in 2018 under the ticker $HODL, Cypherpunk Holdings was a trailblazer in blockchain innovation and digital asset investment, originally focusing on privacy-focused cryptocurrencies and technology.
-                </Text>
-              </div>
-              <div class="description__text">
-                <Text class="color-gray" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.22">
-                  Now, at SOL Strategies, we are dedicated to investing in the Solana ecosystem, managing staking validators, and driving value through strategic engagement in decentralized finance.
-                </Text>
-              </div>
-          </div>
-
-          <div class="team-grid">
-            <div
-              v-for="(team, index) in teams"
-              :key="team.title"
-              class="team-item"
-            >
-              <div class="img">
-                <img :src="team.img" :alt="team.title" />
-              </div>
-              <div class="content">
-                <div class="name-container">
-                  <h6>{{ team.title }}</h6>
-                  <div class="social">
-                    <a v-if="team.linkedin" :href="team.linkedin" class="social-link"><MediaImg src="/linkedin.svg" alt="Linkedin" /></a>
-                    <a v-if="team.twitter" :href="team.twitter" class="social-link"><MediaImg src="/twitter.svg" alt="Twitter" /></a>
-                  </div>
-                </div>
-                
-                <div class="text">{{ team.description }}</div>
-                <div class="linkTeam">
-                  <a :href="team.url" class="btn">Read bio <MediaImg class="bioArrow" src="/bio.svg" alt="Read bio" /></a>
-                </div>
-              </div>
-              </div>
-          </div>
-          
-        </div>
-      </div>
-
-      <div class="about-grid">
-        <div class="title-container fadeinLeft">
-                <Text class="titleTeam" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.15">  <span class="num red">02</span>
-                  Board of Directors
-                </Text>
+      <div v-for="(group, gIndex) in teamGroups" :key="gIndex" class="about-grid">
+        <div class="title-container fadeinUp">
+          <Text class="titleTeam" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.15">  <span class="num yellow">01</span>
+            Leadership Team
+          </Text>
         </div>
         <div class="team-container" ref="el => teamSections.value.push(el)">
            <div class="description fadeinUp">
@@ -80,17 +31,48 @@
           </div>
 
           <div class="team-grid">
-            <div
-              v-for="(team, index) in teams"
-              :key="team.title"
-              class="team-item"
-            >
+
+            <div v-for="(member, mIndex) in group.members" :key="member.title" class="team-item">
               <div class="img">
                 <a :href="team.url"><img :src="team.img" :alt="team.title" /></a>
               </div>
               <div class="content">
                 <div class="name-container">
-                  <a :href="team.url"><h6>{{ team.title }}</h6></a>
+                  <h6><a :href="team.url"></a>{{ team.title }}</a></h6>
+                  <div class="social">
+                    <a v-if="team.linkedin" :href="team.linkedin" class="social-link"><MediaImg src="/linkedin.svg" alt="Linkedin" /></a>
+                    <a v-if="team.twitter" :href="team.twitter" class="social-link"><MediaImg src="/twitter.svg" alt="Twitter" /></a>
+                  </div>
+                </div>
+                
+                <!-- <a class="text" :href="team.url">{{ team.description }}</a> -->
+                <a class="text" :href="team.url" v-html="team.description"></a>
+                <div class="linkTeam">
+                  <a :href="team.url" class="btn">Read bio <MediaImg class="bioArrow" src="/bio.svg" alt="Read bio" /></a>
+                </div>
+              </div>
+              </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div v-for="(group, gIndex) in teamGroups" :key="gIndex" class="about-grid">
+        <div class="title-container fadeinUp">
+          <Text class="titleTeam" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.15">  <span class="num red">02</span>
+            Board of Directors
+          </Text>
+        </div>
+        <div class="team-container" ref="el => teamSections.value.push(el)">
+
+          <div class="team-grid">
+            <div v-for="(member, mIndex) in group.members" :key="member.title" class="team-item"></div>
+              <div class="img">
+                <a :href="team.url"><img :src="team.img" :alt="team.title" /></a>
+              </div>
+              <div class="content">
+                <div class="name-container">
+                  <h6><a :href="team.url"></a>{{ team.title }}</a></h6>
                   <div class="social">
                     <a v-if="team.linkedin" :href="team.linkedin" class="social-link"><MediaImg src="/linkedin.svg" alt="Linkedin" /></a>
                     <a v-if="team.twitter" :href="team.twitter" class="social-link"><MediaImg src="/twitter.svg" alt="Twitter" /></a>
@@ -121,48 +103,117 @@ const el = useTemplateRef('el');
 let ctx;
 
 
-const teams = [
-{ 
-    title: 'Leah Wald',
-    description: 'Chief Executive Officer <br> and Board Member',
-    img: '/team1.png',
-    url: '#',
-    linkedin: 'https://linkedin.com/',
-    twitter: 'https://twitter.com/' 
-},
-{ 
-  title: 'Max Kaplan', 
-  description: 'Chief Technology Officer', 
-  img: '/team2.png', 
-  url: '#' ,
-  linkedin: 'https://linkedin.com/',
-  twitter: 'https://twitter.com/' 
-},
-{ 
-  title: 'Doug Harris', 
-  description: 'Chief Financial Officer', 
-  img: '/team3.png', 
-  url: '#',
-  linkedin: 'https://linkedin.com/',
-  twitter: 'https://twitter.com/' 
- },
-{ 
-  title: 'Michael Hubbard', 
-  description: 'Chief Strategy Officer and Board Member', 
-  img: '/team4.png', 
-  url: '#',
-  linkedin: 'https://linkedin.com/',
-  twitter: 'https://twitter.com/' 
- },
-{ 
-  title: 'Andrew McDonald', 
-  description: 'Director of Operations', 
-  img: '/team5.png', 
-  url: '#',
-  linkedin: 'https://linkedin.com/',
-  twitter: 'https://twitter.com/' 
- }
+
+
+const teamGroups = [
+  {
+    members: [
+      { 
+        title: 'Leah Wald',
+        description: 'Chief Executive Officer <br> and Board Member',
+        img: '/team1.png',
+        url: '#',
+        linkedin: 'https://linkedin.com/',
+        twitter: 'https://twitter.com/' 
+    },
+    { 
+      title: 'Max Kaplan', 
+      description: 'Chief Technology Officer', 
+      img: '/team2.png', 
+      url: '#' ,
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/' 
+    },
+    { 
+      title: 'Doug Harris', 
+      description: 'Chief Financial Officer', 
+      img: '/team3.png', 
+      url: '#',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/' 
+    },
+    { 
+      title: 'Michael Hubbard', 
+      description: 'Chief Strategy Officer and Board Member', 
+      img: '/team4.png', 
+      url: '#',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/' 
+    },
+    { 
+      title: 'Andrew McDonald', 
+      description: 'Director of Operations', 
+      img: '/team5.png', 
+      url: '#',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/' 
+    }
+    ]
+  },
+  {
+    members: [
+      { 
+        title: 'Luis Berruga',
+        description: 'Chairman of the Board',
+        img: '/team6.png',
+        url: '#',
+        linkedin: 'https://linkedin.com/',
+        twitter: 'https://twitter.com/' 
+    },
+    { 
+      title: 'Ungad Chadda', 
+      description: 'Director', 
+      img: '/team7.png', 
+      url: '#' ,
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/' 
+    },
+    { 
+      title: 'Rubsun Ho', 
+      description: 'Director', 
+      img: '/team8.png', 
+      url: '#',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/' 
+    },
+    { 
+      title: 'Jose Calderon', 
+      description: 'Director', 
+      img: '/team9.png', 
+      url: '#',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/' 
+    },
+    { 
+        title: 'Leah Wald',
+        description: 'Chief Executive Officer <br> and Board Member',
+        img: '/team1.png',
+        url: '#',
+        linkedin: 'https://linkedin.com/',
+        twitter: 'https://twitter.com/' 
+    },
+    { 
+      title: 'Jon Matonis', 
+      description: 'Chief Economist <br> and Board Member', 
+      img: '/team11.png', 
+      url: '#',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/' 
+    },
+    { 
+      title: 'Michael Hubbard', 
+      description: 'Chief Strategy Officer and Board Member', 
+      img: '/team4.png', 
+      url: '#',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/' 
+    },
+    ]
+  }
 ]
+
+
+
 
 import { ref, onMounted, nextTick } from 'vue'
 
@@ -200,12 +251,14 @@ onMounted(async () => {
 section.team {
   padding: 130px 0;
   position: relative;
+  background-color: #FDFCFC;
 }
 .bg-bottom {
-  position: absolute;
-  bottom: 0;
+  bottom: -240px;
   left: 0;
-  z-index: -1;
+  position: absolute;
+  z-index: 0;
+  opacity: 0.5;
 }
 
 .about-grid {
@@ -257,6 +310,18 @@ section.team {
         background: #d3d3d3 50% / cover no-repeat;
         background-blend-mode: luminosity;
         filter: grayscale(1);
+        a {
+          display: block;
+          -webkit-transition: 0.4s;
+          -moz-transition: 0.4s;
+          -o-transition: 0.4s;
+          transition: 0.4s;
+          overflow: hidden;
+
+          &:hover {
+            transform: scale(1.1);
+          } 
+        }
       }
       .content {
         padding-top: 15px;
