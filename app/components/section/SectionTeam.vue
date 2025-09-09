@@ -43,14 +43,14 @@
                 <div class="name-container">
                   <h6>{{ team.title }}</h6>
                   <div class="social">
-                    <a v-if="team.insta" :href="team.insta" class="social-link">IG</a>
-                    <a v-if="team.twitter" :href="team.twitter" class="social-link">TW</a>
+                    <a v-if="team.linkedin" :href="team.linkedin" class="social-link"><MediaImg src="/linkedin.svg" alt="Linkedin" /></a>
+                    <a v-if="team.twitter" :href="team.twitter" class="social-link"><MediaImg src="/twitter.svg" alt="Twitter" /></a>
                   </div>
                 </div>
                 
-                <div class="description">{{ team.description }}</div>
+                <div class="text">{{ team.description }}</div>
                 <div class="linkTeam">
-                  <a :href="team.url" class="btn">Read bio</a>
+                  <a :href="team.url" class="btn">Read bio <MediaImg class="bioArrow" src="/bio.svg" alt="Read bio" /></a>
                 </div>
               </div>
               </div>
@@ -61,8 +61,8 @@
 
       <div class="about-grid">
         <div class="title-container">
-                <Text class="titleTeam" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.15">  <span class="num red">01</span>
-                  Leadership Team
+                <Text class="titleTeam" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.15">  <span class="num red">02</span>
+                  Board of Directors
                 </Text>
         </div>
         <div class="team-container" ref="teamSection">
@@ -92,14 +92,14 @@
                 <div class="name-container">
                   <h6>{{ team.title }}</h6>
                   <div class="social">
-                    <a v-if="team.insta" :href="team.insta" class="social-link">IG</a>
-                    <a v-if="team.twitter" :href="team.twitter" class="social-link">TW</a>
+                    <a v-if="team.linkedin" :href="team.linkedin" class="social-link"><MediaImg src="/linkedin.svg" alt="Linkedin" /></a>
+                    <a v-if="team.twitter" :href="team.twitter" class="social-link"><MediaImg src="/twitter.svg" alt="Twitter" /></a>
                   </div>
                 </div>
                 
-                <div class="description">{{ team.description }}</div>
+                <div class="text">{{ team.description }}</div>
                 <div class="linkTeam">
-                  <a :href="team.url" class="btn">Read bio</a>
+                  <a :href="team.url" class="btn">Read bio <MediaImg class="bioArrow" src="/bio.svg" alt="Read bio" /></a>
                 </div>
               </div>
               </div>
@@ -126,7 +126,7 @@ const teams = [
     description: 'Chief Executive Officer and Board Member',
     img: '/team1.png',
     url: '#',
-    insta: 'https://instagram.com/',
+    linkedin: 'https://linkedin.com/',
     twitter: 'https://twitter.com/' 
 },
 { 
@@ -134,7 +134,7 @@ const teams = [
   description: 'Chief Technology Officer', 
   img: '/team2.png', 
   url: '#' ,
-  insta: 'https://instagram.com/',
+  linkedin: 'https://linkedin.com/',
   twitter: 'https://twitter.com/' 
 },
 { 
@@ -142,7 +142,7 @@ const teams = [
   description: 'Chief Financial Officer', 
   img: '/team3.png', 
   url: '#',
-  insta: 'https://instagram.com/',
+  linkedin: 'https://linkedin.com/',
   twitter: 'https://twitter.com/' 
  },
 { 
@@ -150,7 +150,7 @@ const teams = [
   description: 'Chief Strategy Officer and Board Member', 
   img: '/team4.png', 
   url: '#',
-  insta: 'https://instagram.com/',
+  linkedin: 'https://linkedin.com/',
   twitter: 'https://twitter.com/' 
  },
 { 
@@ -158,7 +158,7 @@ const teams = [
   description: 'Director of Operations', 
   img: '/team5.png', 
   url: '#',
-  insta: 'https://instagram.com/',
+  linkedin: 'https://linkedin.com/',
   twitter: 'https://twitter.com/' 
  }
 ]
@@ -240,11 +240,60 @@ section.team {
     flex-wrap: wrap;   /* permite que los items salten de línea */
     gap: 20px;
     .team-item {
-      flex: 0 0 calc(33.333% - 20px); 
+      flex: 0 0 33.333%; 
       box-sizing: border-box;
-      padding: 10px;
+      .img {
+        border-radius: 6px;
+        overflow: hidden;
+        background: #d3d3d3 50% / cover no-repeat;
+        background-blend-mode: luminosity;
+        filter: grayscale(1);
+      }
+      .content {
+        padding-top: 15px;
+      }
+      .name-container {
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        h6 {
+          color: #171717;
+          font-size: 30px;
+          flex: 0 0 50%;
+        }
+        .text {
+          color: #828282;
+          font-size: 16px;
+        }
+      }
+      .linkTeam {
+        margin-top: 15px;
+      }
   }
 
+}
+
+p.titleTeam {
+    font-size: 20px;
+    color: #686868;
+}
+
+span.num {
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    line-height: 40px;
+    text-align: center;
+    margin-right: 10px;
+    &.red{
+      background: rgba(255, 151, 81, 0.21);
+    }
+    &.yellow{
+      background: rgba(255, 252, 117, 0.34);
+    }
 }
 
 
