@@ -51,7 +51,7 @@
                   <a :href="team.url" class="btn">Read bio <MediaImg class="bioArrow" src="/bio.svg" alt="Read bio" /></a>
                 </div>
               </div>
-              </div>
+            </div>
           </div>
           
         </div>
@@ -66,7 +66,7 @@
         <div class="team-container" ref="el => teamSections.value.push(el)">
 
           <div class="team-grid">
-            <div v-for="(member, mIndex) in group.members" :key="member.title" class="team-item"></div>
+            <div v-for="(member, mIndex) in group.members" :key="member.title" class="team-item">
               <div class="img">
                 <a :href="team.url"><img :src="team.img" :alt="team.title" /></a>
               </div>
@@ -85,7 +85,7 @@
                   <a :href="team.url" class="btn">Read bio <MediaImg class="bioArrow" src="/bio.svg" alt="Read bio" /></a>
                 </div>
               </div>
-              </div>
+            </div>
           </div>
           
         </div>
