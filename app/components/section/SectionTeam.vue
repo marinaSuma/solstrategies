@@ -125,23 +125,46 @@ const teamGroups = [
       "Now, at SOL Strategies, we are dedicated to investing in the Solana ecosystem, managing staking validators, and driving value through strategic engagement in decentralized finance."
     ],
     members: [
-      {
-        title: "Doug Harris",
-        description: "Chief Financial Officer",
-        img: "/team3.png",
-        url: "#",
-        linkedin: "https://linkedin.com/",
-        twitter: "https://twitter.com/"
-      },
-      {
-        title: "Other Leader",
-        description: "CEO",
-        img: "/team1.png",
-        url: "#",
-        linkedin: "",
-        twitter: ""
-      }
-      // ➝ Agregá más miembros acá
+      { 
+        title: 'Leah Wald',
+        description: 'Chief Executive Officer <br> and Board Member',
+        img: '/team1.png',
+        url: '#',
+        linkedin: 'https://linkedin.com/',
+        twitter: 'https://twitter.com/' 
+    },
+    { 
+      title: 'Max Kaplan', 
+      description: 'Chief Technology Officer', 
+      img: '/team2.png', 
+      url: '#' ,
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/' 
+    },
+    { 
+      title: 'Doug Harris', 
+      description: 'Chief Financial Officer', 
+      img: '/team3.png', 
+      url: '#',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/' 
+    },
+    { 
+      title: 'Michael Hubbard', 
+      description: 'Chief Strategy Officer and Board Member', 
+      img: '/team4.png', 
+      url: '#',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/' 
+    },
+    { 
+      title: 'Andrew McDonald', 
+      description: 'Director of Operations', 
+      img: '/team5.png', 
+      url: '#',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/' 
+    }
     ]
   },
   {
@@ -150,15 +173,62 @@ const teamGroups = [
     color: "red",
     description: [], // este grupo no tiene texto de descripción, queda vacío
     members: [
-      {
-        title: "John Doe",
-        description: "Board Member",
-        img: "/team2.png",
-        url: "#",
-        linkedin: "",
-        twitter: ""
-      }
-      // ➝ Agregá más miembros acá
+      { 
+        title: 'Luis Berruga',
+        description: 'Chairman of the Board',
+        img: '/team6.png',
+        url: '#',
+        linkedin: 'https://linkedin.com/',
+        twitter: 'https://twitter.com/' 
+    },
+    { 
+      title: 'Ungad Chadda', 
+      description: 'Director', 
+      img: '/team7.png', 
+      url: '#' ,
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/' 
+    },
+    { 
+      title: 'Rubsun Ho', 
+      description: 'Director', 
+      img: '/team8.png', 
+      url: '#',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/' 
+    },
+    { 
+      title: 'Jose Calderon', 
+      description: 'Director', 
+      img: '/team9.png', 
+      url: '#',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/' 
+    },
+    { 
+        title: 'Leah Wald',
+        description: 'Chief Executive Officer <br> and Board Member',
+        img: '/team1.png',
+        url: '#',
+        linkedin: 'https://linkedin.com/',
+        twitter: 'https://twitter.com/' 
+    },
+    { 
+      title: 'Jon Matonis', 
+      description: 'Chief Economist <br> and Board Member', 
+      img: '/team11.png', 
+      url: '#',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/' 
+    },
+    { 
+      title: 'Michael Hubbard', 
+      description: 'Chief Strategy Officer and Board Member', 
+      img: '/team4.png', 
+      url: '#',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/' 
+    },
     ]
   }
 ];
