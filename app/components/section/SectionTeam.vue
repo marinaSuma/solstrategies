@@ -14,7 +14,7 @@
         <div class="title-container">
 
         </div>
-        <div class="team-container">
+        <div class="team-container" ref="teamSection">
            <div class="description">
               <div class="description__text">
                 <Text class="color-gray" variant="body22" data-split data-linereveal reveal-notrigger reveal-waitpreloader reveal-delay="0.15">
@@ -31,27 +31,27 @@
           
           <div
           v-for="(team, index) in teams"
-            :key="team.id"
-            class="team-item"
-          >
-            <div class="img">
-              <img :src="team.img" :alt="team.title" />
+          :key="team.title"
+          class="team-item"
+        >
+          <div class="img">
+            <img :src="team.img" :alt="team.title" />
+          </div>
+          <div class="content">
+            <div class="name-container">
+              <h6>{{ team.title }}</h6>
+              <div class="social">
+                <a v-if="team.insta" :href="team.insta" class="social-link">IG</a>
+                <a v-if="team.twitter" :href="team.twitter" class="social-link">TW</a>
+              </div>
             </div>
-            <div class="content">
-              <div class="name-container">
-                <h6>{{ team.title }}</h6>
-                <div class="social">
-                  <a :href="insta.url" class="social-link"></a>
-                  <a :href="twitter.url" class="social-link"></a>
-                </div>
-              </div>
-              
-              <div class="description">{{ team.description }}</div>
-              <div class="linkTeam">
-                <a :href="team.url" class="btn">Read bio</a>
-              </div>
+            
+            <div class="description">{{ team.description }}</div>
+            <div class="linkTeam">
+              <a :href="team.url" class="btn">Read bio</a>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
