@@ -52,6 +52,7 @@ declare global {
   const getHeader: typeof import('../../node_modules/h3')['getHeader']
   const getHeaders: typeof import('../../node_modules/h3')['getHeaders']
   const getMethod: typeof import('../../node_modules/h3')['getMethod']
+  const getNitroOrigin: typeof import('../../node_modules/nuxt-site-config/dist/runtime/server/composables/getNitroOrigin')['getNitroOrigin']
   const getPathRobotConfig: typeof import('../../node_modules/@nuxtjs/robots/dist/runtime/server/composables/getPathRobotConfig')['getPathRobotConfig']
   const getProxyRequestHeaders: typeof import('../../node_modules/h3')['getProxyRequestHeaders']
   const getQuery: typeof import('../../node_modules/h3')['getQuery']
@@ -72,6 +73,7 @@ declare global {
   const getRouterParam: typeof import('../../node_modules/h3')['getRouterParam']
   const getRouterParams: typeof import('../../node_modules/h3')['getRouterParams']
   const getSession: typeof import('../../node_modules/h3')['getSession']
+  const getSiteConfig: typeof import('../../node_modules/nuxt-site-config/dist/runtime/server/composables/getSiteConfig')['getSiteConfig']
   const getSiteIndexable: typeof import('../../node_modules/nuxt-site-config/dist/runtime/server/composables/getSiteIndexable')['getSiteIndexable']
   const getSiteRobotConfig: typeof import('../../node_modules/@nuxtjs/robots/dist/runtime/server/composables/getSiteRobotConfig')['getSiteRobotConfig']
   const getValidatedQuery: typeof import('../../node_modules/h3')['getValidatedQuery']
@@ -164,6 +166,8 @@ export { defineAppConfig } from '/Users/marina/Trabajos/Pia/solstrategies/reposi
 export { useImage } from '/Users/marina/Trabajos/Pia/solstrategies/repository/node_modules/@nuxt/image/dist/runtime/server/utils/image';
 export { defineSitemapEventHandler } from '/Users/marina/Trabajos/Pia/solstrategies/repository/node_modules/@nuxtjs/sitemap/dist/runtime/server/composables/defineSitemapEventHandler';
 export { asSitemapUrl } from '/Users/marina/Trabajos/Pia/solstrategies/repository/node_modules/@nuxtjs/sitemap/dist/runtime/server/composables/asSitemapUrl';
+export { getNitroOrigin } from '/Users/marina/Trabajos/Pia/solstrategies/repository/node_modules/nuxt-site-config/dist/runtime/server/composables/getNitroOrigin';
+export { getSiteConfig } from '/Users/marina/Trabajos/Pia/solstrategies/repository/node_modules/nuxt-site-config/dist/runtime/server/composables/getSiteConfig';
 export { getSiteIndexable } from '/Users/marina/Trabajos/Pia/solstrategies/repository/node_modules/nuxt-site-config/dist/runtime/server/composables/getSiteIndexable';
 export { updateSiteConfig } from '/Users/marina/Trabajos/Pia/solstrategies/repository/node_modules/nuxt-site-config/dist/runtime/server/composables/updateSiteConfig';
 export { useNitroOrigin } from '/Users/marina/Trabajos/Pia/solstrategies/repository/node_modules/nuxt-site-config/dist/runtime/server/composables/useNitroOrigin';

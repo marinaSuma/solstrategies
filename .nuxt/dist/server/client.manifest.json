@@ -1,0 +1,387 @@
+{
+  "../node_modules/nuxt-tradingview/dist/runtime/components/SymbolInfo.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "CxywYvJ3.js",
+    "name": "SymbolInfo",
+    "src": "../node_modules/nuxt-tradingview/dist/runtime/components/SymbolInfo.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_BTe17v2n.js",
+      "../node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "../node_modules/nuxt-tradingview/dist/runtime/components/TickerTape.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "B_gm_gLb.js",
+    "name": "TickerTape",
+    "src": "../node_modules/nuxt-tradingview/dist/runtime/components/TickerTape.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_BTe17v2n.js",
+      "../node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "../node_modules/nuxt/dist/app/entry.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "C1Mm-ZPl.js",
+    "name": "entry",
+    "src": "../node_modules/nuxt/dist/app/entry.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "layouts/default.vue"
+    ],
+    "css": [
+      "entry.Bj7I4seC.css"
+    ]
+  },
+  "entry.Bj7I4seC.css": {
+    "file": "entry.Bj7I4seC.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  },
+  "_BTe17v2n.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "BTe17v2n.js",
+    "name": "useInitWidget",
+    "imports": [
+      "../node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "_BirDKeFh.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "BirDKeFh.js",
+    "name": "SectionAboutTeam",
+    "imports": [
+      "../node_modules/nuxt/dist/app/entry.js"
+    ],
+    "css": [
+      "SectionAboutTeam.BYJPVthq.css"
+    ]
+  },
+  "SectionAboutTeam.BYJPVthq.css": {
+    "file": "SectionAboutTeam.BYJPVthq.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  },
+  "_D3ZLOVW6.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "D3ZLOVW6.js",
+    "name": "MotionSlider",
+    "imports": [
+      "../node_modules/nuxt/dist/app/entry.js",
+      "assets/icon/googleplay.svg",
+      "assets/icon/appstore.svg"
+    ],
+    "css": [
+      "MotionSlider.DnCELEWV.css"
+    ]
+  },
+  "MotionSlider.DnCELEWV.css": {
+    "file": "MotionSlider.DnCELEWV.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  },
+  "_DIicislN.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "DIicislN.js",
+    "name": "SectionCta",
+    "imports": [
+      "../node_modules/nuxt/dist/app/entry.js"
+    ],
+    "css": [
+      "SectionCta.CjSHyhVZ.css"
+    ]
+  },
+  "SectionCta.CjSHyhVZ.css": {
+    "file": "SectionCta.CjSHyhVZ.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  },
+  "_MotionSlider.DnCELEWV.css": {
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true,
+    "file": "MotionSlider.DnCELEWV.css",
+    "src": "_MotionSlider.DnCELEWV.css"
+  },
+  "_SectionAboutTeam.BYJPVthq.css": {
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true,
+    "file": "SectionAboutTeam.BYJPVthq.css",
+    "src": "_SectionAboutTeam.BYJPVthq.css"
+  },
+  "_SectionCta.CjSHyhVZ.css": {
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true,
+    "file": "SectionCta.CjSHyhVZ.css",
+    "src": "_SectionCta.CjSHyhVZ.css"
+  },
+  "assets/icon/appstore.svg": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "eJjt9xNR.js",
+    "name": "appstore",
+    "src": "assets/icon/appstore.svg",
+    "isDynamicEntry": true,
+    "imports": [
+      "../node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "assets/icon/arrowslide.svg": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "BvNHlybB.js",
+    "name": "arrowslide",
+    "src": "assets/icon/arrowslide.svg",
+    "isDynamicEntry": true,
+    "imports": [
+      "../node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "assets/icon/circlecenter.svg": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "-leuru1g.js",
+    "name": "circlecenter",
+    "src": "assets/icon/circlecenter.svg",
+    "isDynamicEntry": true,
+    "imports": [
+      "../node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "assets/icon/circleleft.svg": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "D0GnV701.js",
+    "name": "circleleft",
+    "src": "assets/icon/circleleft.svg",
+    "isDynamicEntry": true,
+    "imports": [
+      "../node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "assets/icon/circleright.svg": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "DPM_WihF.js",
+    "name": "circleright",
+    "src": "assets/icon/circleright.svg",
+    "isDynamicEntry": true,
+    "imports": [
+      "../node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "assets/icon/googleplay.svg": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "CMKlzcYv.js",
+    "name": "googleplay",
+    "src": "assets/icon/googleplay.svg",
+    "isDynamicEntry": true,
+    "imports": [
+      "../node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "assets/icon/hamburger.svg": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "DbwxUDqE.js",
+    "name": "hamburger",
+    "src": "assets/icon/hamburger.svg",
+    "isDynamicEntry": true,
+    "imports": [
+      "../node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "assets/icon/logotext.svg": {
+    "resourceType": "image",
+    "prefetch": true,
+    "mimeType": "image/svg+xml",
+    "file": "logotext.C9cYrIRT.svg",
+    "src": "assets/icon/logotext.svg"
+  },
+  "assets/icon/quote.svg": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "hepc3F3K.js",
+    "name": "quote",
+    "src": "assets/icon/quote.svg",
+    "isDynamicEntry": true,
+    "imports": [
+      "../node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "layouts/default.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "CVD7GX8-.js",
+    "name": "default",
+    "src": "layouts/default.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "../node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "pages/about.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "BAQjeYV8.js",
+    "name": "about",
+    "src": "pages/about.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_BirDKeFh.js",
+      "_DIicislN.js",
+      "../node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "pages/blog.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "B3ZNUaU6.js",
+    "name": "blog",
+    "src": "pages/blog.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "../node_modules/nuxt/dist/app/entry.js",
+      "_DIicislN.js"
+    ],
+    "css": [
+      "blog.DGCcCwbj.css"
+    ]
+  },
+  "blog.DGCcCwbj.css": {
+    "file": "blog.DGCcCwbj.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  },
+  "pages/index.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "qRJ3kABK.js",
+    "name": "index",
+    "src": "pages/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "../node_modules/nuxt/dist/app/entry.js",
+      "../node_modules/nuxt-tradingview/dist/runtime/components/SymbolInfo.vue",
+      "../node_modules/nuxt-tradingview/dist/runtime/components/TickerTape.vue",
+      "assets/icon/circleleft.svg",
+      "assets/icon/circlecenter.svg",
+      "assets/icon/circleright.svg",
+      "assets/icon/quote.svg",
+      "assets/icon/arrowslide.svg",
+      "_D3ZLOVW6.js",
+      "_DIicislN.js",
+      "_BTe17v2n.js",
+      "assets/icon/googleplay.svg",
+      "assets/icon/appstore.svg"
+    ],
+    "css": [
+      "index.gq73_lY3.css"
+    ]
+  },
+  "index.gq73_lY3.css": {
+    "file": "index.gq73_lY3.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  },
+  "pages/investor-relations.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "Cn43OCv9.js",
+    "name": "investor-relations",
+    "src": "pages/investor-relations.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "../node_modules/nuxt/dist/app/entry.js",
+      "../node_modules/nuxt-tradingview/dist/runtime/components/SymbolInfo.vue",
+      "../node_modules/nuxt-tradingview/dist/runtime/components/TickerTape.vue",
+      "assets/icon/arrowslide.svg",
+      "_D3ZLOVW6.js",
+      "_DIicislN.js",
+      "_BTe17v2n.js",
+      "assets/icon/googleplay.svg",
+      "assets/icon/appstore.svg"
+    ],
+    "css": [
+      "investor-relations.B-NnE4T-.css"
+    ]
+  },
+  "investor-relations.B-NnE4T-.css": {
+    "file": "investor-relations.B-NnE4T-.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  },
+  "pages/singleTeam.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "DVaVfZmw.js",
+    "name": "singleTeam",
+    "src": "pages/singleTeam.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_BirDKeFh.js",
+      "_DIicislN.js",
+      "../node_modules/nuxt/dist/app/entry.js"
+    ]
+  }
+}

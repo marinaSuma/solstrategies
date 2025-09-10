@@ -143,38 +143,6 @@ import { RuntimeConfig as UserRuntimeConfig, PublicRuntimeConfig as UserPublicRu
       refreshOnResize: boolean,
    },
 
-   "nuxt-schema-org": {
-      reactive: boolean,
-
-      minify: boolean,
-
-      scriptAttributes: {
-         "data-nuxt-schema-org": boolean,
-      },
-
-      identity: any,
-
-      version: string,
-   },
-
-   "nuxt-link-checker": {
-      version: string,
-
-      hasSitemapModule: boolean,
-
-      rootDir: string,
-
-      excludeLinks: Array<any>,
-
-      skipInspections: Array<any>,
-
-      fetchTimeout: number,
-
-      showLiveInspections: boolean,
-
-      fetchRemoteUrls: boolean,
-   },
-
    "seo-utils": {
       canonicalQueryWhitelist: Array<string>,
 
@@ -190,7 +158,7 @@ import { RuntimeConfig as UserRuntimeConfig, PublicRuntimeConfig as UserPublicRu
    },
 
    "nuxt-scripts": {
-      version: string,
+      version: any,
 
       defaultScriptOptions: {
          trigger: string,

@@ -1,0 +1,5 @@
+const SectionOverviewInvestors_vue_vue_type_style_index_0_scoped_6ed97c43_lang = ".overview[data-v-6ed97c43]{padding:calc(122/var(--base-vw)*var(--base-multiplier)) 0;position:relative;text-align:center}@media (max-width:767.98px){.overview[data-v-6ed97c43]{padding:calc(118/var(--base-vw)*var(--base-multiplier)) 0}}.overview .bg[data-v-6ed97c43]{pointer-events:none;position:absolute;right:0;top:0;width:80%;z-index:-1}.overview .ticker[data-v-6ed97c43]{display:flex;flex-direction:column;gap:calc(64/var(--base-vw)*var(--base-multiplier));justify-content:center;margin-top:0}.overview .ticker .ticker__symbol[data-v-6ed97c43]{height:230px;margin:0 auto;max-width:600px;width:100%}.overview .ticker .ticker__tape[data-v-6ed97c43]{height:46px;margin-top:calc(98/var(--base-vw)*var(--base-multiplier) - 64/var(--base-vw)*var(--base-multiplier))}";
+export {
+  SectionOverviewInvestors_vue_vue_type_style_index_0_scoped_6ed97c43_lang as default
+};
+//# sourceMappingURL=SectionOverviewInvestors-styles-1.mjs-DoU3WFug.js.map

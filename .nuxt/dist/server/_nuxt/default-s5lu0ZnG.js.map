@@ -1,0 +1,1 @@
+{"version":3,"file":"default-s5lu0ZnG.js","sources":["../../../../app/layouts/default.vue"],"sourcesContent":["<template>\n  <main id=\"main\">\n    <slot />\n  </main>\n</template>\n"],"names":["_ssrRenderAttrs","_mergeProps"],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;AACQ,QAAA,QAAAA,eAAAC,WAAA,EAAA,IAAG,UAAM,MAAA,CAAA,CAAA,GAAA;;;;;;;;;;;"}

@@ -19,8 +19,10 @@ declare module 'vue-router/auto-routes' {
    */
   export interface RouteNamedMap {
     'index': RouteRecordInfo<'index', '/', Record<never, never>, Record<never, never>>,
+    'about': RouteRecordInfo<'about', '/about', Record<never, never>, Record<never, never>>,
     'blog': RouteRecordInfo<'blog', '/blog', Record<never, never>, Record<never, never>>,
     'investor-relations': RouteRecordInfo<'investor-relations', '/investor-relations', Record<never, never>, Record<never, never>>,
+    'singleTeam': RouteRecordInfo<'singleTeam', '/singleTeam', Record<never, never>, Record<never, never>>,
   }
 
   /**
@@ -38,12 +40,20 @@ declare module 'vue-router/auto-routes' {
       routes: 'index'
       views: never
     }
+    'app/pages/about.vue': {
+      routes: 'about'
+      views: never
+    }
     'app/pages/blog.vue': {
       routes: 'blog'
       views: never
     }
     'app/pages/investor-relations.vue': {
       routes: 'investor-relations'
+      views: never
+    }
+    'app/pages/singleTeam.vue': {
+      routes: 'singleTeam'
       views: never
     }
   }

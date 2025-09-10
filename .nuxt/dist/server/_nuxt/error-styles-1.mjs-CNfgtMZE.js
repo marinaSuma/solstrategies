@@ -1,0 +1,5 @@
+const error_vue_vue_type_style_index_0_scoped_0a7ce4ba_lang = ".bg[data-v-0a7ce4ba]{width:100%}.bg[data-v-0a7ce4ba],.error[data-v-0a7ce4ba]{height:100vh;min-height:100%}.error[data-v-0a7ce4ba]{align-items:center;display:flex;flex-direction:column;justify-content:center;margin:0;text-align:center}.error[data-v-0a7ce4ba] .animation{margin:4rem auto;max-width:40rem}.error[data-v-0a7ce4ba] h1{margin-bottom:1rem;text-transform:none}.error-dev[data-v-0a7ce4ba]{margin-top:2rem;width:100%}.statuscode[data-v-0a7ce4ba]{font-size:3rem}.message[data-v-0a7ce4ba]{margin-bottom:1rem}.stack[data-v-0a7ce4ba]{background-color:#000;color:#fff;padding:2rem;white-space:normal}.cta[data-v-0a7ce4ba]{margin-top:2rem}.cta a[data-v-0a7ce4ba]{-webkit-text-decoration:underline;text-decoration:underline}";
+export {
+  error_vue_vue_type_style_index_0_scoped_0a7ce4ba_lang as default
+};
+//# sourceMappingURL=error-styles-1.mjs-CNfgtMZE.js.map
