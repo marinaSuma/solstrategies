@@ -30,11 +30,7 @@ const props = defineProps({
   twitter: String,
 })
 
-const slots = defineSlots<{
-  img?: () => unknown
-  title?: () => unknown
-  desc?: () => unknown
-}>()
+const slots = defineSlots()
 </script>
 
 <style scoped lang="scss">
