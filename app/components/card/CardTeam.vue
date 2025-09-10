@@ -24,11 +24,19 @@
   </div>
 </template>
 
-<script setup lang="ts">
-defineProps<{
-  linkedin?: string
-  twitter?: string
+<script setup>
+
+const props = defineProps({
+  linkedin: String,
+  twitter: String,
+})
+
+defineSlots<{
+  img?: () => any,
+  title?: () => any,
+  desc?: () => any,
 }>()
+
 </script>
 
 <style scoped lang="scss">
