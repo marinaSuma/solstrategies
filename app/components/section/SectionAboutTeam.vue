@@ -202,6 +202,9 @@ section.team {
  @include mx.mobile {
     flex-direction: column;
     row-gap: 30px;
+    + .about-grid{
+      margin-top: 80px;
+    }
   }
 }
 
@@ -244,6 +247,13 @@ section.team {
     .team-item {
       flex: 0 0 calc(33.333% - 20px); 
       box-sizing: border-box;
+      @include mx.mobile {
+        &:not(:first-child) {
+          border-top: 1px solid #D0D0D0;
+          padding-top: 50px;
+        }
+        
+      }
       .img {
         border-radius: 6px;
         overflow: hidden;

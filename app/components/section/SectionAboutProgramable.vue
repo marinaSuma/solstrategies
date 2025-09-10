@@ -40,6 +40,7 @@ let ctx;
     height: 570px;
     display: flex;
     align-items: center;
+
   }
   .bg {
     top: 0;
@@ -63,6 +64,9 @@ let ctx;
         font-size: 60px;
         @include mx.mobile {
           font-size: 40px;
+          br{
+            display: none;
+          }
         }
       }
     }
@@ -72,6 +76,13 @@ let ctx;
         position: relative;
         left: -80px;
         width: calc(220 / var(--base-vw) * var(--base-multiplier));
+        @include mx.mobile {
+          left: unset;
+          position: absolute;
+          width: calc(130 / var(--base-vw) * var(--base-multiplier));
+          right: 0px;
+          top: -100px;
+        }
       }
       &.bottom {
         position: absolute;
@@ -79,10 +90,10 @@ let ctx;
         top: 150px;
         width: calc(300 / var(--base-vw) * var(--base-multiplier));
         @include mx.mobile {
-        right: 0;
-        top: unset;
-        bottom: 0;
-         width: calc(120 / var(--base-vw) * var(--base-multiplier));
+          right: unset;
+          top: auto;
+          width: calc(140 / var(--base-vw) * var(--base-multiplier));
+          left: -70px;
         }
       }
 

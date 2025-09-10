@@ -57,8 +57,9 @@ let ctx;
   @include mx.mobile {
     flex-direction: column;
     min-height: auto;
-    padding-top: fn.toVw(160);
+    padding-top: 110px;
     padding-bottom: 60px;
+    height: 100vh;
   }
 
 
@@ -77,6 +78,16 @@ let ctx;
     top: 0;
     z-index: -1;
     width: 100%;
+    @include mx.mobile {
+      height: 40%;
+    }
+    .media-img {
+      img {
+        @include mx.mobile {
+          object-position: right;
+        }
+      }
+    }
 }
 
 .wrapper {
@@ -106,7 +117,7 @@ let ctx;
       line-height: 1.008;
 
       @include mx.mobile {
-        font-size: 50px;
+        
       }
 
       b {
@@ -123,6 +134,7 @@ let ctx;
 
     @include mx.mobile {
       align-self: start;
+      margin-top: 20px;
     }
 
     .description__text {
