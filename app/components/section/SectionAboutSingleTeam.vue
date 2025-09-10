@@ -34,12 +34,6 @@ let ctx;
 </script>
 
 <style scoped lang="scss">
-section.team {
-   @include mx.mobile {
-  }
-}
-
-
 .bg {
   top: 0;
   left: 0;
@@ -47,6 +41,53 @@ section.team {
   z-index: 0;
   opacity: 0.8;
 }
+
+
+.singleTeam {
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    gap: 50px;
+    /* flex-wrap: wrap; */
+    .img {
+      flex: 0 0 400px;
+      background: #d3d3d3 50% / cover no-repeat;
+      background-blend-mode: luminosity;
+      border-radius: 15px;
+      filter: grayscale(1);
+      overflow: hidden;
+    }
+    .content {
+      flex: 1;
+      max-width: 599px;
+      h3 {
+        font-size: 60px;
+      }
+      h6 {
+        font-size: 24px;
+        margin-bottom: 40px;
+      }
+      p.text {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+      }
+    }
+    @include mx.mobile {
+    }
+}
+
+
+
+
+
+
+
+
 
 
 </style>

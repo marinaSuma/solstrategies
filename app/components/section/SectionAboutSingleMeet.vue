@@ -1,5 +1,5 @@
 <template>
-  <section ref="el" class="milestone">
+  <section ref="el" class="singlemeet">
     <div class="top">
       <div class="text-wrapper">
         <Text tag="h2" variant="heading2" data-split data-linereveal> Meet the team </Text>
@@ -26,62 +26,160 @@
       <MotionSlider ref="elSlider" :gap-desktop="32">
 
         <div class="team-item">
-          <div class="team-item">
-            <div class="img">
-              <MediaImg src="/team2.png" alt="Max Kaplan" />
+          <div class="img">
+            <MediaImg src="/team2.png" alt="Max Kaplan" />
+          </div>
+
+          <div class="content">
+            <div class="name-container">
+              <Text tag="h6" variant="heading2"> Max Kaplan </Text>
+              <div class="social">
+                <a href="#" target="_blank" class="social-link">
+                  <MediaImg src="/linkedin.svg" alt="Linkedin" />
+                </a>
+                <a href="#" target="_blank" class="social-link">
+                  <MediaImg src="/twitter.svg" alt="Twitter" />
+                </a>
+              </div>
             </div>
 
-            <div class="content">
-              <div class="name-container">
-                <Text tag="h6" variant="heading2"> Max Kaplan </Text>
-                <div class="social">
-                  <a href="#" target="_blank" class="social-link">
-                    <MediaImg src="/linkedin.svg" alt="Linkedin" />
-                  </a>
-                  <a href="#" target="_blank" class="social-link">
-                    <MediaImg src="/twitter.svg" alt="Twitter" />
-                  </a>
-                </div>
-              </div>
-
-              <!-- Descripción -->
-              <div class="text">
-                <Text tag="p"> Chief Technology Officer </Text>
-              </div>
+            <!-- Descripción -->
+            <div class="text">
+              <Text tag="p"> Chief Technology Officer </Text>
             </div>
           </div>
         </div>
 
 
         <div class="team-item">
-          <div class="team-item">
-            <div class="img">
-              <MediaImg src="/team2.png" alt="Max Kaplan" />
+          <div class="img">
+            <MediaImg src="/team2.png" alt="Max Kaplan" />
+          </div>
+
+          <div class="content">
+            <div class="name-container">
+              <Text tag="h6" variant="heading2"> Max Kaplan </Text>
+              <div class="social">
+                <a href="#" target="_blank" class="social-link">
+                  <MediaImg src="/linkedin.svg" alt="Linkedin" />
+                </a>
+                <a href="#" target="_blank" class="social-link">
+                  <MediaImg src="/twitter.svg" alt="Twitter" />
+                </a>
+              </div>
             </div>
 
-            <div class="content">
-              <div class="name-container">
-                <Text tag="h6" variant="heading2"> Max Kaplan </Text>
-                <div class="social">
-                  <a href="#" target="_blank" class="social-link">
-                    <MediaImg src="/linkedin.svg" alt="Linkedin" />
-                  </a>
-                  <a href="#" target="_blank" class="social-link">
-                    <MediaImg src="/twitter.svg" alt="Twitter" />
-                  </a>
-                </div>
-              </div>
-
-              <!-- Descripción -->
-              <div class="text">
-                <Text tag="p"> Chief Technology Officer </Text>
-              </div>
+            <!-- Descripción -->
+            <div class="text">
+              <Text tag="p"> Chief Technology Officer </Text>
             </div>
           </div>
         </div>
 
-        
 
+         <div class="team-item">
+          <div class="img">
+            <MediaImg src="/team2.png" alt="Max Kaplan" />
+          </div>
+
+          <div class="content">
+            <div class="name-container">
+              <Text tag="h6" variant="heading2"> Max Kaplan </Text>
+              <div class="social">
+                <a href="#" target="_blank" class="social-link">
+                  <MediaImg src="/linkedin.svg" alt="Linkedin" />
+                </a>
+                <a href="#" target="_blank" class="social-link">
+                  <MediaImg src="/twitter.svg" alt="Twitter" />
+                </a>
+              </div>
+            </div>
+
+            <!-- Descripción -->
+            <div class="text">
+              <Text tag="p"> Chief Technology Officer </Text>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="team-item">
+          <div class="img">
+            <MediaImg src="/team2.png" alt="Max Kaplan" />
+          </div>
+
+          <div class="content">
+            <div class="name-container">
+              <Text tag="h6" variant="heading2"> Max Kaplan </Text>
+              <div class="social">
+                <a href="#" target="_blank" class="social-link">
+                  <MediaImg src="/linkedin.svg" alt="Linkedin" />
+                </a>
+                <a href="#" target="_blank" class="social-link">
+                  <MediaImg src="/twitter.svg" alt="Twitter" />
+                </a>
+              </div>
+            </div>
+
+            <!-- Descripción -->
+            <div class="text">
+              <Text tag="p"> Chief Technology Officer </Text>
+            </div>
+          </div>
+        </div>
+
+
+
+         <div class="team-item">
+          <div class="img">
+            <MediaImg src="/team2.png" alt="Max Kaplan" />
+          </div>
+
+          <div class="content">
+            <div class="name-container">
+              <Text tag="h6" variant="heading2"> Max Kaplan </Text>
+              <div class="social">
+                <a href="#" target="_blank" class="social-link">
+                  <MediaImg src="/linkedin.svg" alt="Linkedin" />
+                </a>
+                <a href="#" target="_blank" class="social-link">
+                  <MediaImg src="/twitter.svg" alt="Twitter" />
+                </a>
+              </div>
+            </div>
+
+            <!-- Descripción -->
+            <div class="text">
+              <Text tag="p"> Chief Technology Officer </Text>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="team-item">
+          <div class="img">
+            <MediaImg src="/team2.png" alt="Max Kaplan" />
+          </div>
+
+          <div class="content">
+            <div class="name-container">
+              <Text tag="h6" variant="heading2"> Max Kaplan </Text>
+              <div class="social">
+                <a href="#" target="_blank" class="social-link">
+                  <MediaImg src="/linkedin.svg" alt="Linkedin" />
+                </a>
+                <a href="#" target="_blank" class="social-link">
+                  <MediaImg src="/twitter.svg" alt="Twitter" />
+                </a>
+              </div>
+            </div>
+
+            <!-- Descripción -->
+            <div class="text">
+              <Text tag="p"> Chief Technology Officer </Text>
+            </div>
+          </div>
+        </div>
 
 
       </MotionSlider>
@@ -139,7 +237,7 @@ onUnmounted(() => {
 
 
 <style scoped lang="scss">
-.milestone {
+.singlemeet {
   position: relative;
 
   overflow: hidden;
@@ -159,21 +257,6 @@ onUnmounted(() => {
   display: flex;
   gap: fn.toVw(5);
   justify-content: space-between;
-
-  .text-wrapper {
-    display: flex;
-    gap: fn.toVw(5);
-  }
-
-  .shape {
-    width: fn.toVw(140);
-    margin-top: fn.toVw(-5);
-
-    @include mx.mobile {
-      width: fn.toVw(108);
-      margin-top: fn.toVw(-8);
-    }
-  }
 }
 
 .list {
@@ -209,5 +292,99 @@ onUnmounted(() => {
   .next {
     transform: scaleX(-1);
   }
+}
+
+
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;   /* permite que los items salten de línea */
+    gap: 50px 20px;
+    .team-item {
+      flex: 0 0 calc(33.333% - 20px); 
+      box-sizing: border-box;
+      @include mx.mobile {
+        &:not(:first-child) {
+          border-top: 1px solid #D0D0D0;
+          padding-top: 50px;
+        }
+        
+      }
+      .img {
+        border-radius: 6px;
+        overflow: hidden;
+        background: #d3d3d3 50% / cover no-repeat;
+        background-blend-mode: luminosity;
+        filter: grayscale(1);
+        a {
+          display: block;
+          -webkit-transition: 0.4s;
+          -moz-transition: 0.4s;
+          -o-transition: 0.4s;
+          transition: 0.4s;
+          overflow: hidden;
+
+          &:hover {
+            transform: scale(1.1);
+          } 
+        }
+      }
+      .content {
+        padding-top: 15px;
+      }
+      .name-container {
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        h6 {
+          color: #171717;
+          font-size: 30px;
+          flex: 0 0 50%;
+        }
+        .text {
+          color: #828282;
+          font-size: 16px;
+        }
+        .social {
+          display: flex;
+          gap: 16px;
+        }
+      }
+
+       a.text {
+        color: #828282;
+      }
+      .linkTeam {
+        margin-top: 15px;
+        a.btn {
+          display: flex;
+          overflow: visible;
+          gap: 7px;
+          .bioArrow {
+            width: 12px;
+            height: 11px;
+            transform-origin: center bottom;
+            display: block;
+            overflow: visible;
+            -webkit-transition: 0.4s;
+            -moz-transition: 0.4s;
+            -o-transition: 0.4s;
+            transition: 0.4s;
+          }
+          &:hover{
+            .bioArrow {
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+  }
+
+  @include mx.mobile {
+    flex-direction: column;
+  }
+
 }
 </style>
