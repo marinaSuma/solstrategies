@@ -239,9 +239,7 @@ onUnmounted(() => {
 <style scoped lang="scss">
 .singlemeet {
   position: relative;
-
   overflow: hidden;
-
   padding-top: fn.toVw(276);
   padding-right: fn.toVw($layout-container-desktop);
   padding-left: fn.toVw($layout-container-desktop);
@@ -261,6 +259,9 @@ onUnmounted(() => {
 
 .list {
   margin-top: fn.toVw(57);
+  .section-slider {
+    padding-left: 160px;
+  }
 
   @include mx.mobile {
     margin-top: fn.toVw(40);
@@ -296,95 +297,89 @@ onUnmounted(() => {
 
 
 
-.team-grid {
-    display: flex;
-    flex-wrap: wrap;   /* permite que los items salten de línea */
-    gap: 50px 20px;
-    .team-item {
-      flex: 0 0 calc(33.333% - 20px); 
-      box-sizing: border-box;
-      @include mx.mobile {
-        &:not(:first-child) {
-          border-top: 1px solid #D0D0D0;
-          padding-top: 50px;
-        }
-        
+
+.team-item {
+    flex: 0 0 calc(33.333% - 20px); 
+    box-sizing: border-box;
+    @include mx.mobile {
+      &:not(:first-child) {
+        border-top: 1px solid #D0D0D0;
+        padding-top: 50px;
       }
-      .img {
-        border-radius: 6px;
+      
+    }
+    .img {
+      border-radius: 6px;
+      overflow: hidden;
+      background: #d3d3d3 50% / cover no-repeat;
+      background-blend-mode: luminosity;
+      filter: grayscale(1);
+      a {
+        display: block;
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
         overflow: hidden;
-        background: #d3d3d3 50% / cover no-repeat;
-        background-blend-mode: luminosity;
-        filter: grayscale(1);
-        a {
+
+        &:hover {
+          transform: scale(1.1);
+        } 
+      }
+    }
+    .content {
+      padding-top: 15px;
+    }
+    .name-container {
+      display: flex;
+      gap: 30px;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      h6 {
+        color: #171717;
+        font-size: 30px;
+        flex: 0 0 50%;
+      }
+      .text {
+        color: #828282;
+        font-size: 16px;
+      }
+      .social {
+        display: flex;
+        gap: 16px;
+      }
+    }
+
+    a.text {
+      color: #828282;
+    }
+    .linkTeam {
+      margin-top: 15px;
+      a.btn {
+        display: flex;
+        overflow: visible;
+        gap: 7px;
+        .bioArrow {
+          width: 12px;
+          height: 11px;
+          transform-origin: center bottom;
           display: block;
+          overflow: visible;
           -webkit-transition: 0.4s;
           -moz-transition: 0.4s;
           -o-transition: 0.4s;
           transition: 0.4s;
-          overflow: hidden;
-
-          &:hover {
-            transform: scale(1.1);
-          } 
         }
-      }
-      .content {
-        padding-top: 15px;
-      }
-      .name-container {
-        display: flex;
-        gap: 30px;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 10px;
-        h6 {
-          color: #171717;
-          font-size: 30px;
-          flex: 0 0 50%;
-        }
-        .text {
-          color: #828282;
-          font-size: 16px;
-        }
-        .social {
-          display: flex;
-          gap: 16px;
-        }
-      }
-
-       a.text {
-        color: #828282;
-      }
-      .linkTeam {
-        margin-top: 15px;
-        a.btn {
-          display: flex;
-          overflow: visible;
-          gap: 7px;
+        &:hover{
           .bioArrow {
-            width: 12px;
-            height: 11px;
-            transform-origin: center bottom;
-            display: block;
-            overflow: visible;
-            -webkit-transition: 0.4s;
-            -moz-transition: 0.4s;
-            -o-transition: 0.4s;
-            transition: 0.4s;
-          }
-          &:hover{
-            .bioArrow {
-              transform: rotate(45deg);
-            }
+            transform: rotate(45deg);
           }
         }
       }
-  }
-
-  @include mx.mobile {
-    flex-direction: column;
-  }
-
+    }
 }
+
+
+
 </style>
