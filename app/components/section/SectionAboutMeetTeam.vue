@@ -24,25 +24,32 @@
 
     <div class="list">
       <MotionSlider ref="elSlider" :gap-desktop="32">
-        <CardMilestone desc="secured with ATW Partners" background="/milestone-1.jpg">
+
+        <CardAbout desc="secured with ATW Partners">
           <template #title> <b>$500</b>M Convertible Facility </template>
-        </CardMilestone>
+        </CardAbout>
 
-        <CardMilestone desc="completed, expanding validator operations" background="/milestone-2.jpg">
-          <template #title> <b>$35</b>M Laine Acquisition </template>
-        </CardMilestone>
+        <CardAbout desc="secured with ATW Partners">
+          <template #title> <b>$500</b>M Convertible Facility </template>
+        </CardAbout>
 
-        <CardMilestone desc="with SEC for potential Nasdaq listing" background="/milestone-3.jpg">
-          <template #title> <b>Form 40-F Filed</b> </template>
-        </CardMilestone>
+        <CardAbout desc="secured with ATW Partners">
+          <template #title> <b>$500</b>M Convertible Facility </template>
+        </CardAbout>
 
-        <CardMilestone desc="certifications achieved">
-          <template #title> <b>SOC 1 & 2 Type 1</b> </template>
-        </CardMilestone>
+        <CardAbout desc="secured with ATW Partners">
+          <template #title> <b>$500</b>M Convertible Facility </template>
+        </CardAbout>
 
-        <CardMilestone :is-download="true" desc="launched on" background="/milestone-5.jpg">
-          <template #title> <b>Orangefin</b> </template>
-        </CardMilestone>
+        <CardAbout desc="secured with ATW Partners">
+          <template #title> <b>$500</b>M Convertible Facility </template>
+        </CardAbout>
+
+        <CardAbout desc="secured with ATW Partners">
+          <template #title> <b>$500</b>M Convertible Facility </template>
+        </CardAbout>
+
+
       </MotionSlider>
     </div>
 
