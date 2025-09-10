@@ -1,6 +1,6 @@
 <template>
   <div :class="$route.name">
-    <SectionHeroAbout />
+    <SectionAboutHero />
     <SectionAboutProgramable />
     <SectionAboutTeam />
     <SectionCta />
