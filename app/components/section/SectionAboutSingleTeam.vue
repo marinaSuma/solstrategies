@@ -1,6 +1,6 @@
 <template>
   <section ref="el" class="team">
-    <div class="bg-bottom">
+    <div class="bg">
       <MediaImg src="/teamSingleBG.png" alt="Team Background" />
     </div>
 
