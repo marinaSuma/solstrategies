@@ -1,7 +1,7 @@
 <template>
   <div :class="$route.name">
-    <!-- <SectionAboutSingleTeam /> -->
-    <!-- <SectionAboutMeetTeam /> -->
+    <SectionAboutSingleTeam />
+    <!-- <SectionAboutSingleMeet /> -->
     <SectionCta />
   </div>
 </template>

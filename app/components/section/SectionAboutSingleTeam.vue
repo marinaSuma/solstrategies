@@ -3,7 +3,7 @@
     <div class="container">
       <div class="singleTeam">
         <div class="img">
-          <MediaImg src="/bio.svg" alt="Leah Wald" />
+          <MediaImg src="/team1.png" alt="Leah Wald" />
         </div>
         
         <div class="content">
