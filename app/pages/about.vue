@@ -2,7 +2,7 @@
   <div :class="$route.name">
     <SectionHeroAbout />
     <SectionAboutProgramable />
-    <SectionTeam />
+    <SectionAboutTeam />
     <SectionCta />
   </div>
 </template>
