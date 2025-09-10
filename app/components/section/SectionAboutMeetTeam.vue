@@ -22,94 +22,38 @@
       </div>
     </div>
 
-    <div class="list">
+    <div class="list fadeinUp">
       <MotionSlider ref="elSlider" :gap-desktop="32">
-
-        <CardAbout 
-          linkedin="https://linkedin.com/in/leahwald"
-          twitter="https://twitter.com/leahwald">
-
-          <template #img>
-            <MediaImg src="/team2.png" alt="Max Kaplan" />
-          </template>
-          <template #title>
-            Max Kaplan
-          </template>
-          <template #desc>
-            Chief Technology Officer
-          </template>
+        <CardAbout linkedin="https://linkedin.com/in/leahwald" twitter="https://twitter.com/leahwald"> 
+          <template #img> <MediaImg src="/team2.png" alt="Max Kaplan" /> </template> 
+          <template #title> Max Kaplan </template> 
+          <template #desc> Chief Technology Officer </template> 
+        </CardAbout> 
+        <CardAbout linkedin="https://linkedin.com/" twitter="https://twitter.com/"> 
+          <template #img> <MediaImg src="/team2.png" alt="Max Kaplan" /> </template> 
+          <template #title> Max Kaplan </template> 
+          <template #desc> Chief Technology Officer </template> 
+        </CardAbout> 
+        <CardAbout linkedin="https://linkedin.com/" twitter="https://twitter.com/"> 
+          <template #img> <MediaImg src="/team3.png" alt="Doug Harris" /> </template> 
+          <template #title> Doug Harris </template> 
+          <template #desc> Chief Technology Officer </template> 
+        </CardAbout> 
+        <CardAbout linkedin="https://linkedin.com/" twitter="https://twitter.com/"> 
+          <template #img> <MediaImg src="/team4.png" alt="Michael Hubbard" /> </template> 
+          <template #title> Michael <br>Hubbard </template> 
+          <template #desc> Chief Strategy Officer and Board Member </template> 
+        </CardAbout> 
+        <CardAbout linkedin="https://linkedin.com/" twitter="https://twitter.com/"> 
+          <template #img> <MediaImg src="/team4.png" alt="Andrew McDonald" /> </template> 
+          <template #title> Andrew <br>McDonald </template> 
+          <template #desc> Director of Operations </template> 
+        </CardAbout> 
+        <CardAbout linkedin="https://linkedin.com/" twitter="https://twitter.com/"> 
+          <template #img> <MediaImg src="/team5.png" alt="Luis Berruga" /> </template> 
+          <template #title> Luis Berruga </template> 
+          <template #desc> Chairman of the Board </template> 
         </CardAbout>
-
-        <CardAbout
-          linkedin="https://linkedin.com/"
-          twitter="https://twitter.com/">
-          <template #img>
-            <MediaImg src="/team2.png" alt="Max Kaplan" />
-          </template>
-          <template #title>
-            Max Kaplan
-          </template>
-          <template #desc>
-            Chief Technology Officer
-          </template>
-        </CardAbout>
-
-        <CardAbout
-          linkedin="https://linkedin.com/"
-          twitter="https://twitter.com/">
-          <template #img>
-            <MediaImg src="/team3.png" alt="Doug Harris" />
-          </template>
-          <template #title>
-            Doug Harris
-          </template>
-          <template #desc>
-            Chief Technology Officer
-          </template>
-        </CardAbout>
-
-        <CardAbout
-          linkedin="https://linkedin.com/"
-          twitter="https://twitter.com/">
-          <template #img>
-            <MediaImg src="/team4.png" alt="Michael Hubbard" />
-          </template>
-          <template #title>
-            Michael <br>Hubbard
-          </template>
-          <template #desc>
-            Chief Strategy Officer and Board Member
-          </template>
-        </CardAbout>
-
-        <CardAbout
-          linkedin="https://linkedin.com/"
-          twitter="https://twitter.com/">
-          <template #img>
-            <MediaImg src="/team4.png" alt="Andrew McDonald" />
-          </template>
-          <template #title>
-            Andrew <br>McDonald
-          </template>
-          <template #desc>
-            Director of Operations
-          </template>
-        </CardAbout>
-
-        <CardAbout
-          linkedin="https://linkedin.com/"
-          twitter="https://twitter.com/">
-          <template #img>
-            <MediaImg src="/team5.png" alt="Luis Berruga" />
-          </template>
-          <template #title>
-            Luis Berruga
-          </template>
-          <template #desc>
-            Chairman of the Board
-          </template>
-        </CardAbout>
-
         
 
 
