@@ -24,8 +24,52 @@
 
     <div class="list fadeinUp">
       <MotionSlider ref="elSlider" :gap-desktop="32">
+         <CardTeam linkedin="https://linkedin.com/in/" twitter="https://twitter.com/"> 
+          <template #img>  <MediaImg src="/team2.png" alt="Max Kaplan" /> </template> 
+          <template #title> Max Kaplan </template> 
+          <template #desc> Chief Technology Officer </template> 
+        </CardTeam> 
 
-        <div class="team-item">
+        <CardTeam linkedin="https://linkedin.com/in/" twitter="https://twitter.com/"> 
+          <template #img>  <MediaImg src="/team2.png" alt="Max Kaplan" /> </template> 
+          <template #title> Max Kaplan </template> 
+          <template #desc> Chief Technology Officer </template> 
+        </CardTeam> 
+
+        <CardTeam linkedin="https://linkedin.com/in/" twitter="https://twitter.com/"> 
+          <template #img>  <MediaImg src="/team2.png" alt="Max Kaplan" /> </template> 
+          <template #title> Max Kaplan </template> 
+          <template #desc> Chief Technology Officer </template> 
+        </CardTeam> 
+
+        <CardTeam linkedin="https://linkedin.com/in/" twitter="https://twitter.com/"> 
+          <template #img>  <MediaImg src="/team2.png" alt="Max Kaplan" /> </template> 
+          <template #title> Max Kaplan </template> 
+          <template #desc> Chief Technology Officer </template> 
+        </CardTeam> 
+
+        <CardTeam linkedin="https://linkedin.com/in/" twitter="https://twitter.com/"> 
+          <template #img>  <MediaImg src="/team2.png" alt="Max Kaplan" /> </template> 
+          <template #title> Max Kaplan </template> 
+          <template #desc> Chief Technology Officer </template> 
+        </CardTeam> 
+
+        <CardTeam linkedin="https://linkedin.com/in/" twitter="https://twitter.com/"> 
+          <template #img>  <MediaImg src="/team2.png" alt="Max Kaplan" /> </template> 
+          <template #title> Max Kaplan </template> 
+          <template #desc> Chief Technology Officer </template> 
+        </CardTeam> 
+
+        <CardTeam linkedin="https://linkedin.com/in/" twitter="https://twitter.com/"> 
+          <template #img>  <MediaImg src="/team2.png" alt="Max Kaplan" /> </template> 
+          <template #title> Max Kaplan </template> 
+          <template #desc> Chief Technology Officer </template> 
+        </CardTeam> 
+
+        
+
+
+        <!-- <div class="team-item">
           <div class="img">
             <MediaImg src="/team2.png" alt="Max Kaplan" />
           </div>
@@ -43,143 +87,13 @@
               </div>
             </div>
 
-            <!-- Descripción -->
             <div class="text">
               <Text tag="p"> Chief Technology Officer </Text>
             </div>
           </div>
-        </div>
+        </div> -->
 
 
-        <div class="team-item">
-          <div class="img">
-            <MediaImg src="/team2.png" alt="Max Kaplan" />
-          </div>
-
-          <div class="content">
-            <div class="name-container">
-              <Text tag="h6" variant="heading2"> Max Kaplan </Text>
-              <div class="social">
-                <a href="#" target="_blank" class="social-link">
-                  <MediaImg src="/linkedin.svg" alt="Linkedin" />
-                </a>
-                <a href="#" target="_blank" class="social-link">
-                  <MediaImg src="/twitter.svg" alt="Twitter" />
-                </a>
-              </div>
-            </div>
-
-            <!-- Descripción -->
-            <div class="text">
-              <Text tag="p"> Chief Technology Officer </Text>
-            </div>
-          </div>
-        </div>
-
-
-         <div class="team-item">
-          <div class="img">
-            <MediaImg src="/team2.png" alt="Max Kaplan" />
-          </div>
-
-          <div class="content">
-            <div class="name-container">
-              <Text tag="h6" variant="heading2"> Max Kaplan </Text>
-              <div class="social">
-                <a href="#" target="_blank" class="social-link">
-                  <MediaImg src="/linkedin.svg" alt="Linkedin" />
-                </a>
-                <a href="#" target="_blank" class="social-link">
-                  <MediaImg src="/twitter.svg" alt="Twitter" />
-                </a>
-              </div>
-            </div>
-
-            <!-- Descripción -->
-            <div class="text">
-              <Text tag="p"> Chief Technology Officer </Text>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="team-item">
-          <div class="img">
-            <MediaImg src="/team2.png" alt="Max Kaplan" />
-          </div>
-
-          <div class="content">
-            <div class="name-container">
-              <Text tag="h6" variant="heading2"> Max Kaplan </Text>
-              <div class="social">
-                <a href="#" target="_blank" class="social-link">
-                  <MediaImg src="/linkedin.svg" alt="Linkedin" />
-                </a>
-                <a href="#" target="_blank" class="social-link">
-                  <MediaImg src="/twitter.svg" alt="Twitter" />
-                </a>
-              </div>
-            </div>
-
-            <!-- Descripción -->
-            <div class="text">
-              <Text tag="p"> Chief Technology Officer </Text>
-            </div>
-          </div>
-        </div>
-
-
-
-         <div class="team-item">
-          <div class="img">
-            <MediaImg src="/team2.png" alt="Max Kaplan" />
-          </div>
-
-          <div class="content">
-            <div class="name-container">
-              <Text tag="h6" variant="heading2"> Max Kaplan </Text>
-              <div class="social">
-                <a href="#" target="_blank" class="social-link">
-                  <MediaImg src="/linkedin.svg" alt="Linkedin" />
-                </a>
-                <a href="#" target="_blank" class="social-link">
-                  <MediaImg src="/twitter.svg" alt="Twitter" />
-                </a>
-              </div>
-            </div>
-
-            <!-- Descripción -->
-            <div class="text">
-              <Text tag="p"> Chief Technology Officer </Text>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="team-item">
-          <div class="img">
-            <MediaImg src="/team2.png" alt="Max Kaplan" />
-          </div>
-
-          <div class="content">
-            <div class="name-container">
-              <Text tag="h6" variant="heading2"> Max Kaplan </Text>
-              <div class="social">
-                <a href="#" target="_blank" class="social-link">
-                  <MediaImg src="/linkedin.svg" alt="Linkedin" />
-                </a>
-                <a href="#" target="_blank" class="social-link">
-                  <MediaImg src="/twitter.svg" alt="Twitter" />
-                </a>
-              </div>
-            </div>
-
-            <!-- Descripción -->
-            <div class="text">
-              <Text tag="p"> Chief Technology Officer </Text>
-            </div>
-          </div>
-        </div>
 
 
       </MotionSlider>
@@ -300,6 +214,7 @@ onUnmounted(() => {
 
 .team-item {
     flex: 0 0 calc(33.333% - 20px); 
+    width: calc(370 / var(--base-vw) * var(--base-multiplier));
     box-sizing: border-box;
     @include mx.mobile {
       &:not(:first-child) {
@@ -339,11 +254,7 @@ onUnmounted(() => {
       h6 {
         color: #171717;
         font-size: 30px;
-        flex: 0 0 50%;
-      }
-      .text {
-        color: #828282;
-        font-size: 16px;
+        flex: 0 0 60%;
       }
       .social {
         display: flex;
@@ -351,8 +262,9 @@ onUnmounted(() => {
       }
     }
 
-    a.text {
+    .text {
       color: #828282;
+      font-size: 16px;
     }
     .linkTeam {
       margin-top: 15px;

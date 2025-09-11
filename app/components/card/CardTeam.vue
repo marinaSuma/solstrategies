@@ -1,5 +1,5 @@
 <template>
-  <div class="card-about">
+  <!-- <div class="card-about">
     <div class="img">
       <slot name="img"></slot>
     </div>
@@ -22,6 +22,36 @@
       </div>
     </div>
   </div>
+ -->
+
+  <div class="team-item">
+    <div class="img">
+       <slot name="img"></slot>
+    </div>
+
+    <div class="content">
+      <div class="name-container">
+        <slot name="title"></slot>
+        <div class="social">
+          <a v-if="linkedin" :href="linkedin" target="_blank" class="social-link">
+            <MediaImg src="/linkedin.svg" alt="Linkedin" />
+          </a>
+          <a v-if="twitter" :href="twitter" target="_blank" class="social-link">
+            <MediaImg src="/twitter.svg" alt="Twitter" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Descripción -->
+      <div class="text">
+         <slot name="desc"></slot>
+      </div>
+    </div>
+  </div>
+
+
+
+
 </template>
 
 <script setup lang="ts">
@@ -33,7 +63,7 @@ const props = defineProps({
 const slots = defineSlots()
 </script>
 
-<style scoped lang="scss">
+<!-- <style scoped lang="scss">
 .card-about {
   position: relative;
   overflow: hidden;
@@ -90,4 +120,4 @@ const slots = defineSlots()
     font-size: 16px;
   }
 }
-</style>
+</style> -->
