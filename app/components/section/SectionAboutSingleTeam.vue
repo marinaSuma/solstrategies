@@ -5,7 +5,7 @@
     </div>
 
     <div class="container">
-      <div class="singleTeam">
+      <div class="singleTeam fadeinUp">
         <div class="img">
           <MediaImg src="/team1.png" alt="Leah Wald" />
         </div>

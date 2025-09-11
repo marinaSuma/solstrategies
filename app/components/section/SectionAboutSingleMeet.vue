@@ -25,43 +25,45 @@
     <div class="list fadeinUp">
       <MotionSlider ref="elSlider" :gap-desktop="32">
          <CardTeam linkedin="https://linkedin.com/in/" twitter="https://twitter.com/"> 
-          <template #img>  <MediaImg src="/team2.png" alt="Max Kaplan" /> </template> 
+          <template #img> 
+            <a href="#"><MediaImg src="/team2.png" alt="Max Kaplan" /></a>
+          </template> 
           <template #title> Max Kaplan </template> 
           <template #desc> Chief Technology Officer </template> 
         </CardTeam> 
 
         <CardTeam linkedin="https://linkedin.com/in/" twitter="https://twitter.com/"> 
-          <template #img>  <MediaImg src="/team3.png" alt="Doug Harris" /> </template> 
+          <template #img>   <a href="#"><MediaImg src="/team3.png" alt="Max Kaplan" /></a> </template> 
           <template #title> Doug Harris </template> 
           <template #desc> Chief Technology Officer </template> 
         </CardTeam> 
 
         <CardTeam linkedin="https://linkedin.com/in/" twitter="https://twitter.com/"> 
-          <template #img>  <MediaImg src="/team4.png" alt="Max Kaplan" /> </template> 
+          <template #img>   <a href="#"><MediaImg src="/team4.png" alt="Max Kaplan" /></a> </template> 
           <template #title>Michael Hubbard </template> 
           <template #desc> Chief Strategy Officer and Board Member </template> 
         </CardTeam> 
 
         <CardTeam linkedin="https://linkedin.com/in/" twitter="https://twitter.com/"> 
-          <template #img>  <MediaImg src="/team5.png" alt="Max Kaplan" /> </template> 
+          <template #img>   <a href="#"><MediaImg src="/team5.png" alt="Max Kaplan" /></a> </template> 
           <template #title> Andrew McDonald </template> 
           <template #desc> Director of Operations </template> 
         </CardTeam> 
 
          <CardTeam linkedin="https://linkedin.com/in/" twitter="https://twitter.com/"> 
-          <template #img>  <MediaImg src="/team3.png" alt="Doug Harris" /> </template> 
+          <template #img>   <a href="#"><MediaImg src="/team2.png" alt="Max Kaplan" /></a> </template> 
           <template #title> Doug Harris </template> 
           <template #desc> Chief Technology Officer </template> 
         </CardTeam> 
 
         <CardTeam linkedin="https://linkedin.com/in/" twitter="https://twitter.com/"> 
-          <template #img>  <MediaImg src="/team4.png" alt="Max Kaplan" /> </template> 
+          <template #img>   <a href="#"><MediaImg src="/team3.png" alt="Max Kaplan" /></a> </template> 
           <template #title>Michael Hubbard </template> 
           <template #desc> Chief Strategy Officer and Board Member </template> 
         </CardTeam> 
 
         <CardTeam linkedin="https://linkedin.com/in/" twitter="https://twitter.com/"> 
-          <template #img>  <MediaImg src="/team5.png" alt="Max Kaplan" /> </template> 
+          <template #img>  <a href="#"><MediaImg src="/team4.png" alt="Max Kaplan" /></a> </template> 
           <template #title> Andrew McDonald </template> 
           <template #desc> Director of Operations </template> 
         </CardTeam> 
@@ -212,63 +214,87 @@ onUnmounted(() => {
 }
 
 
+
 .team-item {
-  flex: 0 0 calc(14% - 20px);
-  
-  ::v-deep(.img) {
-    border-radius: 6px;
-    overflow: hidden;
-    background: #d3d3d3 50% / cover no-repeat;
-    background-blend-mode: luminosity;
-    filter: grayscale(1);
-    
-    a {
-      display: block;
-      transition: 0.4s;
-      &:hover { transform: scale(1.1); }
-    }
-  }
-
-  ::v-deep(.content) {
-    padding-top: 15px;
-
-    ::v-deep(.name-container) {
-      display: flex;
-      gap: 30px;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
-
-      h6 { color: #171717; font-size: 30px; flex: 0 0 60%; }
-
-      ::v-deep(.social) {
-        display: flex;
-        gap: 16px;
+    flex: 0 0 calc(14% - 20px);
+    box-sizing: border-box;
+    @include mx.mobile {
+      &:not(:first-child) {
+        border-top: 1px solid #D0D0D0;
+        padding-top: 50px;
       }
+      
     }
-
-    ::v-deep(.text, .text p) {
-      color: #828282;
-      font-size: 16px;
-    }
-
-    ::v-deep(.linkTeam a.btn) {
-      display: flex;
-      gap: 7px;
-
-      ::v-deep(.bioArrow) {
-        width: 12px;
-        height: 11px;
-        transform-origin: center bottom;
+    ::v-deep(.img) {
+      border-radius: 6px;
+      overflow: hidden;
+      background: #d3d3d3 50% / cover no-repeat;
+      background-blend-mode: luminosity;
+      filter: grayscale(1);
+      a {
+        display: block;
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -o-transition: 0.4s;
         transition: 0.4s;
-      }
+        overflow: hidden;
 
-      &:hover ::v-deep(.bioArrow) {
-        transform: rotate(45deg);
+        &:hover {
+          transform: scale(1.1);
+        } 
       }
     }
-  }
-}
+    ::v-deep(.content) {
+      padding-top: 15px;
+       ::v-deep(.name-container) {
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+         ::v-deep(h6) {
+          color: #171717;
+          font-size: 30px;
+          flex: 0 0 60%;
+        }
+         ::v-deep(.social) {
+          display: flex;
+          gap: 16px;
+        }
+      }
 
+       ::v-deep(.text , .text p){
+        color: #828282;
+        font-size: 16px;
+      }
+       ::v-deep(.linkTeam) {
+        margin-top: 15px;
+         ::v-deep(a.btn) {
+          display: flex;
+          overflow: visible;
+          gap: 7px;
+           ::v-deep(.bioArrow) {
+            width: 12px;
+            height: 11px;
+            transform-origin: center bottom;
+            display: block;
+            overflow: visible;
+            -webkit-transition: 0.4s;
+            -moz-transition: 0.4s;
+            -o-transition: 0.4s;
+            transition: 0.4s;
+          }
+          &:hover{
+            .bioArrow {
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+    }
+  
+
+
+}
 
 </style>
