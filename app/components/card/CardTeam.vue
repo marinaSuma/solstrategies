@@ -46,6 +46,12 @@
       <div class="text">
          <slot name="desc"></slot>
       </div>
+      <div class="linkTeam">
+        <a href="#" class="btn">
+          Read bio
+          <MediaImg class="bioArrow" src="/bio.svg" alt="Read bio" />
+        </a>
+      </div>
     </div>
   </div>
 

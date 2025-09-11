@@ -31,7 +31,7 @@
         </CardTeam> 
 
         <CardTeam linkedin="https://linkedin.com/in/" twitter="https://twitter.com/"> 
-          <template #img>  <MediaImg src="/team3.png" alt="Max Kaplan" /> </template> 
+          <template #img>  <MediaImg src="/team3.png" alt="Doug Harris" /> </template> 
           <template #title> Doug Harris </template> 
           <template #desc> Chief Technology Officer </template> 
         </CardTeam> 
@@ -39,33 +39,15 @@
         <CardTeam linkedin="https://linkedin.com/in/" twitter="https://twitter.com/"> 
           <template #img>  <MediaImg src="/team4.png" alt="Max Kaplan" /> </template> 
           <template #title>Michael Hubbard </template> 
-          <template #desc> Chief Technology Officer </template> 
+          <template #desc> Chief Strategy Officer and Board Member </template> 
         </CardTeam> 
 
         <CardTeam linkedin="https://linkedin.com/in/" twitter="https://twitter.com/"> 
           <template #img>  <MediaImg src="/team5.png" alt="Max Kaplan" /> </template> 
           <template #title> Andrew McDonald </template> 
-          <template #desc> Chief Technology Officer </template> 
+          <template #desc> Director of Operations </template> 
         </CardTeam> 
 
-        <CardTeam linkedin="https://linkedin.com/in/" twitter="https://twitter.com/"> 
-          <template #img>  <MediaImg src="/team2.png" alt="Max Kaplan" /> </template> 
-          <template #title> Max Kaplan </template> 
-          <template #desc> Chief Technology Officer </template> 
-        </CardTeam> 
-
-
-        <CardTeam linkedin="https://linkedin.com/in/" twitter="https://twitter.com/"> 
-          <template #img>  <MediaImg src="/team3.png" alt="Max Kaplan" /> </template> 
-          <template #title> Doug Harris </template> 
-          <template #desc> Chief Technology Officer </template> 
-        </CardTeam> 
-
-        <CardTeam linkedin="https://linkedin.com/in/" twitter="https://twitter.com/"> 
-          <template #img>  <MediaImg src="/team4.png" alt="Max Kaplan" /> </template> 
-          <template #title>Michael Hubbard </template> 
-          <template #desc> Chief Technology Officer </template> 
-        </CardTeam> 
 
 
 
