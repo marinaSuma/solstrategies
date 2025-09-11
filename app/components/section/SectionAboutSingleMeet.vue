@@ -71,33 +71,6 @@
 
 
 
-        <!-- <div class="team-item">
-          <div class="img">
-            <MediaImg src="/team2.png" alt="Max Kaplan" />
-          </div>
-
-          <div class="content">
-            <div class="name-container">
-              <Text tag="h6" variant="heading2"> Max Kaplan </Text>
-              <div class="social">
-                <a href="#" target="_blank" class="social-link">
-                  <MediaImg src="/linkedin.svg" alt="Linkedin" />
-                </a>
-                <a href="#" target="_blank" class="social-link">
-                  <MediaImg src="/twitter.svg" alt="Twitter" />
-                </a>
-              </div>
-            </div>
-
-            <div class="text">
-              <Text tag="p"> Chief Technology Officer </Text>
-            </div>
-          </div>
-        </div> -->
-
-
-
-
       </MotionSlider>
     </div>
 
@@ -156,12 +129,11 @@ onUnmounted(() => {
 .singlemeet {
   position: relative;
   overflow: hidden;
-  padding-top: fn.toVw(276);
+  padding-top: 50px;
   padding-right: fn.toVw($layout-container-desktop);
   padding-left: fn.toVw($layout-container-desktop);
 
   @include mx.mobile {
-    padding-top: fn.toVw(200);
     padding-right: fn.toVw($layout-container-mobile);
     padding-left: fn.toVw($layout-container-mobile);
   }
@@ -246,7 +218,10 @@ onUnmounted(() => {
     }
     ::v-deep(.content) {
       padding-top: 15px;
-       ::v-deep(.name-container) {
+
+    }
+
+           ::v-deep(.name-container) {
         display: flex;
         gap: 30px;
         justify-content: space-between;
@@ -291,7 +266,6 @@ onUnmounted(() => {
           }
         }
       }
-    }
   
 
 
