@@ -47,7 +47,7 @@ const slots = defineSlots()
 
 
 
-<style scoped lang="scss">
+<style lang="scss">
 
   .list {
   margin-top: fn.toVw(57);
