@@ -244,7 +244,11 @@ onUnmounted(() => {
       }
        ::v-deep(.linkTeam) {
         margin-top: 15px;
-         ::v-deep(a.btn) {
+
+      }
+  
+
+      ::v-deep(a.btn) {
           display: flex;
           overflow: visible;
           gap: 7px;
@@ -265,10 +269,6 @@ onUnmounted(() => {
             }
           }
         }
-      }
-  
-
-
 }
 
 </style>
