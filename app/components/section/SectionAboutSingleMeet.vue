@@ -267,9 +267,7 @@ onUnmounted(() => {
     -o-transition: 0.4s;
     transition: 0.4s;
     &:hover{
-      .bioArrow {
-        transform: rotate(45deg);
-      }
+      transform: rotate(45deg);
     }
   }
 
