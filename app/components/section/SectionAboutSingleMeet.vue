@@ -252,12 +252,6 @@ onUnmounted(() => {
     display: flex;
     overflow: visible;
     gap: 7px;
-    &:hover {
-    /* El elemento interno bioArrow también necesita ::v-deep */
-      ::v-deep(.bioArrow) {
-        transform: rotate(45deg);
-      }
-    }
   }
 
 
@@ -273,6 +267,10 @@ onUnmounted(() => {
     transition: 0.4s;
     
   }
+
+   ::v-deep(a.btn:hover .bioArrow){
+    transform: rotate(45deg);
+   }
 
 }
 
