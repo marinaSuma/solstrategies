@@ -212,87 +212,63 @@ onUnmounted(() => {
 }
 
 
-
 .team-item {
-    flex: 0 0 calc(16% - 20px);
-    box-sizing: border-box;
-    @include mx.mobile {
-      &:not(:first-child) {
-        border-top: 1px solid #D0D0D0;
-        padding-top: 50px;
-      }
-      
-    }
-    .img {
-      border-radius: 6px;
-      overflow: hidden;
-      background: #d3d3d3 50% / cover no-repeat;
-      background-blend-mode: luminosity;
-      filter: grayscale(1);
-      a {
-        display: block;
-        -webkit-transition: 0.4s;
-        -moz-transition: 0.4s;
-        -o-transition: 0.4s;
-        transition: 0.4s;
-        overflow: hidden;
-
-        &:hover {
-          transform: scale(1.1);
-        } 
-      }
-    }
-    .content {
-      padding-top: 15px;
-      .name-container {
-        display: flex;
-        gap: 30px;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 10px;
-        h6 {
-          color: #171717;
-          font-size: 30px;
-          flex: 0 0 60%;
-        }
-        .social {
-          display: flex;
-          gap: 16px;
-        }
-      }
-
-      .text , .text p{
-        color: #828282;
-        font-size: 16px;
-      }
-      .linkTeam {
-        margin-top: 15px;
-        a.btn {
-          display: flex;
-          overflow: visible;
-          gap: 7px;
-          .bioArrow {
-            width: 12px;
-            height: 11px;
-            transform-origin: center bottom;
-            display: block;
-            overflow: visible;
-            -webkit-transition: 0.4s;
-            -moz-transition: 0.4s;
-            -o-transition: 0.4s;
-            transition: 0.4s;
-          }
-          &:hover{
-            .bioArrow {
-              transform: rotate(45deg);
-            }
-          }
-        }
-      }
-    }
+  flex: 0 0 calc(14% - 20px);
   
+  ::v-deep(.img) {
+    border-radius: 6px;
+    overflow: hidden;
+    background: #d3d3d3 50% / cover no-repeat;
+    background-blend-mode: luminosity;
+    filter: grayscale(1);
+    
+    a {
+      display: block;
+      transition: 0.4s;
+      &:hover { transform: scale(1.1); }
+    }
+  }
 
+  ::v-deep(.content) {
+    padding-top: 15px;
 
+    ::v-deep(.name-container) {
+      display: flex;
+      gap: 30px;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+
+      h6 { color: #171717; font-size: 30px; flex: 0 0 60%; }
+
+      ::v-deep(.social) {
+        display: flex;
+        gap: 16px;
+      }
+    }
+
+    ::v-deep(.text, .text p) {
+      color: #828282;
+      font-size: 16px;
+    }
+
+    ::v-deep(.linkTeam a.btn) {
+      display: flex;
+      gap: 7px;
+
+      ::v-deep(.bioArrow) {
+        width: 12px;
+        height: 11px;
+        transform-origin: center bottom;
+        transition: 0.4s;
+      }
+
+      &:hover ::v-deep(.bioArrow) {
+        transform: rotate(45deg);
+      }
+    }
+  }
 }
+
 
 </style>
