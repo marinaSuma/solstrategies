@@ -234,12 +234,12 @@ onUnmounted(() => {
       font-size: 30px;
       flex: 0 0 60%;
     }
-    ::v-deep(.social) {
+  ::v-deep(.social) {
       display: flex;
       gap: 16px;
     }
 
-    ::v-deep(.text , .text p){
+  ::v-deep(.text , .text p){
     color: #828282;
     font-size: 16px;
   }
@@ -253,6 +253,12 @@ onUnmounted(() => {
     display: flex;
     overflow: visible;
     gap: 7px;
+    &:hover {
+    /* El elemento interno bioArrow también necesita ::v-deep */
+      ::v-deep(.bioArrow) {
+        transform: rotate(45deg);
+      }
+    }
   }
 
 
@@ -266,9 +272,7 @@ onUnmounted(() => {
     -moz-transition: 0.4s;
     -o-transition: 0.4s;
     transition: 0.4s;
-    &:hover{
-      transform: rotate(45deg);
-    }
+    
   }
 
 }
