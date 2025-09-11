@@ -214,8 +214,7 @@ onUnmounted(() => {
 
 
 .team-item {
-    flex: 0 0 calc(33.333% - 20px); 
-    width: calc(370 / var(--base-vw) * var(--base-multiplier));
+    flex: 0 0 calc(16% - 20px);
     box-sizing: border-box;
     @include mx.mobile {
       &:not(:first-child) {
@@ -245,52 +244,55 @@ onUnmounted(() => {
     }
     .content {
       padding-top: 15px;
-    }
-    .name-container {
-      display: flex;
-      gap: 30px;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
-      h6 {
-        color: #171717;
-        font-size: 30px;
-        flex: 0 0 60%;
-      }
-      .social {
+      .name-container {
         display: flex;
-        gap: 16px;
-      }
-    }
-
-    .text , .text p{
-      color: #828282;
-      font-size: 16px;
-    }
-    .linkTeam {
-      margin-top: 15px;
-      a.btn {
-        display: flex;
-        overflow: visible;
-        gap: 7px;
-        .bioArrow {
-          width: 12px;
-          height: 11px;
-          transform-origin: center bottom;
-          display: block;
-          overflow: visible;
-          -webkit-transition: 0.4s;
-          -moz-transition: 0.4s;
-          -o-transition: 0.4s;
-          transition: 0.4s;
+        gap: 30px;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        h6 {
+          color: #171717;
+          font-size: 30px;
+          flex: 0 0 60%;
         }
-        &:hover{
+        .social {
+          display: flex;
+          gap: 16px;
+        }
+      }
+
+      .text , .text p{
+        color: #828282;
+        font-size: 16px;
+      }
+      .linkTeam {
+        margin-top: 15px;
+        a.btn {
+          display: flex;
+          overflow: visible;
+          gap: 7px;
           .bioArrow {
-            transform: rotate(45deg);
+            width: 12px;
+            height: 11px;
+            transform-origin: center bottom;
+            display: block;
+            overflow: visible;
+            -webkit-transition: 0.4s;
+            -moz-transition: 0.4s;
+            -o-transition: 0.4s;
+            transition: 0.4s;
+          }
+          &:hover{
+            .bioArrow {
+              transform: rotate(45deg);
+            }
           }
         }
       }
     }
+  
+
+
 }
 
 
