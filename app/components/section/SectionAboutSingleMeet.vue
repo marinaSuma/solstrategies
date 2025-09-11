@@ -221,54 +221,58 @@ onUnmounted(() => {
 
     }
 
-           ::v-deep(.name-container) {
-        display: flex;
-        gap: 30px;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 10px;
-         ::v-deep(h6) {
-          color: #171717;
-          font-size: 30px;
-          flex: 0 0 60%;
-        }
-         ::v-deep(.social) {
-          display: flex;
-          gap: 16px;
-        }
-      }
+  ::v-deep(.name-container) {
+      display: flex;
+      gap: 30px;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+  }
 
-       ::v-deep(.text , .text p){
-        color: #828282;
-        font-size: 16px;
-      }
-       ::v-deep(.linkTeam) {
-        margin-top: 15px;
+  ::v-deep(.name-container h6) {
+      color: #171717;
+      font-size: 30px;
+      flex: 0 0 60%;
+    }
+    ::v-deep(.social) {
+      display: flex;
+      gap: 16px;
+    }
 
-      }
+    ::v-deep(.text , .text p){
+    color: #828282;
+    font-size: 16px;
+  }
+  ::v-deep(.linkTeam) {
+  margin-top: 15px;
+
+  }
   
 
-      ::v-deep(a.btn) {
-          display: flex;
-          overflow: visible;
-          gap: 7px;
-           ::v-deep(.bioArrow) {
-            width: 12px;
-            height: 11px;
-            transform-origin: center bottom;
-            display: block;
-            overflow: visible;
-            -webkit-transition: 0.4s;
-            -moz-transition: 0.4s;
-            -o-transition: 0.4s;
-            transition: 0.4s;
-          }
-          &:hover{
-            .bioArrow {
-              transform: rotate(45deg);
-            }
-          }
-        }
+  ::v-deep(a.btn) {
+    display: flex;
+    overflow: visible;
+    gap: 7px;
+  }
+
+
+  ::v-deep(.bioArrow) {
+    width: 12px;
+    height: 11px;
+    transform-origin: center bottom;
+    display: block;
+    overflow: visible;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    &:hover{
+      .bioArrow {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
 }
 
 </style>
