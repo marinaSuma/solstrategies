@@ -155,6 +155,9 @@ onUnmounted(() => {
 
   @include mx.mobile {
     margin-top: fn.toVw(40);
+    .section-slider {
+      padding-left: 0px;
+    }
   }
 }
 
@@ -191,11 +194,7 @@ onUnmounted(() => {
     flex: 0 0 calc(14% - 20px);
     box-sizing: border-box;
     @include mx.mobile {
-      &:not(:first-child) {
-        border-top: 1px solid #D0D0D0;
-        padding-top: 50px;
-      }
-      
+      flex: 1;
     }
     ::v-deep(.img) {
       border-radius: 6px;

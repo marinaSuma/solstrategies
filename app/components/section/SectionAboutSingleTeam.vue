@@ -78,6 +78,9 @@ let ctx;
       }
     }
     @include mx.mobile {
+      flex-direction: column;
+      min-height: auto;
+      padding-top: 100px;
     }
 }
 
