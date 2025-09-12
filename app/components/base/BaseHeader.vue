@@ -55,7 +55,7 @@
               </div>
             </li>
             <li v-if="idx === 2">
-              <NuxtLink class="nav__item" to="/">
+              <NuxtLink class="nav__item" to="/investorRelations">
                 <span class="text">Investor Relations</span>
                 <span class="placeholder">Investor Relations</span>
               </NuxtLink>
@@ -177,7 +177,7 @@ const menus: Record<MenuKey, { label: string; items: { label: string; to: string
   resources: {
     label: 'Resources',
     items: [
-      { label: 'Blog', to: '/' },
+      { label: 'Blog', to: '/blog' },
       { label: 'Case Studies', to: '/' },
       { label: 'Press', to: '/' },
       { label: 'FAQs', to: '/' },
