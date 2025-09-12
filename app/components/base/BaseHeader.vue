@@ -55,7 +55,7 @@
               </div>
             </li>
             <li v-if="idx === 2">
-              <NuxtLink class="nav__item" to="/investorRelations">
+              <NuxtLink class="nav__item" to="/investor-relations">
                 <span class="text">Investor Relations</span>
                 <span class="placeholder">Investor Relations</span>
               </NuxtLink>
