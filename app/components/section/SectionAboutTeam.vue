@@ -306,8 +306,6 @@ section.team {
       .linkTeam {
         margin-top: 15px;
       }
-  }
-
 
   ::v-deep(a.btn) {
     display: flex;
@@ -340,6 +338,8 @@ section.team {
     flex-direction: column;
   }
 
+
+  }
 }
 
 p.titleTeam {
