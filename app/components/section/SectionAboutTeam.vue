@@ -54,11 +54,13 @@
               class="team-item"
             >
               <div class="img">
-                <a :href="member.url"><img :src="member.img" :alt="member.title" /></a>
+                <!-- <a :href="member.url"><img :src="member.img" :alt="member.title" /></a> -->
+                <a href="/single-team"><img :src="member.img" :alt="member.title" /></a>
               </div>
               <div class="content">
                 <div class="name-container">
-                  <h6><a :href="member.url">{{ member.title }}</a></h6>
+                  <!-- <h6><a :href="member.url">{{ member.title }}</a></h6> -->
+                  <h6> <a href="/single-team">{{ member.title }}</a></h6>
                   <div class="social">
                     <a
                       v-if="member.linkedin"
@@ -67,7 +69,7 @@
                     >
                       <MediaImg src="/linkedin.svg" alt="Linkedin" />
                     </a>
-                    <a
+                    <a 
                       v-if="member.twitter"
                       :href="member.twitter"
                       class="social-link"
@@ -82,7 +84,8 @@
 
                 <!-- Botón bio -->
                 <div class="linkTeam">
-                  <a :href="member.url" class="btn">
+                  <!-- <a :href="member.url" class="btn"> -->
+                  <a href="/single-team">
                     Read bio
                     <MediaImg class="bioArrow" src="/bio.svg" alt="Read bio" />
                   </a>

@@ -147,11 +147,11 @@ const menus: Record<MenuKey, { label: string; items: { label: string; to: string
   about: {
     label: 'About',
     items: [
-      { label: 'Leadership & Vision', to: '/' },
-      { label: 'Technology Arm', to: '/' },
-      { label: 'Company Timeline', to: '/' },
-      { label: 'Investment Thesis', to: '/' },
-      { label: 'Leadership Team', to: '/' },
+      { label: 'Leadership & Vision', to: '/about' },
+      { label: 'Technology Arm', to: '/about' },
+      { label: 'Company Timeline', to: '/about' },
+      { label: 'Investment Thesis', to: '/about' },
+      { label: 'Leadership Team', to: '/about' },
     ],
   },
   solutions: {
