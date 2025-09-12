@@ -1,30 +1,29 @@
 <template>
+   <SectionContact />
   <header
     id="header"
     ref="el"
     :class="{
+      'is--hidden': isHeaderHidden,
       active: headerActive,
     }">
     <div class="container">
       <nav class="nav">
-        <NuxtLink class="logo" to="/" external>
+        <div class="logo">
           <TextLogo />
-        </NuxtLink>
+        </div>
 
         <ul class="nav__list">
-          <template v-for="(menu, key) in menus" :key="key">
-            <!-- Caso tenha items: vira dropdown -->
+          <template v-for="(menu, key, idx) in menus" :key="key">
             <li
-              v-if="menu.items && menu.items.length"
               :ref="(el) => setLiRef(key as MenuKey, el as HTMLElement)"
               class="has-dropdown"
               @mouseenter="handleOpen(key as MenuKey)"
               @mouseleave="handleClose">
               <NuxtLink
-                :external="menu.external !== false"
                 class="nav__item"
                 :class="{ active: openMenuKey === (key as MenuKey) }"
-                :to="menu.to || '/'"
+                to="/"
                 :aria-expanded="openMenuKey === (key as MenuKey)">
                 <span class="text">{{ menu.label }}</span>
                 <span class="placeholder">{{ menu.label }}</span>
@@ -48,18 +47,17 @@
                     :key="idx"
                     :ref="(el) => setItemRef(key as MenuKey, idx, el as HTMLLIElement)"
                     @mouseenter="handleItemEnter(key as MenuKey, idx)">
-                    <NuxtLink class="dropdown__item" :to="item.to" :external="item.external !== false">
+                    <NuxtLink class="dropdown__item" :to="item.to">
                       {{ item.label }}
                     </NuxtLink>
                   </li>
                 </ul>
               </div>
             </li>
-
-            <li v-else>
-              <NuxtLink class="nav__item" :to="menu.to || '/'" :external="menu.external !== false">
-                <span class="text">{{ menu.label }}</span>
-                <span class="placeholder">{{ menu.label }}</span>
+            <li v-if="idx === 2">
+              <NuxtLink class="nav__item" to="/">
+                <span class="text">Investor Relations</span>
+                <span class="placeholder">Investor Relations</span>
               </NuxtLink>
             </li>
           </template>
@@ -78,41 +76,38 @@
               <div class="mobile-menu__overlay" />
               <aside ref="elMobilePanel" class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Main navigation">
                 <div class="mobile-menu__top">
-                  <NuxtLink class="logo" to="/" external>
+                  <div class="logo">
                     <TextLogo />
-                  </NuxtLink>
+                  </div>
 
                   <ButtonMenu :active-class="isMenuOpen" @click="handleToggleMenu" />
                 </div>
 
                 <ul class="mobile-menu__list">
                   <li v-for="(menu, key) in menus" :key="key">
-                    <!-- mobile também segue a mesma lógica -->
-                    <template v-if="menu.items && menu.items.length">
-                      <button
-                        type="button"
-                        class="mobile-menu__item"
-                        :aria-expanded="mobileOpenKey === (key as MenuKey)"
-                        :aria-controls="`submenu-${String(key)}`"
-                        @click="handleMobileToggle(key as MenuKey)">
-                        <span>{{ menu.label }}</span>
-                        <IconChevron class="arrow" :class="{ open: mobileOpenKey === (key as MenuKey) }" />
-                      </button>
-                      <Transition name="accordion">
-                        <ul v-if="mobileOpenKey === (key as MenuKey)" :id="`submenu-${String(key)}`" class="mobile-submenu">
-                          <li v-for="(item, idx) in menu.items" :key="idx">
-                            <NuxtLink :external="item.external !== false" class="mobile-submenu__item" :to="item.to" @click="handleCloseMenu">
-                              {{ item.label }}
-                            </NuxtLink>
-                          </li>
-                        </ul>
-                      </Transition>
-                    </template>
-                    <template v-else>
-                      <NuxtLink :external="menu.external !== false" class="mobile-menu__item" :to="menu.to || '/'" @click="handleCloseMenu">
-                        <span>{{ menu.label }}</span>
-                      </NuxtLink>
-                    </template>
+                    <button
+                      type="button"
+                      class="mobile-menu__item"
+                      :aria-expanded="mobileOpenKey === (key as MenuKey)"
+                      :aria-controls="`submenu-${String(key)}`"
+                      @click="handleMobileToggle(key as MenuKey)">
+                      <span>{{ menu.label }}</span>
+                      <IconChevron class="arrow" :class="{ open: mobileOpenKey === (key as MenuKey) }" />
+                    </button>
+                    <Transition name="accordion">
+                      <ul v-if="mobileOpenKey === (key as MenuKey)" :id="`submenu-${String(key)}`" class="mobile-submenu">
+                        <li v-for="(item, idx) in menu.items" :key="idx">
+                          <NuxtLink class="mobile-submenu__item" :to="item.to" @click="handleCloseMenu">
+                            {{ item.label }}
+                          </NuxtLink>
+                        </li>
+                      </ul>
+                    </Transition>
+                  </li>
+                  <li>
+                    <NuxtLink class="mobile-menu__item" to="/">
+                      <span>Investor Relations</span>
+                    </NuxtLink>
                   </li>
                 </ul>
 
@@ -146,17 +141,9 @@ const elMobilePanel = useTemplateRef<HTMLElement>('elMobilePanel');
 const nuxtApp = useNuxtApp();
 const lenis = nuxtApp.$lenis;
 
-type MenuKey = 'about' | 'solutions' | 'investorRelations' | 'resources';
+type MenuKey = 'about' | 'solutions' | 'technology' | 'resources';
 
-const menus: Record<
-  MenuKey,
-  {
-    label: string;
-    to?: string;
-    external?: boolean;
-    items?: { label: string; to: string; external?: boolean }[];
-  }
-> = {
+const menus: Record<MenuKey, { label: string; items: { label: string; to: string }[] }> = {
   about: {
     label: 'About',
     items: [
@@ -169,24 +156,32 @@ const menus: Record<
   },
   solutions: {
     label: 'Solutions',
-    to: '/solutions',
-    items: [],
-  },
-  investorRelations: {
-    label: 'Investor Relations',
     items: [
-      { label: 'Overview', to: '/investor-relations' },
-      { label: 'Stock Information', to: '/investor-relations', external: false },
-      { label: 'Financial Reports', to: '/investor-relations' },
+      { label: 'Portfolio Management', to: '/' },
+      { label: 'Research & Analytics', to: '/' },
+      { label: 'Risk Management', to: '/' },
+      { label: 'Advisory Services', to: '/' },
+      { label: 'Education Hub', to: '/' },
+    ],
+  },
+  technology: {
+    label: 'Technology',
+    items: [
+      { label: 'Platform Overview', to: '/' },
+      { label: 'Data Pipeline', to: '/' },
+      { label: 'Security & Compliance', to: '/' },
+      { label: 'API & Integrations', to: '/' },
+      { label: 'Infrastructure', to: '/' },
     ],
   },
   resources: {
     label: 'Resources',
     items: [
-      { label: 'Press Releases', to: '/press' },
-      { label: 'Media Coverage', to: '/media-coverage' },
-      { label: 'News', to: '/blog' },
-      { label: 'Trust Center', to: 'https://trust.solstrategies.io' },
+      { label: 'Blog', to: '/' },
+      { label: 'Case Studies', to: '/' },
+      { label: 'Press', to: '/' },
+      { label: 'FAQs', to: '/' },
+      { label: 'Support', to: '/' },
     ],
   },
 };
@@ -197,31 +192,34 @@ const closingKey = ref<MenuKey | null>(null);
 const liRefs = reactive<Record<MenuKey, HTMLElement | null>>({
   about: null,
   solutions: null,
-  investorRelations: null,
+  technology: null,
   resources: null,
 });
 const panelRefs = reactive<Record<MenuKey, HTMLElement | null>>({
   about: null,
   solutions: null,
-  investorRelations: null,
+  technology: null,
   resources: null,
 });
+
 const bgSelectorRefs = reactive<Record<MenuKey, HTMLElement | null>>({
   about: null,
   solutions: null,
-  investorRelations: null,
+  technology: null,
   resources: null,
 });
+
 const itemRefs = reactive<Record<MenuKey, (HTMLLIElement | null)[]>>({
   about: [],
   solutions: [],
-  investorRelations: [],
+  technology: [],
   resources: [],
 });
+
 const panelStyles = reactive<Record<MenuKey, any>>({
   about: {},
   solutions: {},
-  investorRelations: {},
+  technology: {},
   resources: {},
 });
 
@@ -237,9 +235,12 @@ function handleOpen(key: MenuKey): void {
   openMenuKey.value = key;
   nextTick(() => positionPanel(key));
 }
+
 function handleClose(): void {
   openMenuKey.value = null;
 }
+
+// hover only; no click toggle
 
 Object.keys(menus).forEach((k) => {
   const key = k as MenuKey;
@@ -260,11 +261,6 @@ nuxtApp.hook('page:transition:finish', () => {
 
 const isPreloadDone = usePreloadDone();
 
-let tlIntro;
-const { trigger } = watchTriggerable(isPreloadDone, (value) => {
-  if (value) tlIntro?.play();
-});
-
 let ctx: gsap.Context;
 
 onMounted(() => {
@@ -278,32 +274,44 @@ onMounted(() => {
     gsap.killTweensOf(target);
     gsap.fromTo(target, { opacity: 0, y: 8, scale: 0.98 }, { opacity: 1, y: 0, scale: 1, duration: 0.28, ease: 'power2.out' });
   };
+
   const animateClose = (target: HTMLElement) => {
     gsap.killTweensOf(target);
     gsap.to(target, { opacity: 0, y: 8, scale: 0.98, duration: 0.24, ease: 'power2.inOut' });
   };
 
   watch(openMenuKey, (key, prev) => {
-    if (key) lenis.pause();
-    else lenis.resume();
+    // Pause/resume Lenis when dropdown opens/closes
+    if (key) {
+      lenis.pause();
+    } else {
+      lenis.resume();
+    }
 
+    // close previous
     if (prev) {
       const prevEl = panelRefs[prev];
       if (prevEl) {
         closingKey.value = prev;
         animateClose(prevEl);
+        // after close animation, clear closing flag
         setTimeout(() => {
           if (closingKey.value === prev) closingKey.value = null;
         }, 260);
       }
       const prevBg = bgSelectorRefs[prev];
-      if (prevBg) gsap.to(prevBg, { opacity: 0, duration: 0.18, ease: 'power2.out' });
+      if (prevBg) {
+        gsap.to(prevBg, { opacity: 0, duration: 0.18, ease: 'power2.out' });
+      }
     }
 
+    // open next
     if (key) {
       const nextEl = panelRefs[key];
       if (nextEl) animateOpen(nextEl);
-      nextTick(() => initializeBgSelectorPosition(key as MenuKey));
+      nextTick(() => {
+        initializeBgSelectorPosition(key as MenuKey);
+      });
     }
   });
 
@@ -314,28 +322,44 @@ onMounted(() => {
   lenis.on('scroll', (e: ScrollEvent) => {
     if (!el.value) return;
     if (e.isLocked) return;
+
     if (e.actualScroll <= 130) return;
-    if (e.direction === 1) isHeaderHidden.value = true;
-    else if (e.direction === -1) isHeaderHidden.value = false;
+    if (e.direction === 1) {
+      isHeaderHidden.value = true;
+    } else if (e.direction === -1) {
+      isHeaderHidden.value = false;
+    }
   });
 
   ctx = gsap.context(() => {
     ScrollTrigger.create({
       trigger: document.body,
-      start: `top top`,
+      start: `${window.innerHeight - 300}px`,
       invalidateOnRefresh: true,
-      onEnter: () => (headerActive.value = true),
-      onLeaveBack: () => (headerActive.value = false),
+      onEnter: () => {
+        headerActive.value = true;
+      },
+      onLeaveBack: () => {
+        headerActive.value = false;
+      },
     });
 
-    tlIntro = gsap.timeline({
+    const tlIntro = gsap.timeline({
       paused: !isPreloadDone.value,
     });
+
     tlIntro.from('.nav > *', {
       yPercent: -190,
       stagger: 0.15,
       willChange: 'transform',
     });
+
+    const { trigger } = watchTriggerable(isPreloadDone, (value) => {
+      if (value) {
+        tlIntro.play();
+      }
+    });
+
     trigger();
   }, el.value);
 
@@ -343,7 +367,7 @@ onMounted(() => {
     if (e.key === 'Escape' && isMenuOpen.value) handleCloseMenu();
   });
 
-  // Drag-to-close mobile
+  // Drag-to-close: allow dragging the mobile panel downward to close
   const menuEl = elMobileMenu;
   const panelEl = elMobilePanel;
 
@@ -356,6 +380,7 @@ onMounted(() => {
     if (!isMenuOpen.value) return;
     const panel = panelEl.value;
     if (!panel) return;
+    // Only start drag when scrolled to top to avoid conflicting with content scroll
     if (panel.scrollTop > 0) {
       isDraggingMenu = false;
       return;
@@ -425,10 +450,15 @@ function positionPanel(key: MenuKey): void {
 
   const liLeftWithinNav = liRect.left - navRect.left;
   const liCenterWithinNav = liLeftWithinNav + liRect.width / 2;
+
+  // Desired panel left so its center aligns with the li center
   const desiredLeftWithinNav = liCenterWithinNav - panelRect.width / 2;
+  // Clamp to stay within nav bounds
   const clampedLeftWithinNav = Math.max(0, Math.min(desiredLeftWithinNav, navWidth - panelRect.width));
+  // Convert to left relative to li (since panel is absolutely positioned inside li)
   const leftRelativeToLi = clampedLeftWithinNav - liLeftWithinNav;
 
+  // Caret should point to li center relative to the panel
   const caretLeft = liCenterWithinNav - clampedLeftWithinNav;
   const caretClamped = Math.max(12, Math.min(caretLeft, panelRect.width - 12));
 
@@ -447,12 +477,16 @@ function initializeBgSelectorPosition(key: MenuKey): void {
   const top = firstItem.offsetTop;
   const height = firstItem.offsetHeight;
   gsap.set(bg, { y: top, height, opacity: 1 });
-  gsap.to(bg, { scale: 0 });
+
+  gsap.to(bg, {
+    scale: 0,
+  });
 }
 
 function handleItemEnter(key: MenuKey, index: number): void {
   moveBgToItem(key, index);
 }
+
 function moveBgToItem(key: MenuKey, index: number): void {
   const bg = bgSelectorRefs[key];
   const items = itemRefs[key];
@@ -463,16 +497,25 @@ function moveBgToItem(key: MenuKey, index: number): void {
   const height = item.offsetHeight;
 
   gsap.killTweensOf(bg);
-  gsap.to(bg, { y: top, height, opacity: 1, scale: 1, duration: 0.3 });
+
+  gsap.to(bg, {
+    y: top,
+    height,
+    opacity: 1,
+    scale: 1,
+    duration: 0.3,
+  });
 }
 
 function handleToggleMenu(): void {
   isMenuOpen.value = !isMenuOpen.value;
 }
+
 function handleCloseMenu(): void {
   isMenuOpen.value = false;
   mobileOpenKey.value = null;
 }
+
 function handleMobileToggle(key: MenuKey): void {
   mobileOpenKey.value = mobileOpenKey.value === key ? null : key;
 }
@@ -819,7 +862,7 @@ function handleMobileToggle(key: MenuKey): void {
     &:deep(.btn) {
       background:
         linear-gradient($color-neutral, $color-neutral) padding-box,
-        linear-gradient(0deg, #f2f2f2, #818781 80%, $color-neutral) border-box;
+        linear-gradient(0deg, #f2f2f2, #818181 80%, $color-neutral) border-box;
     }
   }
 }
