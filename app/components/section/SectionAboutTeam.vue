@@ -305,29 +305,36 @@ section.team {
       }
       .linkTeam {
         margin-top: 15px;
-        a.btn {
-          display: flex;
-          overflow: visible;
-          gap: 7px;
-          .bioArrow {
-            width: 12px;
-            height: 11px;
-            transform-origin: center bottom;
-            display: block;
-            overflow: visible;
-            -webkit-transition: 0.4s;
-            -moz-transition: 0.4s;
-            -o-transition: 0.4s;
-            transition: 0.4s;
-          }
-          &:hover{
-            .bioArrow {
-              transform: rotate(45deg);
-            }
-          }
-        }
       }
   }
+
+
+  ::v-deep(a.btn) {
+    display: flex;
+    overflow: visible;
+    gap: 7px;
+  }
+
+
+  ::v-deep(.bioArrow) {
+    width: 12px;
+    height: 11px;
+    transform-origin: center bottom;
+    display: block;
+    overflow: visible;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    
+  }
+
+   ::v-deep(a.btn:hover .bioArrow){
+    transform: rotate(45deg);
+   }
+
+
+
 
   @include mx.mobile {
     flex-direction: column;
