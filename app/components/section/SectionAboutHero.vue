@@ -68,6 +68,77 @@ let ctx;
       margin-top: fn.toVw(-100);
     }
   }
+
+
+  .wrapper {
+    display: flex;
+    gap: fn.toVw(46);
+    flex-direction: column;
+    max-width: 1110px;
+
+    @include mx.mobile {
+      flex-direction: column;
+      gap: fn.toVw(14);
+    }
+
+    .title-wrapper {
+      flex-shrink: 0;
+      width: 100%;
+      max-width: fn.toVw(900);
+      align-self: flex-start;
+      @include mx.tablet {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .title__text {
+        width: 100%;
+      }
+
+      .title {
+        font-size: 70px;
+        font-weight: 300;
+        line-height: 1.008;
+
+        @include mx.mobile {
+          
+        }
+
+        b {
+          font-weight: 500;
+        }
+      }
+    }
+
+    .description {
+      display: flex;
+      flex-direction: column;
+      gap: fn.toVw(67);
+      align-self: end;
+
+      @include mx.mobile {
+        align-self: start;
+        margin-top: 20px;
+        max-width: 100%;
+        width: 100%;
+      }
+
+      @include mx.tablet {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .description__text {
+        // max-width: 360px;
+        width: 100%;
+
+        p + p {
+          margin-top: 20px;
+        }
+      }
+
+    }
+  }
 }
 
 
@@ -90,75 +161,7 @@ let ctx;
     }
 }
 
-.wrapper {
-  display: flex;
-  gap: fn.toVw(46);
-  flex-direction: column;
-  max-width: 1110px;
 
-  @include mx.mobile {
-    flex-direction: column;
-    gap: fn.toVw(14);
-  }
-
-  .title-wrapper {
-    flex-shrink: 0;
-    width: 100%;
-    max-width: fn.toVw(900);
-    align-self: flex-start;
-    @include mx.tablet {
-      max-width: 100%;
-      width: 100%;
-    }
-
-    .title__text {
-      width: 100%;
-    }
-
-    .title {
-      font-size: 70px;
-      font-weight: 300;
-      line-height: 1.008;
-
-      @include mx.mobile {
-        
-      }
-
-      b {
-        font-weight: 500;
-      }
-    }
-  }
-
-  .description {
-    display: flex;
-    flex-direction: column;
-    gap: fn.toVw(67);
-    align-self: end;
-
-    @include mx.mobile {
-      align-self: start;
-      margin-top: 20px;
-      max-width: 100%;
-      width: 100%;
-    }
-
-    @include mx.tablet {
-      max-width: 100%;
-      width: 100%;
-    }
-
-    .description__text {
-      // max-width: 360px;
-      width: 100%;
-
-      p + p {
-        margin-top: 20px;
-      }
-    }
-
-  }
-}
 
 
 
