@@ -247,6 +247,9 @@ section.team {
     display: flex;
     flex-wrap: wrap;   /* permite que los items salten de línea */
     gap: 50px 20px;
+    @include mx.mobile {
+      flex-direction: column;
+    }
     .team-item {
       flex: 0 0 calc(33.333% - 20px); 
       box-sizing: border-box;

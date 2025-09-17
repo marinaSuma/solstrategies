@@ -89,6 +89,10 @@ let ctx;
         right: -150px;
         top: 150px;
         width: calc(300 / var(--base-vw) * var(--base-multiplier));
+        @include mx.tablet {
+          right: -30px;
+          top: 150px;
+        }
         @include mx.mobile {
           right: unset;
           top: auto;

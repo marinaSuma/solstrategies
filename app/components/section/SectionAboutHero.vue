@@ -106,6 +106,10 @@ let ctx;
     width: 100%;
     max-width: fn.toVw(900);
     align-self: flex-start;
+    @include mx.tablet {
+      max-width: 100%;
+      width: 100%;
+    }
 
     .title__text {
       width: 100%;
@@ -135,6 +139,13 @@ let ctx;
     @include mx.mobile {
       align-self: start;
       margin-top: 20px;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    @include mx.tablet {
+      max-width: 100%;
+      width: 100%;
     }
 
     .description__text {

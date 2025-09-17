@@ -14,6 +14,13 @@
   }
 }
 
+
+@mixin tablet() {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
 // Etc
 @mixin text-underline($color: currentColor) {
   cursor: pointer;
