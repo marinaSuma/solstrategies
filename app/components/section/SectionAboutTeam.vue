@@ -321,7 +321,7 @@ section.team {
     width: 12px;
     height: 11px;
     transform-origin: center bottom;
-    display: block;
+    display: inline-block;
     overflow: visible;
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
